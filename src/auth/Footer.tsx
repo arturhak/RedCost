@@ -4,7 +4,7 @@ function Footer () {
 
 
     return (
-        <footer className="footer">
+        <footer className="footer" style={{marginTop: "500px"}}>
                 Footer
         </footer>
     )
