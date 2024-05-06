@@ -25,7 +25,7 @@ function MainComponent (props:any) {
                     <input type="text" className="input" placeholder={"Email: "}/>
                 </div>
                 <div className={props.buttonSize? "main-component-button main-component-button_width": "main-component-button"}>
-                    WHITEPAPER
+                    {props.buttonValue}
                 </div>
             </div>
         </div>

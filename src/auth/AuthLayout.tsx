@@ -1,8 +1,13 @@
 import React, {useState} from "react";
 import Countdown from "react-countdown";
 import MainComponent from "../components/MainComponent";
-import RedCost from "../assets/images/red-cost.svg"
-
+import RedCost from "../assets/images/red-cost.svg";
+import RedCost1 from "../assets/images/red-cost-1.svg";
+import RedCost2 from "../assets/images/red-cost-2.svg";
+import SecurytyImage from "../assets/images/security-logo.svg"
+import Security from "../components/Security";
+import Roadmap from "../assets/roadmap.png";
+import {socialItemsList} from "../constants/socialItems";
 
 function AuthLayout () {
     const [countdown, setCountdown] = useState<any>(Date.now());
@@ -78,7 +83,70 @@ function AuthLayout () {
                 reverse={false}
                 buttonSize={true}
                 isInput={false}
+                buttonValue="WHITEPAPER"
             />
+
+            <div className="security-component">
+                <div className="security-component-header">
+                    <div className="line_1"></div>
+                    <div className="security-component-title">we offer you</div>
+                    <div className="line_1"></div>
+                </div>
+                <div className="security-group">
+                    {[1,2,3,4].map(()=> {
+                        return <Security
+                            image={SecurytyImage}
+                            subtitle="Security"
+                            content="Your NFTs are stored in a digital wallet. And it’s crucial to keep this wallet secure."
+                        />
+                    })}
+                </div>
+                <div className="main-component-button main-component-button_width">
+                    Explore now
+                </div>
+            </div>
+
+            <div className="roadmap">
+                <img src={Roadmap} alt="roadmap"/>
+            </div>
+
+            <MainComponent
+                image={RedCost1}
+                title={true}
+                titleText="OUR"
+                subtitle="AirDrop"
+                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                reverse={true}
+                buttonSize={false}
+                isInput={true}
+                buttonValue="Start now"
+
+            />
+
+            <div className="security-component">
+                <div className="security-component-header">
+                    <div className="line_1"></div>
+                    <div className="security-component-title">follow our socials</div>
+                    <div className="line_1"></div>
+                </div>
+                <div className="social-group-component">
+                    {socialItemsList.map((item,key)=> {
+                        return <img src={item.logo} alt="logo" key={key}/>
+                    })}
+                </div>
+            </div>
+            <MainComponent
+                image={RedCost2}
+                title={true}
+                titleText="important"
+                subtitle="For Investors"
+                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                buttonSize={false}
+                isInput={true}
+                buttonValue="Learn more"
+
+            />
+
 
         </div>
     )
