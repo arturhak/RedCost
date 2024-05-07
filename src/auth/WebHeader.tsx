@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/logo.svg";
 import {navItems} from "../constants/navItems";
 import {socialItems} from "../constants/socialItems";
+import leftFill from "../assets/images/left-fill.svg"
 
 
 function WebHeader() {
@@ -27,6 +28,7 @@ function WebHeader() {
                 <div className="navbar-item-market_nft">Market NFT</div>
                 <div className="login">
                     <div className="social-group-logo">
+                        <img src={leftFill} alt="leftFill" style={{height: "19px"}}/>
                         {socialItems.map((socialItem:any,key) =>{
                             return <img src={socialItem.logo} alt="logo" key={key} onClick={() => handleClickSocialItem(socialItem.name) } />
                         })}

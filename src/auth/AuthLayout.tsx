@@ -8,6 +8,7 @@ import SecurytyImage from "../assets/images/security-logo.svg"
 import Security from "../components/Security";
 import Roadmap from "../assets/roadmap.png";
 import {socialItemsList} from "../constants/socialItems";
+import bgImage from "../assets/bg-image.svg"
 
 function AuthLayout () {
     const [countdown, setCountdown] = useState<any>(Date.now());
@@ -22,7 +23,7 @@ function AuthLayout () {
                 <div className="datetime-container">
                     <div className="datetime-content">
                         <div className="datetime-text">DAYS</div>
-                        <div className="datetime-number">{days}</div>
+                        <div className="datetime-number">0{days}</div>
                     </div>
                     <div className="datetime-content">
                         <div className="datetime-text">HOURSE</div>
@@ -51,6 +52,9 @@ function AuthLayout () {
 
     return (
         <div className="auth-layouth">
+            <div className="bg-image">
+                <img src={bgImage} alt="bgImage"/>
+            </div>
 
             <div className="digital-art">
                 <div className="header-side">

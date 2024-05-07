@@ -130,8 +130,10 @@
   font-style: normal;
   font-weight: 300;
   line-height: 114.5%; /* 73.28px */
+  z-index: 1;
 }
 .bottom-side {
+  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -210,6 +212,7 @@
   box-shadow: 0 4px 13.9px 0 rgba(0, 0, 0, 0.25);
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 .datetime-text {
   font-family: Montserrat-Regular;
@@ -256,8 +259,9 @@
 .title-group {
   display: flex;
   flex-direction: column;
-  gap: 2%;
+  gap: 12px;
   max-width: max-content;
+  z-index: 1;
 }
 .title-group_line-title {
   display: flex;
@@ -311,6 +315,7 @@
   line-height: normal;
   margin-top: 3.5%;
   margin-bottom: 4.3%;
+  z-index: 1;
 }
 .main-component-button {
   width: 61%;
@@ -484,4 +489,93 @@
   width: 100%;
   gap: 50px;
   flex-wrap: wrap;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 139px;
+  padding: 0 140px;
+}
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #DFDFDF;
+}
+.footer-top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+}
+.footer-top-left-text {
+  max-width: 172px;
+  color: #949494;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 16.03px */
+  text-transform: uppercase;
+}
+.footer-top-right {
+  display: flex;
+  gap: 87px;
+}
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nav-footer-item {
+  color: #949494;
+  font-family: Montserrat-Regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  padding-top: 28px;
+  padding-bottom: 103px;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-bottom-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.footer-bottom-left-item {
+  color: #949494;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat-Regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 18.32px */
+  text-transform: uppercase;
+}
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-bottom-right img {
+  cursor: pointer;
+}
+.bg-image {
+  position: absolute;
+  /*z-index: 0;*/
+  top: 135px;
+  right: 0;
 }

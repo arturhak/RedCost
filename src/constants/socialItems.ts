@@ -1,6 +1,7 @@
 import xLogo from "../assets/socialLogos/x_logo.svg";
 import instagramLogo from "../assets/socialLogos/instagram-logo.svg";
 import facebookLogo from "../assets/socialLogos/facebook-logo.svg";
+import discordLogo from "../assets/socialLogos/discord-logo.svg";
 import X from "../assets/socialLogos/biglogos/x-logo.svg";
 import discord from "../assets/socialLogos/biglogos/discord-logo.svg";
 import facebook from "../assets/socialLogos/biglogos/facebook-logo.svg";
@@ -22,6 +23,24 @@ export const socialItems = [
     {
         name: "facebook",
         logo: facebookLogo
+    },
+]
+export const socialItemsFooter = [
+    {
+        name: "x",
+        logo: xLogo
+    },
+    {
+        name: "instagram",
+        logo: instagramLogo
+    },
+    {
+        name: "facebook",
+        logo: facebookLogo
+    },
+    {
+        name: "discord",
+        logo: discordLogo
     },
 ]
 
