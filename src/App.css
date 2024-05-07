@@ -13,7 +13,11 @@
 
 .App-layout {
   width: 100%;
-  /*background-color: #282c34;*/
+  background: url("./assets/bg-app.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -112,7 +116,7 @@
 .digital-art {
   display: flex;
   flex-direction: column;
-  background: white;
+  /*background: white;*/
   padding: 0 140px;
   margin-top: 161px;
   gap: 35px;
@@ -230,7 +234,7 @@
 
 .main-component {
   display: flex;
-  background: white;
+  /*background: white;*/
   padding: 0 140px;
   margin-top: 250px;
   align-items: center;
@@ -433,7 +437,7 @@
   margin-top: 160px;
   gap: 48px;
   padding: 0 140px;
-  background: #FFFFFF;
+  /*background: #FFFFFF;*/
 }
 
 .security-component-header {
@@ -467,7 +471,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 41px;
-  background: #FFFFFF;
+  /*background: #FFFFFF;*/
 }
 
 .social-group-component {
