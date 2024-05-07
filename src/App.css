@@ -6,6 +6,10 @@
   font-family: "Montserrat-Bold";
   src: url("./fonts/Montserrat/Montserrat-Regular.ttf"), local("Montserrat-Bold");
 }
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("./fonts/RobotoMono/static/RobotoMono-Medium.ttf"), local("Roboto Mono");
+}
 
 .App {
   overflow: hidden;
