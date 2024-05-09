@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.svg";
 import {socialItemsFooter} from "../constants/socialItems";
-import rightFill from "../assets/images/right-fill.svg"
+import rightFill from "../assets/icons/right-fill.svg"
 
 
 function Footer () {

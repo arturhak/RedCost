@@ -2,6 +2,12 @@ import xLogo from "../assets/socialLogos/x_logo.svg";
 import instagramLogo from "../assets/socialLogos/instagram-logo.svg";
 import facebookLogo from "../assets/socialLogos/facebook-logo.svg";
 import discordLogo from "../assets/socialLogos/discord-logo.svg";
+import linkedinLogo from "../assets/socialLogos/linkedin-logo.svg";
+import redditLogo from "../assets/socialLogos/reddit-logo.svg";
+import youtubeLogo from "../assets/socialLogos/youtube-logo.svg";
+import telegramLogo from "../assets/socialLogos/telegram-logo.svg";
+import mediumLogo from "../assets/socialLogos/medium-logo.svg";
+import threadsLogo from "../assets/socialLogos/bi_threads-logo.svg";
 import X from "../assets/socialLogos/biglogos/x-logo.svg";
 import discord from "../assets/socialLogos/biglogos/discord-logo.svg";
 import facebook from "../assets/socialLogos/biglogos/facebook-logo.svg";
@@ -23,6 +29,34 @@ export const socialItems = [
     {
         name: "facebook",
         logo: facebookLogo
+    },
+    {
+        name: "discord",
+        logo: discordLogo
+    },
+    {
+        name: "linkedin",
+        logo: linkedinLogo
+    },
+    {
+        name: "reddit",
+        logo: redditLogo
+    },
+    {
+        name: "youtube",
+        logo: youtubeLogo
+    },
+    {
+        name: "telegram",
+        logo: telegramLogo
+    },
+    {
+        name: "medium",
+        logo: mediumLogo
+    },
+    {
+        name: "threads",
+        logo: threadsLogo
     },
 ]
 export const socialItemsFooter = [
