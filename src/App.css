@@ -164,7 +164,6 @@
 }
 .login-button {
   display: flex;
-  /*width: 126px;*/
   padding: 18px 44px;
   justify-content: center;
   align-items: center;
@@ -179,7 +178,6 @@
   line-height: 17.175px;
   cursor: pointer;
   transition: 0.4s ease;
-
 }
 .login-button:hover {
   border: 1px solid #B21815;
@@ -687,7 +685,7 @@
 /*Mobile Header*/
 
 :where(.css-dev-only-do-not-override-1okl62o).ant-drawer-right>.ant-drawer-content-wrapper {
-  top: 95px;
+  top: 74px;
 }
 :where(.css-dev-only-do-not-override-1okl62o).ant-drawer .ant-drawer-header {
   display: none;
@@ -748,8 +746,8 @@
 }
 /*//////////////////////////////////////*/
 .mobile-header {
-  height: 95px;
-  background: white;
+  height: 76px;
+  background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);
   padding: 0 22px;
   display: flex;
@@ -758,7 +756,12 @@
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 5;
+  z-index: 5000;
+}
+.login-burger-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .hamburger {
   display: flex;
@@ -796,8 +799,19 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
-.login-burger-group {
+.mobile-login-button {
   display: flex;
+  padding: 16px 40px;
+  justify-content: center;
   align-items: center;
-  gap: 24px;
+  border-radius: 500px;
+  border: 1px solid #949494;
+  background: #FFF;
+  color: #949494;
+  font-family: Montserrat-Regular;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 13.74px */
+  cursor: pointer;
 }

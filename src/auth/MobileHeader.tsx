@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import {Drawer} from 'antd';
 import {navItems, profileItem} from "../constants/navItems";
 import {socialItems} from "../constants/socialItems";
-import closeDrowerIcon from "../assets/icons/closeDrowerIcon.svg"
 import mobileLogo from "../assets/mobile-logo.svg"
+import avatar from "../assets/icons/avatar.svg";
 
 function MobileHeader(props: any) {
 
@@ -40,16 +40,23 @@ function MobileHeader(props: any) {
     const handleClickSocialItem = (item:String) => {
         console.log(`Click on ${item} and navigate ${item}` )
     }
+    const handleHome = () => {
+        console.log("go to home page");
+        setOpen(false)
+    }
 
     return (
-        <div className="mobile-header">
-            <div onClick={showProfileDrawer}>
-                <img src={mobileLogo} alt="mobileLogo" onClick={()=>{}}/>
+        <div className="mobile-header" >
+            <div onClick={handleHome} style={{cursor: "pointer"}}>
+                <img src={mobileLogo} alt="mobileLogo" />
             </div>
             <div className="login-burger-group">
-                {!isWallet? <div onClick={showProfileDrawer}>
-                    avatar
-                </div>: <div>Login</div>}
+                {isWallet?
+                    <div onClick={showProfileDrawer}>
+                        <img src={avatar} alt="avatar" style={{cursor: "pointer"}} />
+                    </div>:
+                    <div className="mobile-login-button">Login</div>
+                }
                  <div className={!open? "hamburger": "is-active"} onClick={showBurgerDrawer} id="hamburger-1">
                     <div className="line"></div>
                     <div className="line"></div>
@@ -64,15 +71,15 @@ function MobileHeader(props: any) {
             >
                 {burgerDrawer?
                     <div className="drower-content-navbar">
-                        {navItems.map((item: String, key) => {
-                            return <div  className="drower-content-navbar-item" key={key}
+                        {navItems.map((item: String, index) => {
+                            return <div  className="drower-content-navbar-item" key={index}
                                         onClick={() => handleClickNavItem(item)}>{item}</div>
                         })}
                         <div className="drower-content-navbar-nft">Market NFT</div>
                     </div>:
                     <div className="drower-content-navbar drower-content-profile">
-                        {profileItem.map((item: any, key) => {
-                            return <div style={{display:"flex", gap: "8px", alignItems:"center"}} key={key}>
+                        {profileItem.map((item: any, index) => {
+                            return <div style={{display:"flex", gap: "8px", alignItems:"center"}} key={index}>
                                 <img src={item.icon} alt=""/>
                                 <div className="drower-content-navbar-item"
                                         onClick={() => handleClickProfileItem(item.option)}>{item.option}</div>

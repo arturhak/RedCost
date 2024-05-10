@@ -8,8 +8,8 @@ function Header() {
 
     return (
         <div className='header'>
-            {/*<WebHeader />*/}
-            <MobileHeader />
+            <WebHeader />
+            {/*<MobileHeader />*/}
 
             {/*Connection Modal*/}
             <Modal
