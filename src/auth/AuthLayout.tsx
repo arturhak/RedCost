@@ -136,7 +136,7 @@ function AuthLayout () {
                 </div>
                 <div className="social-group-component">
                     {socialItemsList.map((item,key)=> {
-                        return <img src={item.logo} alt="logo" key={key}/>
+                        return <img src={item.logo} alt="logo" key={key} className="folow-item"/>
                     })}
                 </div>
             </div>

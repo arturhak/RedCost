@@ -30,43 +30,53 @@ import threadsred from "../assets/socialLogos/bi-threads-red.svg";
 export const socialItems = [
     {
         name: "x",
-        logo: xLogo
+        logo: xLogo,
+        logored: xred
     },
     {
         name: "instagram",
-        logo: instagramLogo
+        logo: instagramLogo,
+        logored: instagramred
     },
     {
         name: "facebook",
-        logo: facebookLogo
+        logo: facebookLogo,
+        logored: facebookred
     },
     {
         name: "discord",
-        logo: discordLogo
+        logo: discordLogo,
+        logored: discordred
     },
     {
         name: "linkedin",
-        logo: linkedinLogo
+        logo: linkedinLogo,
+        logored: linkedinred
     },
     {
         name: "reddit",
-        logo: redditLogo
+        logo: redditLogo,
+        logored: redditred
     },
     {
         name: "youtube",
-        logo: youtubeLogo
+        logo: youtubeLogo,
+        logored: youtubered
     },
     {
         name: "telegram",
-        logo: telegramLogo
+        logo: telegramLogo,
+        logored: telegramred
     },
     {
         name: "medium",
-        logo: mediumLogo
+        logo: mediumLogo,
+        logored: mediumred
     },
     {
         name: "threads",
-        logo: threadsLogo
+        logo: threadsLogo,
+        logored: threadsred
     },
 ]
 
@@ -106,45 +116,45 @@ export const socialItemsList = [
 
 ]
 
-export const socialItemsRed = [
-    {
-        name: "x",
-        logo: xred
-    },
-    {
-        name: "instagram",
-        logo: instagramred
-    },
-    {
-        name: "facebook",
-        logo: facebookred
-    },
-    {
-        name: "discord",
-        logo: discordred
-    },
-    {
-        name: "linkedin",
-        logo: linkedinred
-    },
-    {
-        name: "reddit",
-        logo: redditred
-    },
-    {
-        name: "youtube",
-        logo: youtubered
-    },
-    {
-        name: "telegram",
-        logo: telegramred
-    },
-    {
-        name: "medium",
-        logo: mediumred
-    },
-    {
-        name: "threads",
-        logo: threadsred
-    },
-]
+// export const socialItemsRed = [
+//     {
+//         name: "x",
+//         logo: xred
+//     },
+//     {
+//         name: "instagram",
+//         logo: instagramred
+//     },
+//     {
+//         name: "facebook",
+//         logo: facebookred
+//     },
+//     {
+//         name: "discord",
+//         logo: discordred
+//     },
+//     {
+//         name: "linkedin",
+//         logo: linkedinred
+//     },
+//     {
+//         name: "reddit",
+//         logo: redditred
+//     },
+//     {
+//         name: "youtube",
+//         logo: youtubered
+//     },
+//     {
+//         name: "telegram",
+//         logo: telegramred
+//     },
+//     {
+//         name: "medium",
+//         logo: mediumred
+//     },
+//     {
+//         name: "threads",
+//         logo: threadsred
+//     },
+// ]

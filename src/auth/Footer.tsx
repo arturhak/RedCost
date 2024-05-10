@@ -52,7 +52,7 @@ function Footer () {
                 <div className="footer-bottom-right-group">
                     <div  className={!isOpen? "footer-bottom-right": "footer-bottom-right open-icons-group"}>
                         {socialItems.map((socialItem:any,key) =>{
-                            return <img src={socialItem.logo} alt="logo" key={key} onClick={() => handleClickSocialItem(socialItem.name) } />
+                            return <img src={socialItem.logo} alt="logo" key={key} onClick={() => handleClickSocialItem(socialItem.name) } className="social-item-footer"/>
                         })}
                     </div>
                     {!isOpen?

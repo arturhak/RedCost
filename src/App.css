@@ -38,11 +38,12 @@
 
 .header {
   width:100%;
-  /*background: red;*/
-  position: relative;
+  background: #FFFFFF;
+  position: fixed;
   display: flex;
   justify-content: center;
   box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);
+  z-index: 5;
 
 }
 .web-header {
@@ -57,6 +58,7 @@
   /*right: 0;*/
   /*left: 0;*/
   z-index: 5;
+  box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);
 
 }
 .logo {
@@ -158,9 +160,23 @@
 }
 
 .social-item:hover{
-  /*filter: blur(5px);*/
-  /*fill: rgba(24, 85, 0, 125)!important;*/
-  filter: grayscale(100%)!important;
+  filter: sepia(84%) saturate(9105%) hue-rotate(351deg) brightness(89%) contrast(63%);
+}
+.social-item-footer {
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.social-item-footer:hover{
+  filter: sepia(84%) saturate(9105%) hue-rotate(351deg) brightness(89%) contrast(63%);
+}
+.folow-item {
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.folow-item:hover{
+  filter: sepia(84%) saturate(9105%) hue-rotate(351deg) brightness(89%) contrast(63%);
 }
 
 .open {
@@ -339,6 +355,9 @@
 }
 .left-side {
   width: 100%;
+}
+.left-side {
+ z-index: 555555555555555555555555555;
 }
 .right-side {
   width: 100%;
@@ -571,7 +590,9 @@
   margin-top: 41px;
   /*background: #FFFFFF;*/
 }
-
+/*.roadmap img {*/
+/*  width: calc(100% - 2px);*/
+/*}*/
 .social-group-component {
   display: flex;
   flex-direction: row;
@@ -751,6 +772,8 @@
   scroll-behavior: smooth;
 }
 .mobile-header {
+  max-width: 770px;
+  width: 100%;
   height: 76px;
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);
@@ -758,9 +781,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  right: 0;
-  left: 0;
   z-index: 5000;
 }
 .login-burger-group {
@@ -819,4 +839,55 @@
   font-weight: 400;
   line-height: 114.5%; /* 13.74px */
   cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  .bottom-side {
+    display: block;
+  }
+  .digital-art {
+    width: auto;
+  }
+  .datetime-container {
+    margin-top: 56px
+  }
+  .web-header {
+    display: none;
+  }
+  .main-component {
+    display: block;
+    width: auto;
+    margin-top: 200px;
+  }
+  .bg-image {
+    top: 5px;
+    right: 0;
+  }
+  .footer {
+    width: 770px;
+  }
+  .security-component {
+    width: 100%;
+  }
+  .security-item {
+    width: 180px;
+    height: 233px;
+  }
+  .security-group {
+     justify-content: center;
+    width: 970px;
+    gap: 18px;
+  }
+  .security-item-title img {
+    width: 64px;
+  }
+  .roadmap img{
+    width: 1239px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .mobile-header {
+    display: none;
+  }
 }
