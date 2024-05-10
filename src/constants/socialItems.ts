@@ -16,6 +16,16 @@ import linkedin from "../assets/socialLogos/biglogos/linkedin-logo.svg";
 import reddit from "../assets/socialLogos/biglogos/reddit-logo.svg";
 import medium from "../assets/socialLogos/biglogos/medium-logo.svg";
 import instagram from "../assets/socialLogos/biglogos/instagram-logo.svg";
+import xred from "../assets/socialLogos/x-red.svg";
+import instagramred from "../assets/socialLogos/instagram-red.svg";
+import facebookred from "../assets/socialLogos/facebook-red.svg";
+import discordred from "../assets/socialLogos/discord-red.svg";
+import linkedinred from "../assets/socialLogos/linkedin-red.svg";
+import redditred from "../assets/socialLogos/reddit-red.svg";
+import youtubered from "../assets/socialLogos/youtube-red.svg";
+import telegramred from "../assets/socialLogos/telegram-red.svg";
+import mediumred from "../assets/socialLogos/medium-red.svg";
+import threadsred from "../assets/socialLogos/bi-threads-red.svg";
 
 export const socialItems = [
     {
@@ -94,4 +104,47 @@ export const socialItemsList = [
         logo: instagram
     },
 
+]
+
+export const socialItemsRed = [
+    {
+        name: "x",
+        logo: xred
+    },
+    {
+        name: "instagram",
+        logo: instagramred
+    },
+    {
+        name: "facebook",
+        logo: facebookred
+    },
+    {
+        name: "discord",
+        logo: discordred
+    },
+    {
+        name: "linkedin",
+        logo: linkedinred
+    },
+    {
+        name: "reddit",
+        logo: redditred
+    },
+    {
+        name: "youtube",
+        logo: youtubered
+    },
+    {
+        name: "telegram",
+        logo: telegramred
+    },
+    {
+        name: "medium",
+        logo: mediumred
+    },
+    {
+        name: "threads",
+        logo: threadsred
+    },
 ]

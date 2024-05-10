@@ -9,7 +9,7 @@ function MainComponent (props:any) {
             <div className="right-side">
                 <div className="title-group">
                     <div className="title-group_line-title">
-                        <div className="line"></div>
+                        <div className="line-width"></div>
                         <div className={props.title? "title": "d-none" }>{props.titleText}</div>
                     </div>
                     <div className="subtitle">{props.subtitle}</div>
