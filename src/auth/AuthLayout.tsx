@@ -72,7 +72,7 @@ function AuthLayout () {
                     </div>
                     <div>
                         {countdown && (
-                            <Countdown date={Date.now() + 600000000} renderer={renderer} />
+                            <Countdown date={countdown + 600000000} renderer={renderer} />
                         )}
                     </div>
                 </div>
@@ -97,8 +97,9 @@ function AuthLayout () {
                     <div className="line_1"></div>
                 </div>
                 <div className="security-group">
-                    {[1,2,3,4].map(()=> {
+                    {[1,2,3,4].map((index)=> {
                         return <Security
+                            key={index}
                             image={SecurytyImage}
                             subtitle="Security"
                             content="Your NFTs are stored in a digital wallet. And it’s crucial to keep this wallet secure."

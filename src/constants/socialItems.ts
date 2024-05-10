@@ -59,24 +59,6 @@ export const socialItems = [
         logo: threadsLogo
     },
 ]
-export const socialItemsFooter = [
-    {
-        name: "x",
-        logo: xLogo
-    },
-    {
-        name: "instagram",
-        logo: instagramLogo
-    },
-    {
-        name: "facebook",
-        logo: facebookLogo
-    },
-    {
-        name: "discord",
-        logo: discordLogo
-    },
-]
 
 export const socialItemsList = [
     {

@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import Logo from "../assets/logo.svg";
-import {socialItemsFooter} from "../constants/socialItems";
+import {socialItems} from "../constants/socialItems";
 import rightFill from "../assets/icons/right-fill.svg"
+import leftFill from "../assets/icons/left-fill.svg";
+import close from "../assets/icons/close.svg";
 
 
 function Footer () {
+    const [isOpen, setIsOpen] = useState(false);
 
+    const openSocialGroup = () => {
+        setIsOpen(!isOpen);
+    };
     const handleClickSocialItem = (item:String) => {
         console.log(`Click on ${item} and navigate ${item}` )
     }
@@ -43,11 +49,16 @@ function Footer () {
                     <div className="footer-bottom-left-item">Privacy Policy</div>
 
                 </div>
-                <div className="footer-bottom-right">
-                    {socialItemsFooter.map((socialItem:any,key) =>{
-                        return <img src={socialItem.logo} alt="logo" key={key} onClick={() => handleClickSocialItem(socialItem.name) } />
-                    })}
-                    <img src={rightFill} alt="rightFill" style={{cursor: "pointer"}}/>
+                <div className="footer-bottom-right-group">
+                    <div  className={!isOpen? "footer-bottom-right": "footer-bottom-right open-icons-group"}>
+                        {socialItems.map((socialItem:any,key) =>{
+                            return <img src={socialItem.logo} alt="logo" key={key} onClick={() => handleClickSocialItem(socialItem.name) } />
+                        })}
+                    </div>
+                    {!isOpen?
+                        <img src={rightFill} alt="rightFill" className="social-group-logo-img" onClick={openSocialGroup}/>:
+                        <img src={close} alt="leftFill" className="social-group-logo-img" onClick={openSocialGroup}/>
+                    }
                 </div>
 
             </div>
