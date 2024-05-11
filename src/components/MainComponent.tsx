@@ -4,7 +4,8 @@ function MainComponent (props:any) {
     return (
         <div className={props.reverse ?"main-component reverse": "main-component"}>
             <div className="left-side">
-                <img src={props.image} alt="image"/>
+                <img src={props.image} alt="image" className="left-side-image-web"/>
+                <img src={props.imageMobile} alt="image" className="left-side-image-mob"/>
             </div>
             <div className="right-side">
                 <div className="title-group">

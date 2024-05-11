@@ -43,7 +43,7 @@
   display: flex;
   justify-content: center;
   box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);
-  z-index: 5;
+  z-index: 500000;
 
 }
 .web-header {
@@ -58,7 +58,7 @@
   /*right: 0;*/
   /*left: 0;*/
   z-index: 5;
-  box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);
+  /*box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);*/
 
 }
 .logo {
@@ -213,7 +213,6 @@
   display: flex;
   flex-direction: column;
   width: 1240px;
-  padding: 0 140px;
   margin-top: 161px;
   gap: 35px;
 }
@@ -258,7 +257,7 @@
 }
 .left-button {
   display: flex;
-  min-width: 100px;
+  /*min-width: 100px;*/
   padding: 24px 44px;
   justify-content: center;
   align-items: center;
@@ -352,12 +351,10 @@
 }
 .reverse {
   flex-direction: row-reverse;
+  gap: 82px
 }
 .left-side {
   width: 100%;
-}
-.left-side {
- z-index: 555555555555555555555555555;
 }
 .right-side {
   width: 100%;
@@ -438,6 +435,23 @@
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 17.175px */
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.security-component-button {
+  display: flex;
+  width: 130px;
+  padding: 24px 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  color: #FFF;
   font-family: Montserrat-Regular;
   font-size: 15px;
   font-style: normal;
@@ -556,7 +570,14 @@
   gap: 48px;
   /*background: #FFFFFF;*/
 }
-
+.social-big-logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 160px;
+  gap: 48px;
+  /*background: #FFFFFF;*/
+}
 .security-component-header {
   display: flex;
   flex-direction: row;
@@ -717,9 +738,9 @@
 :where(.css-dev-only-do-not-override-1okl62o).ant-drawer .ant-drawer-header {
   display: none;
 }
-:where(.css-dev-only-do-not-override-1okl62o).ant-drawer .ant-drawer-mask {
-  top: 95px;
-}
+/*:where(.css-dev-only-do-not-override-1okl62o).ant-drawer .ant-drawer-mask {*/
+/*  top: 95px;*/
+/*}*/
 .drower-content-navbar {
   margin-top: 40px;
   display: flex;
@@ -728,6 +749,7 @@
   gap: 24px;
   border-bottom: 1px solid #DFDFDF;;
   height: calc(100% - 95px);
+  overflow: scroll;
 }
 .drower-content-profile {
   align-items: flex-start;
@@ -776,7 +798,7 @@
   width: 100%;
   height: 76px;
   background: #FFF;
-  box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);
+  /*box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);*/
   padding: 0 22px;
   display: flex;
   align-items: center;
@@ -881,13 +903,195 @@
   .security-item-title img {
     width: 64px;
   }
-  .roadmap img{
-    width: 1239px;
+  .roadmap-web{
+    width: 970px;
   }
 }
 
 @media screen and (min-width: 1300px) {
   .mobile-header {
     display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .bg-image-web {
+    display: none;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .bg-image-mobile {
+    display: none;
+  }
+  .left-side-image-mob {
+    display: none;
+  }
+  .roadmap-mob {
+      display: none;
+  }
+}
+@media screen and (max-height: 480px) {
+  .drower-content-navbar {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    border-bottom: 1px solid #DFDFDF;;
+    height: calc(100% - 95px);
+    overflow: scroll;
+  }
+  .drower-content-navbar-nft {
+    margin-bottom: 26px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header-side {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 114.5%;
+  }
+  .bottom-side-left {
+    position: relative;
+  }
+  .bottom-side-left-header {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .left-button {
+    padding: 20px 42px;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114.5%; /* 16.03px */
+  }
+  .right-button {
+    padding: 20px 42px;
+    gap: 10px;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114.5%;
+  }
+  .bottom-side-left-header_buttons {
+    margin-top: 180px;
+    position: absolute;
+    gap: 10px;
+  }
+  .datetime-container {
+    margin-top: 28px
+  }
+  .digital-art {
+    gap: 32px
+  }
+  .datetime-container {
+    display: flex;
+    padding-bottom: 19px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .datetime-content {
+    width: 80px;
+    height: 80px;
+  }
+  .datetime-number {
+    font-size: 44px;
+  }
+  .datetime-text {
+    font-size: 8px;
+  }
+  .digital-art {
+    margin-top: 410px;
+  }
+  .left-side-image-web {
+    display: none;
+  }
+  .left-side {
+    text-align: center;
+  }
+  .title {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114.5%; /* 16.03px */
+    text-transform: uppercase;
+  }
+  .subtitle {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .content {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 350px;
+
+  }
+  .main-component-button {
+    margin-top: 35px;
+    padding: 20px 42px;
+  }
+  .right-side {
+    align-items: center;
+  }
+  .title-group {
+    gap: 2px;
+    margin-left: -210px;
+  }
+  .input-group {
+    align-items: center;
+    width: auto;
+    margin-bottom: -24px;
+  }
+  .main-component-button {
+    width: 77%;
+  }
+  .security-component-title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114.5%; /* 18.32px */
+    text-transform: uppercase;
+  }
+  .folow-item {
+    width: 70px;
+    height: 30px;
+  }
+  .social-group-component {
+    gap: 17px
+  }
+  .social-big-logo-group {
+    gap: 33px
+  }
+  .security-component-header {
+    gap: 8px
+  }
+  .social-big-logo-group {
+    margin-top: 73px;
+  }
+  .main-component {
+    margin-top: 120px;
+  }
+  .roadmap-web {
+    display: none;
+  }
+  .roadmap {
+    margin-top: 72px
+  }
+  .security-component {
+    margin-top: 73px;
+    gap: 25px
+  }
+  .security-component-button {
+    margin-top: 30px;
   }
 }
