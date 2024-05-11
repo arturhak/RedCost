@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Logo from "../assets/logo.svg";
 import {socialItems} from "../constants/socialItems";
 import rightFill from "../assets/icons/right-fill.svg"
-import leftFill from "../assets/icons/left-fill.svg";
+import mobileLogo from "../assets/mobile-logo.svg"
 import close from "../assets/icons/close.svg";
 
 
@@ -21,7 +21,8 @@ function Footer () {
             <div className="footer-top">
                 <div className="footer-top-left">
                     <div className="logo">
-                        <img src={Logo} alt="logo"/>
+                        <img src={Logo} alt="logo" className="footer-logo-web"/>
+                        <img src={mobileLogo} alt="logo" className="footer-logo-mob"/>
                     </div>
                     <div className="footer-top-left-text">
                         new era for making money on NFT assets
@@ -30,15 +31,12 @@ function Footer () {
                 <div className="footer-top-right">
                     <div className="nav-footer">
                         <div className="nav-footer-item">About</div>
-                        <div className="nav-footer-item">Discover</div>
+                        <div className="nav-footer-item fixedposition">Discover</div>
                         <div className="nav-footer-item">AirDrop</div>
-                    </div>
-                    <div className="nav-footer">
                         <div className="nav-footer-item">For investors</div>
                         <div className="nav-footer-item">Contact</div>
                         <div className="nav-footer-item">Market NFT</div>
                     </div>
-
                 </div>
             </div>
 

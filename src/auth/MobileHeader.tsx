@@ -47,7 +47,7 @@ function MobileHeader(props: any) {
 
     return (
         <div className="mobile-header" >
-            <div onClick={handleHome} style={{cursor: "pointer"}}>
+            <div onClick={handleHome} style={{cursor: "pointer"}} className="logo">
                 <img src={mobileLogo} alt="mobileLogo" />
             </div>
             <div className="login-burger-group">
