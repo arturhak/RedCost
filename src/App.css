@@ -69,25 +69,25 @@
 }
 @keyframes wiggle {
   0%, 7% {
-    transform: rotateZ(0);
+    transform: rotateY(0);
   }
   15% {
-    transform: rotateZ(-12deg);
+    transform: rotateY(-12deg);
   }
   20% {
-    transform: rotateZ(10deg);
+    transform: rotateY(10deg);
   }
   25% {
-    transform: rotateZ(-10deg);
+    transform: rotateY(-10deg);
   }
   30% {
-    transform: rotateZ(6deg);
+    transform: rotateY(6deg);
   }
   35% {
-    transform: rotateZ(-4deg);
+    transform: rotateY(-4deg);
   }
   40%, 100% {
-    transform: rotateZ(0);
+    transform: rotateY(5deg);
   }
 }
 .web-header-group-items {
@@ -459,6 +459,9 @@
   line-height: 114.5%; /* 17.175px */
   cursor: pointer;
   transition: 0.4s ease;
+}
+.security-component-button:hover {
+  background: linear-gradient(30deg, #DA291C 18.3%, #B4001E 39.43%, #930210 60.57%, #75030B 81.7%);
 }
 .main-component-button_width {
   width: 120px;
