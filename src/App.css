@@ -1192,4 +1192,7 @@
     width: auto;
     margin-top: 70px;
   }
+  .mobile-header {
+    width: 370px;
+  }
 }
