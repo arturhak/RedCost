@@ -723,15 +723,18 @@
   bottom: 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 29%;
-  padding: 0 200px;
+  justify-content: flex-start;
+  /* width: 29%; */
+  /* padding: 0 200px; */
   gap: 24px;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-behavior: smooth;
+  /*background: green;*/
+  width: 100%;
 }
+
 .footer-bottom-right {
   display: flex;
   align-items: center;
