@@ -108,7 +108,12 @@
   overflow: hidden;
 }
 .navbar-item {
-  color: #949494;
+  background: linear-gradient(to right, #949494 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 800% 100%;
+  background-position: left center;
+  transition: background 0.3s linear;
   font-family: Montserrat-Regular;
   font-size: 16px;
   font-style: normal;
@@ -118,9 +123,7 @@
   white-space: nowrap;
 }
 .navbar-item:hover {
-  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-position: 100% center;
 }
 .login {
   display: flex;
@@ -128,22 +131,22 @@
   gap: 23px
 }
 .navbar-item-market_nft {
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 50%;
+  background-position: left center;
+  transition: background 0.3s linear;
   font-family: Montserrat-Bold;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   cursor: pointer;
   white-space: nowrap;
-  transition: opacity 0.3s ease;
 }
 .navbar-item-market_nft:hover {
-  background: linear-gradient(30deg, #B21815 18.3%, #B21815 39.43%, #B21815 60.57%, #B21815 81.7%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-position: 100% center;
 }
 .social-group-logo {
   display: flex;
@@ -263,7 +266,6 @@
   align-items: center;
   gap: 10px;
   border-radius: 500px;
-  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
   color: #FFF;
   font-family: Montserrat-Regular;
   font-size: 15px;
@@ -271,12 +273,18 @@
   font-weight: 400;
   line-height: 114.5%; /* 17.175px */
   cursor: pointer;
-  transition: 0.4s ease;
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  /*-webkit-text-fill-color: transparent;*/
+  background-size: 400% 100%;
+  background-position: 75% center;
+  transition: background 0.3s linear;
 }
 .left-button:hover {
-  background: linear-gradient(30deg, #DA291C 18.3%, #B4001E 39.43%, #930210 60.57%, #75030B 81.7%);
-
+  background-position: 100% center;
 }
+
+
+
 .right-button {
   display: flex;
   min-width: 100px;
@@ -355,6 +363,7 @@
 }
 .left-side {
   width: 100%;
+  z-index: 555;
 }
 .right-side {
   width: 100%;
@@ -431,7 +440,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 500px;
-  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
@@ -441,8 +450,15 @@
   font-weight: 400;
   line-height: 114.5%; /* 17.175px */
   cursor: pointer;
-  transition: 0.4s ease;
+
+
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  /*-webkit-text-fill-color: transparent;*/
+  background-size: 400% 100%;
+  background-position: 75% center;
+  transition: background 0.3s linear;
 }
+
 .security-component-button {
   display: flex;
   width: 130px;
@@ -458,16 +474,21 @@
   font-weight: 400;
   line-height: 114.5%; /* 17.175px */
   cursor: pointer;
-  transition: 0.4s ease;
+
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  /*-webkit-text-fill-color: transparent;*/
+  background-size: 400% 100%;
+  background-position: 75% center;
+  transition: background 0.3s linear;
 }
 .security-component-button:hover {
-  background: linear-gradient(30deg, #DA291C 18.3%, #B4001E 39.43%, #930210 60.57%, #75030B 81.7%);
+  background-position: 100% center;
 }
 .main-component-button_width {
   width: 120px;
 }
 .main-component-button:hover {
-  background: linear-gradient(30deg, #DA291C 18.3%, #B4001E 39.43%, #930210 60.57%, #75030B 81.7%);
+  background-position: 100% center;
 }
 
 .input-group {
