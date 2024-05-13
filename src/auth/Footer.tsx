@@ -41,7 +41,7 @@ function Footer () {
             </div>
 
             <div className="footer-bottom">
-                <div className="footer-bottom-left">
+                <div className="footer-bottom-left footer-bottom-left-mobile">
                     <div className="footer-bottom-left-item">© 2024</div>
                     <div className="footer-bottom-left-item">WhitePaper</div>
                     <div className="footer-bottom-left-item">Privacy Policy</div>
@@ -57,6 +57,21 @@ function Footer () {
                         <img src={rightFill} alt="rightFill" className="social-group-logo-img" onClick={openSocialGroup}/>:
                         <img src={close} alt="leftFill" className="social-group-logo-img" onClick={openSocialGroup}/>
                     }
+                </div>
+
+                {/*MObile social Items Scroll*/}
+
+                <div className="footer-bottom-right-group-mob">
+                    {socialItems.map((socialItem:any,key) =>{
+                        return <img
+                            style={{width:"29px",height:"29px"}}
+                            src={socialItem.logo}
+                            alt="logo"
+                            className="social-item"
+                            key={key}
+                            onClick={() => handleClickSocialItem(socialItem.name)}
+                        />
+                    })}
                 </div>
 
             </div>
