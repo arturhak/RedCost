@@ -40,15 +40,13 @@ function WebHeader() {
                     }
                     <div className={!isOpen? "social-group-logo": "social-group-logo open"}>
                         {socialItems.map((socialItem:any,key) =>{
-                            return <img
-                                src={socialItem.logo}
-                                alt="logo"
+                            return <div
                                 className="social-item"
                                 key={key}
                                 onClick={() => handleClickSocialItem(socialItem.name)}
-                                onMouseOver={() => setOnHover(true)}
-                                onMouseLeave={() => setOnHover(false)}
-                            />
+                            >
+                                {socialItem.logosvg}
+                            </div>
                         })}
                     </div>
                     <div className="login-button">Login</div>

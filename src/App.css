@@ -157,13 +157,13 @@
   overflow: hidden;
 }
 
-.social-item {
+.social-item svg {
   cursor: pointer;
-  transition: fill 0.3s ease;
+  transition: fill 0.4s ease;
 }
 
-.social-item:hover{
-  filter: sepia(84%) saturate(9105%) hue-rotate(351deg) brightness(89%) contrast(63%);
+.social-item svg:hover{
+  fill: #B4001E;
 }
 .social-item-footer {
   cursor: pointer;
