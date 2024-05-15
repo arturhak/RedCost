@@ -2,26 +2,8 @@ import React, {useEffect} from "react";
 
 function MainComponent (props:any) {
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-
-    },[])
-
-    const handleScroll = () => {
-        let elLeft:any = document.querySelector(".left-side");
-        let elRight:any = document.querySelector(".right-side");
-        let position = elLeft.getBoundingClientRect();
-
-        if (position.top < window.innerHeight && position.bottom <= window.innerHeight) {
-            elLeft.classList.add("anim-from-left")
-            elRight.classList.add("anim-from-right")
-        }else {
-            elLeft.classList.remove("anim-from-left")
-            elRight.classList.remove("anim-from-right")
-        }
-    }
     return (
-        <div className={props.reverse ?"main-component reverse": "main-component"} data-aos="fade-up">
+        <div className={props.reverse ?"main-component reverse": "main-component"}>
             <div className="left-side ">
                 <img src={props.image} alt="image" className="left-side-image-web"/>
                 <img src={props.imageMobile} alt="image" className="left-side-image-mob"/>
