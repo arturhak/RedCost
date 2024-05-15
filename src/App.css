@@ -684,18 +684,22 @@
 }
 
 .nav-footer-item {
-  color: #949494;
   font-family: Montserrat-Regular;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   cursor: pointer;
+  background: linear-gradient(to right, #949494 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 800% 100%;
+  background-position: left center;
+  transition: background 0.3s linear;
+  white-space: nowrap;
 }
 .nav-footer-item:hover {
-  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-position: 100% center;
 }
 
 .footer-bottom {
