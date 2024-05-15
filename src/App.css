@@ -348,8 +348,15 @@
   margin-top: 250px;
   align-items: center;
   justify-content: space-between;
-  gap: 59px
+  gap: 59px;
+  /*opacity: 0;*/
+  /*transition: all 0.5s*/
 }
+/*.visible {*/
+/*  opacity: 1;*/
+/*  transition: all 0.5s*/
+
+/*}*/
 .reverse {
   flex-direction: row-reverse;
   gap: 82px
@@ -357,12 +364,16 @@
 .left-side {
   width: 100%;
   z-index: 555;
+  opacity: 0;
+  transition: all 0.5s
 }
 .right-side {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  opacity: 0;
+  transition: all 0.5s
 
 }
 .title-group {
@@ -1242,5 +1253,34 @@
   }
   .footer-bottom-right-group {
     display: none;
+  }
+}
+
+.anim-from-left {
+  animation: fromleft 2s ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes fromleft {
+  0%{
+    transform: translate(-1024px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+.anim-from-right {
+  animation: fromright 2s ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes  fromright {
+  0%{
+    transform: translate(1024px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
   }
 }
