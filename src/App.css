@@ -905,6 +905,11 @@
   line-height: 114.5%; /* 13.74px */
   cursor: pointer;
 }
+.mobile-login-button:hover {
+  border: 1px solid #B21815;
+  background: #B21815;
+  color: #FFF;
+}
 
 @media screen and (max-width: 1300px) {
   .bottom-side {
