@@ -525,6 +525,7 @@
 .security-item {
   width: 291px;
   height: 266px;
+  position: relative;
   border-radius: 25px;
   filter: drop-shadow(0px 4px 2.4px rgba(0, 0, 0, 0.13));
   background: url("./assets/bg-mask-group.png") lightgray 50% / cover no-repeat;
@@ -534,7 +535,17 @@
   gap: 32px;
   justify-content: center;
   cursor: pointer;
+  transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+  transition: .2s;
 }
+.new-class {
+  perspective: 4800px; 
+  rotateX: 20deg;
+  rotateY: 15deg 
+}
+/* .security-item:hover{
+  transform:  rotateX(20deg) rotateY(15deg)
+} */
 
 .security-item-content {
   width: 100%;
