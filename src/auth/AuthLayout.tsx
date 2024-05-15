@@ -18,6 +18,9 @@ import bgImageMobile from "../assets/bg-image-mobile.svg";
 function AuthLayout () {
     const [countdown, setCountdown] = useState<any>(Date.now());
 
+    const handleClickSocialItem = (item:String) => {
+        console.log(`Click on ${item} and navigate ${item}` )
+    }
     const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
         if (completed) {
             // Render a complete state
@@ -145,7 +148,13 @@ function AuthLayout () {
                 </div>
                 <div className="social-group-component">
                     {socialItemsList.map((item,key)=> {
-                        return <img src={item.logo} alt="logo" key={key} className="folow-item"/>
+                        return <div
+                            className="folow-item"
+                            key={key}
+                            onClick={() => handleClickSocialItem(item.name)}
+                        >
+                            {item.logosvg}
+                        </div>
                     })}
                 </div>
             </div>

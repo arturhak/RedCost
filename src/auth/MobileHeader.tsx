@@ -90,14 +90,13 @@ function MobileHeader(props: any) {
 
                 <div className="drower-content-navbar-bottom">
                     {socialItems.map((socialItem:any,key) =>{
-                        return <img
-                            style={{width:"29px",height:"29px"}}
-                            src={socialItem.logo}
-                            alt="logo"
+                        return <div
                             className="social-item"
                             key={key}
                             onClick={() => handleClickSocialItem(socialItem.name)}
-                        />
+                        >
+                            {socialItem.logosvg}
+                        </div>
                     })}
                 </div>
             </Drawer>

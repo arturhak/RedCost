@@ -50,7 +50,13 @@ function Footer () {
                 <div className="footer-bottom-right-group">
                     <div  className={!isOpen? "footer-bottom-right": "footer-bottom-right open-icons-group"}>
                         {socialItems.map((socialItem:any,key) =>{
-                            return <img src={socialItem.logo} alt="logo" key={key} onClick={() => handleClickSocialItem(socialItem.name) } className="social-item-footer"/>
+                            return <div
+                                className="social-item"
+                                key={key}
+                                onClick={() => handleClickSocialItem(socialItem.name)}
+                            >
+                                {socialItem.logosvg}
+                            </div>
                         })}
                     </div>
                     {!isOpen?
@@ -63,14 +69,13 @@ function Footer () {
 
                 <div className="footer-bottom-right-group-mob">
                     {socialItems.map((socialItem:any,key) =>{
-                        return <img
-                            style={{width:"29px",height:"29px"}}
-                            src={socialItem.logo}
-                            alt="logo"
+                        return <div
                             className="social-item"
                             key={key}
                             onClick={() => handleClickSocialItem(socialItem.name)}
-                        />
+                        >
+                            {socialItem.logosvg}
+                        </div>
                     })}
                 </div>
 
