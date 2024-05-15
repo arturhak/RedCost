@@ -167,11 +167,12 @@
 }
 .folow-item svg {
   cursor: pointer;
-  transition: fill 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .folow-item svg:hover{
   fill: #B4001E;
+  transform: scale(1.2);
 }
 
 .open {
