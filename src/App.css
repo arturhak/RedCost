@@ -159,12 +159,30 @@
 
 .social-item svg {
   cursor: pointer;
-  transition: fill 0.4s ease;
+  transition: fill 0.4s ease; 
 }
 
-.social-item svg:hover{
-  fill: #B4001E;
+.social-item:hover stop:nth-child(4) {
+  stop-color:  #75030B; /* Change this to the desired color */
 }
+
+.social-item:hover stop:nth-child(3) {
+  offset: 33%;
+  stop-color: #930210; /* Change this to the desired color */
+}
+
+.social-item:hover stop:nth-child(2) {
+  offset: 67%;
+  stop-color: #B4001E; /* Change this to the desired color */
+}
+
+.social-item:hover stop:nth-child(1) {
+  offset: 100%;
+  stop-color: #DA291C; /* Change this to the desired color */
+}
+
+
+
 .folow-item svg {
   cursor: pointer;
   transition: 0.3s ease;
