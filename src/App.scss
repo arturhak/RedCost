@@ -357,7 +357,11 @@
   opacity: 1;
   animation: frombottom 1s ease-in-out;
   transition: all 2s ease;
-
+}
+.visible-roadmap {
+  opacity: 1;
+  animation: opacityRoadmap 3s ease-in-out;
+  transition: all 2s ease;
 }
 .reverse {
   flex-direction: row-reverse;
@@ -1355,6 +1359,14 @@
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes opacityRoadmap {
+  0%{
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }

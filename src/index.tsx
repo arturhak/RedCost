@@ -26,9 +26,13 @@ const handleScroll = () => {
     let elLeft1:any = document.querySelector(".lastMainComponent1 .left-side");
     let elRight1:any = document.querySelector(".lastMainComponent1 .right-side");
 
+    let el2:any = document.querySelector(".roadmap");
+
+
     // el.forEach((el:any)=>{
         let position = el.getBoundingClientRect();
         let position1 = el1.getBoundingClientRect();
+        let position2 = el2.getBoundingClientRect();
 
         if (position.top < window.innerHeight && position.bottom > 0) {    //position.top + 100
             elLeft.classList.add("anim-from-left")
@@ -41,7 +45,7 @@ const handleScroll = () => {
             // el.classList.remove("visible")
         }
 
-    if (position1.top < window.innerHeight && position1.bottom > 0) {    //position.top + 200
+    if (position1.top + 100 < window.innerHeight && position1.bottom > 0) {    //position.top + 100
         elLeft1.classList.add("anim-from-left")
         elRight1.classList.add("anim-from-right")
         // el1.classList.add("visible")
@@ -50,6 +54,13 @@ const handleScroll = () => {
         // elLeft1.classList.remove("anim-from-left")
         // elRight1.classList.remove("anim-from-right")
         // el1.classList.remove("visible")
+    }
+
+    if (position2.top + 200 < window.innerHeight && position2.bottom > 0) {    //position.top + 200
+        el2.classList.add("visible-roadmap")
+    }
+    else {
+        // el2.classList.remove("visible-roadmap")
     }
     // })
 
