@@ -670,6 +670,28 @@
   flex-wrap: wrap;
 }
 
+.folow-item:hover{  
+    stop:nth-child(4) {
+      stop-color:  #75030B; /* Change this to the desired color */
+    }
+    
+    stop:nth-child(3) {
+      offset: 33%;
+      stop-color: #930210; /* Change this to the desired color */
+    }
+    
+    stop:nth-child(2) {
+      offset: 67%;
+      stop-color: #B4001E; /* Change this to the desired color */
+    }
+    
+    stop:nth-child(1) {
+      offset: 100%;
+      stop-color: #DA291C; /* Change this to the desired color */
+    }
+}
+
+
 .footer {
   display: flex;
   flex-direction: column;
