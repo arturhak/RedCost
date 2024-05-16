@@ -31,25 +31,25 @@ const handleScroll = () => {
         let position1 = el1.getBoundingClientRect();
 
         if (position.top < window.innerHeight && position.bottom > 0) {    //position.top + 100
-            // elLeft.classList.add("anim-from-left")
-            // elRight.classList.add("anim-from-right")
-            el.classList.add("visible")
+            elLeft.classList.add("anim-from-left")
+            elRight.classList.add("anim-from-right")
+            // el.classList.add("visible")
         }
         else {
             // elLeft.classList.remove("anim-from-left")
             // elRight.classList.remove("anim-from-right")
-            el.classList.remove("visible")
+            // el.classList.remove("visible")
         }
 
     if (position1.top < window.innerHeight && position1.bottom > 0) {    //position.top + 200
-        // elLeft1.classList.add("anim-from-left")
-        // elRight1.classList.add("anim-from-right")
-        el1.classList.add("visible")
+        elLeft1.classList.add("anim-from-left")
+        elRight1.classList.add("anim-from-right")
+        // el1.classList.add("visible")
     }
     else {
         // elLeft1.classList.remove("anim-from-left")
         // elRight1.classList.remove("anim-from-right")
-        el1.classList.remove("visible")
+        // el1.classList.remove("visible")
     }
     // })
 
