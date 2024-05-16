@@ -366,7 +366,7 @@
 .left-side {
   width: 100%;
   z-index: 555;
-  /*opacity: 0;*/
+  //opacity: 0;
   transition: all 2s
 }
 .right-side {
@@ -374,9 +374,15 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /*opacity: 0;*/
+  //opacity: 0;
   transition: all 2s
-
+}
+.lastMainComponent1 {
+.right-side {
+  opacity: 1;
+}.left-side {
+  opacity: 1;
+}
 }
 .title-group {
   display: flex;
@@ -1339,6 +1345,16 @@
   }
 }
 #firstMainComponent {
-  animation: fromTop 2s ease-in-out;
+  animation: fromTopEasy 2s ease-in-out;
   animation-fill-mode: backwards;
+}
+@keyframes fromTopEasy {
+  0%{
+    transform: translateY(950px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

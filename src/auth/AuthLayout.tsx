@@ -128,21 +128,21 @@ function AuthLayout () {
                 <img src={Roadmap} alt="roadmap" className="roadmap-web"/>
                 <img src={RoadmapMobile} alt="roadmap" className="roadmap-mob"/>
             </div>
+            <div className="lastMainComponent">
+                <MainComponent
+                    image={RedCost1}
+                    imageMobile={RedCost1Mob}
+                    title={true}
+                    titleText="OUR"
+                    subtitle="AirDrop"
+                    content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                    reverse={true}
+                    buttonSize={false}
+                    isInput={true}
+                    buttonValue="Start now"
 
-            <MainComponent
-                image={RedCost1}
-                imageMobile={RedCost1Mob}
-                title={true}
-                titleText="OUR"
-                subtitle="AirDrop"
-                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                reverse={true}
-                buttonSize={false}
-                isInput={true}
-                buttonValue="Start now"
-
-            />
-
+                />
+            </div>
             <div className="social-big-logo-group">
                 <div className="security-component-header">
                     <div className="line_1"></div>
@@ -161,19 +161,20 @@ function AuthLayout () {
                     })}
                 </div>
             </div>
-            <MainComponent
-                image={RedCost2}
-                imageMobile={RedCost2Mob}
-                title={true}
-                titleText="important"
-                subtitle="For Investors"
-                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                buttonSize={false}
-                isInput={true}
-                buttonValue="Learn more"
+            <div className="lastMainComponent1">
+                <MainComponent
+                    image={RedCost2}
+                    imageMobile={RedCost2Mob}
+                    title={true}
+                    titleText="important"
+                    subtitle="For Investors"
+                    content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                    buttonSize={false}
+                    isInput={true}
+                    buttonValue="Learn more"
 
-            />
-
+                />
+            </div>
 
         </div>
     )

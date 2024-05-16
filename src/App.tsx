@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import AuthLayout from "./auth/AuthLayout";
 import Header from "./auth/Header";
 import Footer from "./auth/Footer";
