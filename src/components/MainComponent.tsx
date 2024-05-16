@@ -1,13 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 function MainComponent (props:any) {
+
     return (
         <div className={props.reverse ?"main-component reverse": "main-component"}>
-            <div className="left-side">
+            <div className="left-side ">
                 <img src={props.image} alt="image" className="left-side-image-web"/>
                 <img src={props.imageMobile} alt="image" className="left-side-image-mob"/>
             </div>
-            <div className="right-side">
+            <div className="right-side ">
                 <div className="title-group">
                     <div className="title-group_line-title">
                         <div className="line-width"></div>
