@@ -162,10 +162,27 @@
   transition: fill 0.4s ease;
 }
 
-.social-item svg:hover{
-  stop-color: #75030B;
-  fill: #930210;
+.social-item:hover stop:nth-child(4) {
+  stop-color:  #75030B; /* Change this to the desired color */
 }
+
+.social-item:hover stop:nth-child(3) {
+  offset: 33%;
+  stop-color: #930210; /* Change this to the desired color */
+}
+
+.social-item:hover stop:nth-child(2) {
+  offset: 67%;
+  stop-color: #B4001E; /* Change this to the desired color */
+}
+
+.social-item:hover stop:nth-child(1) {
+  offset: 100%;
+  stop-color: #DA291C; /* Change this to the desired color */
+}
+
+
+
 .folow-item svg {
   cursor: pointer;
   transition: 0.3s ease;
@@ -555,6 +572,7 @@
 .security-item {
   width: 291px;
   height: 266px;
+  position: relative;
   border-radius: 25px;
   filter: drop-shadow(0px 4px 2.4px rgba(0, 0, 0, 0.13));
   background: url("./assets/bg-mask-group.png") lightgray 50% / cover no-repeat;
@@ -564,7 +582,17 @@
   gap: 32px;
   justify-content: center;
   cursor: pointer;
+  transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+  transition: .2s;
 }
+.new-class {
+  perspective: 4800px;
+  rotateX: 20deg;
+  rotateY: 15deg
+}
+/* .security-item:hover{
+  transform:  rotateX(20deg) rotateY(15deg)
+} */
 
 .security-item-content {
   width: 100%;
@@ -670,6 +698,28 @@
   gap: 50px;
   flex-wrap: wrap;
 }
+
+.folow-item:hover{
+    stop:nth-child(4) {
+      stop-color:  #75030B; /* Change this to the desired color */
+    }
+
+    stop:nth-child(3) {
+      offset: 33%;
+      stop-color: #930210; /* Change this to the desired color */
+    }
+
+    stop:nth-child(2) {
+      offset: 67%;
+      stop-color: #B4001E; /* Change this to the desired color */
+    }
+
+    stop:nth-child(1) {
+      offset: 100%;
+      stop-color: #DA291C; /* Change this to the desired color */
+    }
+}
+
 
 .footer {
   display: flex;
