@@ -381,11 +381,18 @@
   //opacity: 0;
   transition: all 2s
 }
+.lastMainComponent {
+.right-side {
+  opacity: 0;
+}.left-side {
+  opacity: 0;
+}
+}
 .lastMainComponent1 {
 .right-side {
-  opacity: 1;
+  opacity: 0;
 }.left-side {
-  opacity: 1;
+  opacity: 0;
 }
 }
 .title-group {
