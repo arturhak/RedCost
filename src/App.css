@@ -351,12 +351,14 @@
   justify-content: space-between;
   gap: 59px;
   /*opacity: 0;*/
-  /*transition: all 2s*/
+  transition: all 2s ease;
 }
 .visible {
   opacity: 1;
   animation: frombottom 1s ease-in-out;
-  }
+  transition: all 2s ease;
+
+}
 .reverse {
   flex-direction: row-reverse;
   gap: 82px
@@ -1285,7 +1287,7 @@
   }
 }
 
-@keyframes  frombottom {
+@keyframes frombottom {
   0%{
     transform: translateY(200px);
     opacity: 0;
@@ -1294,4 +1296,49 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+.anim-from-top {
+  animation: fromTop 2s ease-in-out;
+  animation-fill-mode: backwards;
+}
+@keyframes fromTop {
+  0%{
+    transform: translateY(-750px);
+    opacity: 0;
+  }20% {
+    opacity: .1;
+  }30% {
+    opacity: .2;
+  }40% {
+    opacity: .3;
+  }50% {
+    opacity: .4;
+  }60% {
+    opacity: .5;
+  }70% {
+    opacity: .6;
+  }80% {
+    opacity: .7;
+  }90% {
+    opacity: .8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromBottomQuiq {
+  0%{
+    transform: translateY(350px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#firstMainComponent {
+  animation: fromTop 2s ease-in-out;
+  animation-fill-mode: backwards;
 }
