@@ -9,6 +9,25 @@ import close from "../assets/icons/close.svg";
 function Footer () {
     const [isOpen, setIsOpen] = useState(false);
 
+    const handleMouseMove = (e:any) => {
+        const boundingRect = e.currentTarget.getBoundingClientRect();
+        const mouseX = e.clientX - boundingRect.left;
+        const mouseY = e.clientY - boundingRect.top;
+        const centerX = boundingRect.width / 8;
+        const centerY = boundingRect.height / 2;
+        const maxRotateX = 15; // Maximum rotation angle around X-axis
+        const maxRotateY = 1; // Maximum rotation angle around Y-axis
+        const perspective = 4000; // Perspective value
+
+        const rotateX = ((mouseY - centerY) / centerY) * maxRotateX;
+        const rotateY = ((mouseX - centerX) / centerX) * maxRotateY;
+
+        e.currentTarget.style.transform = `perspective(${perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    };
+
+    const handleMouseLeave = (e:any) => {
+        e.currentTarget.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg)';
+    };
     const openSocialGroup = () => {
         setIsOpen(!isOpen);
     };
@@ -21,7 +40,10 @@ function Footer () {
             <div className="footer-top">
                 <div className="footer-top-left">
                     <div className="logo">
-                        <img src={Logo} alt="logo" className="footer-logo-web"/>
+                        <img src={Logo} alt="logo" className="footer-logo-web"
+                             onMouseMove={handleMouseMove}
+                             onMouseLeave={handleMouseLeave}
+                        />
                         <img src={mobileLogo} alt="logo" className="footer-logo-mob"/>
                     </div>
                     <div className="footer-top-left-text">
