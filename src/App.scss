@@ -350,11 +350,7 @@
   animation: frombottom 1s ease-in-out;
   transition: all 2s ease;
 }
-.visible-roadmap {
-  opacity: 1;
-  animation: opacityRoadmap 3s ease-in-out;
-  transition: all 2s ease;
-}
+
 .reverse {
   flex-direction: row-reverse;
   gap: 82px
@@ -653,15 +649,71 @@
 }
 
 .roadmap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  width: 1240px;
   margin-top: 41px;
-  /*background: #FFFFFF;*/
+  background: darkseagreen;
 }
-/*.roadmap img {*/
-/*  width: calc(100% - 2px);*/
-/*}*/
+.roadmapWeb {
+  position: relative;
+  padding-top: 100px;
+  display: flex;
+}
+.r_1 {
+  background: grey;
+  text-align: center;
+}
+
+#first {
+  background: red;
+  width: 587px;
+  height: 274px;
+  border-radius: 25px;
+  text-align: center;
+}
+#second {
+  width: 271px;
+  height: 99px;
+  background: red;
+  position: absolute;
+  left: 52%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+}
+#third {
+  width: 271px;
+  height: 99px;
+  background: red;
+  position: absolute;
+  left: 52%;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+}
+#fourth {
+  width: 291px;
+  height: 142px;
+  background: blue;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+}
+#fifth {
+  width: 291px;
+  height: 99px;
+  background: green;
+  position: absolute;
+  right: 0;
+  top: 57px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+}
+
+
 .social-group-component {
   display: flex;
   flex-direction: row;
@@ -1001,9 +1053,7 @@
   .security-item-title img {
     width: 64px;
   }
-  .roadmap-web{
-    width: 970px;
-  }
+
 }
 
 @media screen and (min-width: 1300px) {
@@ -1023,9 +1073,7 @@
   .left-side-image-mob {
     display: none;
   }
-  .roadmap-mob {
-      display: none;
-  }
+
   .footer-logo-mob{
     display: none;
   }
@@ -1189,12 +1237,6 @@
   .right-button:hover {
     background: #FFF;
     color: #B21815;
-  }
-  .roadmap-web {
-    display: none;
-  }
-  .roadmap {
-    margin-top: 72px
   }
   .security-component {
     margin-top: 73px;
@@ -1396,14 +1438,7 @@
     opacity: 1;
   }
 }
-@keyframes opacityRoadmap {
-  0%{
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 
 /* Countdown */
 .countdown {

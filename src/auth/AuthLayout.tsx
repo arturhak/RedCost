@@ -9,12 +9,11 @@ import RedCost2 from "../assets/images/red-cost-2.svg";
 import RedCost2Mob from "../assets/images/red-cost-2-nobile.png";
 import SecurytyImage from "../assets/images/security-logo.svg"
 import Security from "../components/Security";
-import Roadmap from "../assets/roadmap.png";
-import RoadmapMobile from "../assets/roadmap-mobile.png";
 import {socialItemsList} from "../constants/socialItems";
 import bgImage from "../assets/bg-image.svg";
 import bgImageMobile from "../assets/bg-image-mobile.svg";
 import Countdown from "../components/Countdown";
+import RoadmapWeb from "../components/RoadmapWeb";
 
 function AuthLayout () {
     const [countdown, setCountdown] = useState<any>(Date.now());
@@ -127,8 +126,9 @@ function AuthLayout () {
             </div>
 
             <div className="roadmap">
-                <img src={Roadmap} alt="roadmap" className="roadmap-web"/>
-                <img src={RoadmapMobile} alt="roadmap" className="roadmap-mob"/>
+
+                <RoadmapWeb />
+
             </div>
             <div className="lastMainComponent">
                 <MainComponent
