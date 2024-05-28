@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Security (props:any) {
-    const [isHovered, setIsHovered] = useState(false);
+    // const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseMove = (e:any) => {
       const boundingRect = e.currentTarget.getBoundingClientRect();
@@ -25,7 +25,7 @@ function Security (props:any) {
 
     return (
         <>
-            <div className={isHovered?"new-class":"security-item"} 
+            <div className="security-item"
             onMouseMove={handleMouseMove} 
             onMouseLeave={handleMouseLeave} >
                 <div className="security-item-title">

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Countdown from "react-countdown";
+// import Countdown from "react-countdown";
 import MainComponent from "../components/MainComponent";
 import RedCost from "../assets/images/red-cost.svg";
 import RedCostMob from "../assets/images/red-cost-mob.svg";
@@ -14,6 +14,7 @@ import RoadmapMobile from "../assets/roadmap-mobile.png";
 import {socialItemsList} from "../constants/socialItems";
 import bgImage from "../assets/bg-image.svg";
 import bgImageMobile from "../assets/bg-image-mobile.svg";
+import Countdown from "../components/Countdown";
 
 function AuthLayout () {
     const [countdown, setCountdown] = useState<any>(Date.now());
@@ -67,7 +68,7 @@ function AuthLayout () {
                 <img src={bgImageMobile} alt="bg-image-mobile" className="bg-image-mobile"/>
             </div>
 
-            <div className="digital-art anim-from-top">
+            <div className="digital-art">
                 <div className="header-side">
                     Enter The New World<br/>of Digital Art
                 </div>
@@ -82,9 +83,10 @@ function AuthLayout () {
                         </div>
                     </div>
                     <div>
-                        {countdown && (
-                            <Countdown date={countdown + 600000000} renderer={renderer} />
-                        )}
+                        <Countdown/>
+                        {/*{countdown && (*/}
+                        {/*    <Countdown date={countdown + 600000000} renderer={renderer} />*/}
+                        {/*)}*/}
                     </div>
                 </div>
             </div>
