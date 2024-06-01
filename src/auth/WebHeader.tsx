@@ -4,18 +4,36 @@ import {navItems} from "../constants/navItems";
 import {socialItems} from "../constants/socialItems";
 import leftFill from "../assets/icons/left-fill.svg";
 import close from "../assets/icons/close.svg";
+import {useNavigate} from "react-router-dom";
+import {Switch} from "antd";
 
 
 function WebHeader() {
     const [isOpen, setIsOpen] = useState(false);
     const [onHover, setOnHover] = useState(false);
 
+    const navigate = useNavigate()
+
     const openSocialGroup = () => {
         setIsOpen(!isOpen);
     };
 
-    const handleClickNavItem = (item:String) => {
-        console.log(`Click on ${item} and navigate ${item}` )
+   const handleClickNavItem = (index:any) => {
+       switch (index) {
+           case 0:
+               navigate("./about")
+               break;
+           case 1:
+               navigate("./discover")
+               break;
+           case 2:
+               navigate("./contact")
+               break;
+
+           default:
+               navigate("./error")
+       }
+        console.log(`Click on ${index} and navigate ${index}` )
     }
     const handleClickSocialItem = (item:String) => {
         console.log(`Click on ${item} and navigate ${item}` )
@@ -44,12 +62,13 @@ function WebHeader() {
             <div className="logo"
                  onMouseMove={handleMouseMove}
                  onMouseLeave={handleMouseLeave}
+                 onClick={()=>{navigate("./")}}
             >
                 <img src={Logo} alt="logo"/>
             </div>
             <div className={!isOpen? "navbar": "hide-nav"}>
-                {navItems.map((item:String,key)=>{
-                    return <div className="navbar-item" key={key} onClick={()=>handleClickNavItem(item)}>{item}</div>
+                {navItems.map((item:String,index:any)=>{
+                    return <div className="navbar-item" key={index} onClick={()=>handleClickNavItem(index)}>{item}</div>
                 })}
             </div>
 
