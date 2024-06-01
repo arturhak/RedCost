@@ -41,7 +41,7 @@ function AuthLayout () {
                             <div className="right-button">AirDrop</div>
                         </div>
                     </div>
-                    <div>
+                    <div className="auth-countdown">
                         <CountDown/>
                     </div>
                 </div>

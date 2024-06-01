@@ -65,8 +65,8 @@ function CountDown() {
                     <div className='card-title'>Days</div>
                     <div className='card-container' >
                         <div className="flip-card" data-days-ones>
-                            <div className="top">365</div>
-                            <div className="bottom">365</div>
+                            <div className="top">31</div>
+                            <div className="bottom">31</div>
                         </div>
                     </div>
                 </div>

@@ -220,13 +220,13 @@
   z-index: 1;
   display: flex;
   flex-direction: row;
-  //justify-content: space-between;
+  justify-content: space-between;
   gap: 107px
 }
 .bottom-side-left {
   display: flex;
   flex-direction: column;
-  gap: 63px
+  justify-content: space-between;
 }
 .bottom-side-left-header {
   color: #949494;
@@ -237,6 +237,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  //margin-top: 25px;
 }
 .bottom-side-left-header_buttons {
   display: flex;
@@ -269,11 +270,9 @@
   background-position: 100% center;
 }
 
-
-
 .right-button {
   display: flex;
-  min-width: 100px;
+  min-width: 181px;
   padding: 24px 44px;
   justify-content: center;
   align-items: center;
@@ -445,7 +444,7 @@
   z-index: 1;
 }
 .main-component-button {
-  width: 61%;
+  width: 100%;
   display: flex;
   padding: 24px 44px;
   justify-content: center;
@@ -472,7 +471,7 @@
 
 .security-component-button {
   display: flex;
-  width: 130px;
+  width: 181px;
   padding: 24px 44px;
   justify-content: center;
   align-items: center;
@@ -496,7 +495,7 @@
   background-position: 100% center;
 }
 .main-component-button_width {
-  width: 120px;
+  width: 193px;
 }
 .main-component-button:hover {
   background-position: 100% center;
@@ -509,7 +508,7 @@
   gap: 8px;
   margin-top: -20px;
   margin-bottom: 20px;
-  width: 60%;
+  width: 100%;
 }
 .input {
   display: flex;
@@ -1015,7 +1014,12 @@
 
 @media screen and (max-width: 1300px) {
   .bottom-side {
-    display: block;
+    display: contents;
+  }
+  .bottom-side-left {
+    gap: 44px;
+    margin-bottom: 44px;
+    z-index: 555555;
   }
   .digital-art {
     width: auto;
@@ -1065,6 +1069,7 @@
   .bg-image-web {
     display: none;
   }
+
 }
 @media screen and (min-width: 1023px) {
   .bg-image-mobile {
@@ -1105,12 +1110,14 @@
   }
   .bottom-side-left {
     position: relative;
-  }
+     }
   .bottom-side-left-header {
     font-size: 15px;
     font-weight: 400;
     line-height: normal;
+    margin-top: 28px;
   }
+
   .left-button {
     padding: 20px 42px;
     gap: 10px;
@@ -1131,15 +1138,13 @@
     line-height: 114.5%;
   }
   .bottom-side-left-header_buttons {
-    margin-top: 180px;
-    position: absolute;
     gap: 10px;
   }
   .datetime-container {
     margin-top: 28px
   }
   .digital-art {
-    gap: 32px
+    gap: 0
   }
   .datetime-container {
     display: flex;
@@ -1201,11 +1206,7 @@
   }
   .input-group {
     align-items: center;
-    width: auto;
     margin-bottom: -24px;
-  }
-  .main-component-button {
-    width: 77%;
   }
   .security-component-title {
     font-size: 16px;
@@ -1341,7 +1342,24 @@
   .footer-bottom-right-group {
     display: none;
   }
-
+  .flip-card {
+    width: 80px!important;
+  }
+  .datetime-content {
+    width: 80px!important;
+    height: 80px!important;
+  }
+  .top,
+  .bottom,
+  .flip-card.flip::after,
+  .flip-card.flip::before {
+    width: 76px!important;
+    font-size: 48px;
+   }
+  .card-title {
+    font-size: 8px!important;
+    top: 6px!important;
+  }
 }
 
 .anim-from-left {
@@ -1440,7 +1458,11 @@
 }
 
 //CountDown
-
+.auth-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 *,
 *::before,
 *::after {
@@ -1469,8 +1491,12 @@
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  border-radius: 0.1em;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border: 2px solid #FFF;
+  //background: linear-gradient(180deg, #F2F2F2 0%, #CCC 100%);
+  box-shadow: 0px 4px 13.9px 0px rgba(0, 0, 0, 0.25);
+  width: 170px;
+  align-items: center;
 }
 
 .top,
@@ -1481,26 +1507,28 @@
   height: 0.75em;
   line-height: 1;
   overflow: hidden;
+  width: 166px;
+  //text-align: center;
+
 }
 
 .top,
 .flip-card.flip::before {
-  //width: 170px;
   //height: 85px;
   border-radius: 20px 20px 0px 0px;
   background: linear-gradient(180deg, #FAFAFA 0%, #E2E2E2 100%);
-  //border-bottom: 1px solid #E2E2E2;
+  display: flex;
+  justify-content: center;
 }
 
 .bottom,
 .flip-card.flip::after {
   display: flex;
   align-items: flex-end;
-  //width: 170px;
-  //height: 85px;
   border-radius: 0px 0px 20px 20px;
   background: linear-gradient(180deg, #F2F2F2 0%, #CCC 100%);
-  //box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);;
+  justify-content: center;
+  border-top: 1px solid #FFFFFF;
 }
 
 .flip-card.flip::before {
@@ -1540,32 +1568,35 @@
 
 .countdown-container {
   display: flex;
-  gap: 0.5em;
-  background: red;
-
-}
+  gap: 21px;
+ }
 
 .countdown-cards {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: green;
+  position: relative;
 }
 
 .card-title {
-  font-size: clamp(.8rem,1.5vw,1rem);
-  letter-spacing: 1px;
-  margin-bottom: .5em;
-  color: rgb(29, 27, 27);
+  font-family: Montserrat-Regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
   text-transform: uppercase;
+  position: absolute;
+  top: 12px;
+  z-index: 222222222222222;
 
 }
-
 .card-container {
   display: flex;
   gap: 0.125em;
-
-
-
 }
 
