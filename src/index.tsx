@@ -35,34 +35,34 @@ const handleScroll = () => {
 
 
     // el.forEach((el:any)=>{
-        let position = el.getBoundingClientRect();
-        let position1 = el1.getBoundingClientRect();
-        let position2 = el2.getBoundingClientRect();
+        let position:any = el?.getBoundingClientRect();
+        let position1:any = el1?.getBoundingClientRect();
+        let position2:any = el2?.getBoundingClientRect();
 
-        if (position.top + 600< window.innerHeight && position.bottom > 0) {    //position.top + 100
-            elLeft.classList.add("anim-from-left")
-            elRight.classList.add("anim-from-right")
+        if (position?.top + 600< window.innerHeight && position?.bottom > 0) {    //position.top + 100
+            elLeft?.classList.add("anim-from-left")
+            elRight?.classList.add("anim-from-right")
             // el.classList.add("visible")
         }
         else {
-            elLeft.classList.remove("anim-from-left")
-            elRight.classList.remove("anim-from-right")
+            elLeft?.classList.remove("anim-from-left")
+            elRight?.classList.remove("anim-from-right")
             // el.classList.remove("visible")
         }
 
-    if (position1.top + 600 < window.innerHeight && position1.bottom > 0) {
+    if (position1?.top + 600 < window.innerHeight && position1?.bottom > 0) {
         elLeft1.classList.add("anim-from-left")
         elRight1.classList.add("anim-from-right")
         // el1.classList.add("visible")
     }
     else {
-        elLeft1.classList.remove("anim-from-left")
-        elRight1.classList.remove("anim-from-right")
+        elLeft1?.classList.remove("anim-from-left")
+        elRight1?.classList.remove("anim-from-right")
         // el1.classList.remove("visible")
     }
 
-    if (position2.top + 200 < window.innerHeight && position2.bottom > 0) {
-        el2.classList.add("visible-roadmap")
+    if (position2?.top + 200 < window.innerHeight && position2?.bottom > 0) {
+        el2?.classList.add("visible-roadmap")
     }
     else {
         // el2.classList.remove("visible-roadmap")
