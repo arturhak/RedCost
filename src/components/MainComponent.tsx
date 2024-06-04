@@ -21,12 +21,15 @@ function MainComponent (props:any) {
                     <br/>
                     <br/>
                     {props.content2}
+                    <br/>
+                    <br/>
+                    {props.content3}
                 </div>
                 <div className={props.isInput? "input-group": "d-none"}>
                     <input type="text" className="input" placeholder={"Name: "}/>
                     <input type="text" className="input" placeholder={"Email: "}/>
                 </div>
-                <div className={props.buttonSize? "main-component-button main-component-button_width": "main-component-button"}>
+                <div className={!props.noButton? props.buttonSize? "main-component-button main-component-button_width": "main-component-button": "d-none"}>
                     {props.buttonValue}
                 </div>
             </div>

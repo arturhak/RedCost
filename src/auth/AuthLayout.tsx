@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-// import Countdown from "react-countdown";
 import MainComponent from "../components/MainComponent";
 import RedCost from "../assets/images/red-cost.svg";
 import RedCostMob from "../assets/images/red-cost-mob.svg";
@@ -12,53 +11,14 @@ import Security from "../components/Security";
 import {socialItemsList} from "../constants/socialItems";
 import bgImage from "../assets/bg-image.svg";
 import bgImageMobile from "../assets/bg-image-mobile.svg";
-import Countdown from "../components/Countdown";
 import RoadmapWeb from "../components/RoadmapWeb";
+import CountDown from "../components/CountDown";
 
 function AuthLayout () {
-    const [countdown, setCountdown] = useState<any>(Date.now());
-
-
 
     const handleClickSocialItem = (item:String) => {
         console.log(`Click on ${item} and navigate ${item}` )
     }
-    const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
-        if (completed) {
-            // Render a complete state
-            return <Completionist />;
-        } else {
-            // Render a countdown
-            return (
-                <div className="datetime-container">
-                    <div className="datetime-content">
-                        <div className="datetime-text">DAYS</div>
-                        <div className="datetime-number">0{days}</div>
-                    </div>
-                    <div className="datetime-content">
-                        <div className="datetime-text">HOURSE</div>
-                        <div className="datetime-number">{hours}</div>
-                    </div>
-                    <div className="datetime-content">
-                        <div className="datetime-text">MINUTES</div>
-                        <div className="datetime-number">{minutes}</div>
-                    </div>
-                    <div className="datetime-content">
-                        <div className="datetime-text">SECONDS</div>
-                        <div className="datetime-number">{seconds}</div>
-                    </div>
-                </div>
-            );
-        }
-    };
-
-    const Completionist = () => {
-        return (
-            <>
-                OK
-            </>
-        );
-    };
 
     return (
         <div className="auth-layouth">
@@ -81,11 +41,8 @@ function AuthLayout () {
                             <div className="right-button">AirDrop</div>
                         </div>
                     </div>
-                    <div>
-                        <Countdown/>
-                        {/*{countdown && (*/}
-                        {/*    <Countdown date={countdown + 600000000} renderer={renderer} />*/}
-                        {/*)}*/}
+                    <div className="auth-countdown">
+                        <CountDown/>
                     </div>
                 </div>
             </div>
@@ -183,3 +140,4 @@ function AuthLayout () {
 }
 
 export default AuthLayout;
+
