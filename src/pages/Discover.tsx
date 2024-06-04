@@ -6,6 +6,7 @@ import MainComponent from "../components/MainComponent";
 import RedCost from "../assets/images/red-cost.svg";
 import RedCostMob from "../assets/images/red-cost-mob.svg";
 import RedCostCenter from "../assets/images/red-cost-center.svg";
+import Walf from "../assets/Walf.svg";
 import Security from "../components/Security";
 import SecurytyImage from "../assets/images/security-logo.svg";
 import RoadmapWeb from "../components/RoadmapWeb";
@@ -14,10 +15,6 @@ import SecurityDiscover from "../components/SecurityDiscover";
 import MainComponent2 from "../components/MainComponent2";
 
 function About () {
-
-    const handleClickSocialItem = (item:String) => {
-        console.log(`Click on ${item} and navigate ${item}` )
-    }
 
     return (
         <div className="discover">
@@ -171,6 +168,25 @@ function About () {
                 buttonValue="Button"
             />
             {/*</div>*/}
+            <div className="discover-last-item">
+                <div className="discover-last-item-digital-art">
+                    <div className="discover-header-side">
+                        Enter The New World<br/>of Digital Art
+                    </div>
+                    <div className="discover-bottom-side">
+                        <div className="discover-bottom-side-left">
+                            <div className="discover-bottom-side-left-header">
+                                The marketplace for those who know<br/>the true value of digital assets.
+                            </div>
+                            <div className="discover-last-item-left-button">AirDrop</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="walf-image">
+                    <img src={Walf} alt="" />
+                </div>
+            </div>
+
         </div>
     )
 }

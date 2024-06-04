@@ -448,7 +448,6 @@
   justify-content: center;
   align-items: center;
   border-radius: 500px;
-
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
@@ -458,8 +457,6 @@
   font-weight: 400;
   line-height: 114.5%; /* 17.175px */
   cursor: pointer;
-
-
   background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
   /*-webkit-text-fill-color: transparent;*/
   background-size: 400% 100%;
@@ -1064,6 +1061,10 @@
     width: 770px!important;
     height: 407px!important;
   }
+  .investors-first-item {
+    width: 770px!important;
+    height: 407px!important;
+  }
   .discover-header-side {
     color: #353535!important;
     font-size: 32px!important;
@@ -1098,6 +1099,56 @@
     scroll-behavior: smooth!important;
     flex-wrap: unset!important;
   }
+  .discover-last-item {
+    width: 770px!important;
+  }
+  .walf-image {
+    img {
+      width: 300px !important;
+    }
+  }
+  .offer-block {
+    width: 100%!important;
+  }
+  .offer-group {
+    gap: 0px!important;
+    width: 100%!important;
+    //margin-left: 22px!important;
+    overflow-x: auto!important;
+    -ms-overflow-style: none!important;
+    scrollbar-width: none!important;
+    scroll-behavior: smooth!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: flex-start!important;
+    flex-wrap: nowrap!important;
+  }
+  .offer {
+    width: 291px!important;
+    height: 262px!important;
+    padding-left: 28px;
+    padding-right: 24px;
+    background-image: url("./assets/offer-mobile.svg")!important;
+    &__content {
+      margin-top: 97px;
+      &__title {
+        font-size: 16px!important;
+        font-style: normal!important;
+        font-weight: 600!important;
+        line-height: normal!important;
+      }
+
+      &__text {
+        font-size: 12px!important;
+        font-style: normal!important;
+        font-weight: 400!important;
+        line-height: normal!important;
+      }
+    }
+
+  }
+
+
 }
 
 @media screen and (min-width: 1300px) {
@@ -1126,6 +1177,9 @@
     display: none;
   }
   .discover-first-item-mobile {
+    display: none;
+  }
+  .investors-first-item-mobile {
     display: none;
   }
 }
@@ -1429,11 +1483,25 @@
   .discover-first-item {
     display: none;
   }
+  .investors-first-item {
+    display: none;
+  }
   .discover-first-item-mobile {
       //display: flex;
       //align-items: center;
       //justify-content: center;
       background-image: url("./assets/discover-bg-mobile.svg");
+      //width: 1240px;
+      //height: 776px;
+      margin-top: 0px;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  .investors-first-item-mobile {
+      //display: flex;
+      //align-items: center;
+      //justify-content: center;
+      background-image: url("./assets/investors-mobile-bg.svg");
       //width: 1240px;
       //height: 776px;
       margin-top: 0px;
@@ -1808,9 +1876,6 @@
   backdrop-filter: blur(2px);
 }
 
-
-//////////////////////
-
 .discover-digital-art {
   display: flex;
   flex-direction: column;
@@ -1879,7 +1944,37 @@
 .discover-left-button:hover {
   background-position: 100% center;
 }
-
+.discover-last-item-left-button {
+  display: flex;
+  width: 147px;
+  height: 59px;
+  padding: 24px 44px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 500px;
+  color: #FFF;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 17.175px */
+  cursor: pointer;
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  //-webkit-text-fill-color: transparent;
+  background-size: 400% 100%;
+  background-position: 75% center;
+  transition: background 0.3s linear;
+}
+.discover-last-item-left-button:hover {
+  background-position: 100% center;
+}
+.discover-last-item-digital-art {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 32px;
+}
 .discover-right-button {
   display: flex;
   min-width: 181px;
@@ -2019,12 +2114,120 @@
     line-height: normal;
   }
 }
+
+.discover-last-item {
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+  background: linear-gradient(112deg, #EDEDED 12.45%, #EDEDED 12.46%, #F0F0F0 155.93%);
+  width: 1240px;
+  //height: 580px;
+  margin-top: 160px;
+  border-radius: 26px;
+  padding: 24px 24px 24px 56px;
+  justify-content: space-between;
+;
+}
+
 @media screen and (max-width: 1477px) {
   .main-component-2 {
     flex-wrap: wrap;
     justify-content: center;
     &__left-side {
      align-items: center;
+      width: 1024px;
     }
   }
 }
+
+//FOR INVESTORS
+
+.investors {
+  width: 100%;
+  display: flex;
+  /*justify-content: center;*/
+  flex-direction: column;
+  align-items: center;
+  margin-top: 96px;
+  //background:red;
+}
+.investors-first-item {
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  background-image: url("./assets/investors-bg.svg");
+  width: 1240px;
+  height: 660px;
+  margin-top: 0px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.offer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 160px;
+  gap: 48px;
+  width: 1240px;
+  flex-wrap: wrap;
+  //background:grey;
+  &__header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 17px;
+      width: 100%;
+  }
+}
+.offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 28px;
+  padding-right: 24px;
+  width: 396px;
+  height: 265px;
+  flex-shrink: 0;
+  background-image: url("./assets/offer.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: drop-shadow(0px 4px 13.4px rgba(0, 0, 0, 0.13));
+  cursor: pointer;
+  &__content {
+    margin-top: 97px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:16px;
+   &__title {
+     font-family: Montserrat-Bold;
+     font-size: 20px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     background: Linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+   }
+    &__text {
+      color:  #949494;
+      font-family: Montserrat-Regular;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+   }
+  }
+}
+.offer-group {
+  display: flex;
+  width: 1240px;
+  gap: 25px;
+  flex-wrap: wrap;
+
+}
+
+

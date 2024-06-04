@@ -26,8 +26,8 @@ function WebHeader() {
            case 1:
                navigate("./discover")
                break;
-           case 2:
-               navigate("./contact")
+           case 3:
+               navigate("./investors")
                break;
 
            default:
