@@ -6,7 +6,7 @@ import MainComponent from "../components/MainComponent";
 import RedCost from "../assets/images/red-cost.svg";
 import RedCostMob from "../assets/images/red-cost-mob.svg";
 import RedCostCenter from "../assets/images/red-cost-center.svg";
-import Walf from "../assets/Walf.svg";
+import Walf from "../assets/walf.svg";
 import Security from "../components/Security";
 import SecurytyImage from "../assets/images/security-logo.svg";
 import RoadmapWeb from "../components/RoadmapWeb";
