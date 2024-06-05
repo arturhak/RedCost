@@ -4,12 +4,14 @@ import {navItems, profileItem} from "../constants/navItems";
 import {socialItems} from "../constants/socialItems";
 import mobileLogo from "../assets/mobile-logo.svg"
 import avatar from "../assets/icons/avatar.svg";
+import {useNavigate} from "react-router-dom";
 
 function MobileHeader(props: any) {
 
     const [open, setOpen] = useState(false);
     const [burgerDrawer, setBurgerDrawer] = useState(false);
     const [isWallet, setIsWallet] = useState(false);
+    const navigate = useNavigate()
 
     const showProfileDrawer = () => {
         setOpen(true);
@@ -30,9 +32,6 @@ function MobileHeader(props: any) {
         setOpen(false);
     };
 
-    const handleClickNavItem = (item:String) => {
-        console.log(`Click on ${item} and navigate ${item}` )
-    }
     const handleClickProfileItem = (item:String) => {
         console.log(`Click on ${item} and navigate ${item}` )
     }
@@ -44,7 +43,23 @@ function MobileHeader(props: any) {
         console.log("go to home page");
         setOpen(false)
     }
+    const handleClickNavItem = (index:any) => {
+        switch (index) {
+            case 0:
+                navigate("./about")
+                break;
+            case 1:
+                navigate("./discover")
+                break;
+            case 3:
+                navigate("./investors")
+                break;
 
+            default:
+                navigate("./error")
+        }
+        console.log(`Click on ${index} and navigate ${index}` )
+    }
     return (
         <div className="mobile-header" >
             <div onClick={handleHome} style={{cursor: "pointer"}} className="logo">
@@ -71,9 +86,9 @@ function MobileHeader(props: any) {
             >
                 {burgerDrawer?
                     <div className="drower-content-navbar">
-                        {navItems.map((item: String, index) => {
+                        {navItems.map((item: String, index:any) => {
                             return <div  className="drower-content-navbar-item" key={index}
-                                        onClick={() => handleClickNavItem(item)}>{item}</div>
+                                        onClick={() => handleClickNavItem(index)}>{item}</div>
                         })}
                         <div className="drower-content-navbar-nft">Market NFT</div>
                     </div>:

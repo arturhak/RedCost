@@ -74,17 +74,17 @@ function WebHeader() {
 
             <div className="web-header-group-items">
                 <div className="login">
-                    <div className={!isOpen? "navbar-item-market_nft": "hide-nav navbar-item-market_nft"}>Market NFT</div>
+                    <div className={!isOpen? "navbar-item-market_nft": "hide-nav"}>Market NFT</div>
 
                     {!isOpen?
                         <img src={leftFill} alt="leftFill" className="social-group-logo-img" onClick={openSocialGroup}/>:
                         <img src={close} alt="leftFill" className="social-group-logo-img" onClick={openSocialGroup}/>
                     }
                     <div className={!isOpen? "social-group-logo": "social-group-logo open"}>
-                        {socialItems.map((socialItem:any,key) =>{
+                        {socialItems.map((socialItem:any,index) =>{
                             return <div
                                 className="social-item"
-                                key={key}
+                                key={index}
                                 onClick={() => handleClickSocialItem(socialItem.name)}
                             >
                                 {socialItem.logosvg}
