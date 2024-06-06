@@ -106,7 +106,7 @@ function MobileHeader(props: any) {
                 <div className="drower-content-navbar-bottom">
                     {socialItems.map((socialItem:any,key) =>{
                         return <div
-                            className="social-item"
+                            style={{cursor:"pointer"}}
                             key={key}
                             onClick={() => handleClickSocialItem(socialItem.name)}
                         >

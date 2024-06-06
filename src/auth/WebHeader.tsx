@@ -5,7 +5,7 @@ import {socialItems} from "../constants/socialItems";
 import leftFill from "../assets/icons/left-fill.svg";
 import close from "../assets/icons/close.svg";
 import {useNavigate} from "react-router-dom";
-import {Switch} from "antd";
+import InlineSVG from 'react-inlinesvg';
 
 
 function WebHeader() {
@@ -57,6 +57,7 @@ function WebHeader() {
     const handleMouseLeave = (e:any) => {
         e.currentTarget.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg)';
     };
+
     return (
         <div className="web-header">
             <div className="logo"
@@ -83,11 +84,13 @@ function WebHeader() {
                     <div className={!isOpen? "social-group-logo": "social-group-logo open"}>
                         {socialItems.map((socialItem:any,index) =>{
                             return <div
-                                className="social-item"
                                 key={index}
                                 onClick={() => handleClickSocialItem(socialItem.name)}
                             >
-                                {socialItem.logosvg}
+                                <div className="svg-container">
+                                    {socialItem.logosvg}
+                                    {socialItem.logosvgred}
+                                </div>
                             </div>
                         })}
                     </div>
