@@ -65,6 +65,9 @@
 }
 .logo {
   cursor: pointer;
+  img{
+    width: 185px;
+  }
 }
 
 .web-header-group-items {
@@ -75,7 +78,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 18px;
   transition: 0.5s ease;
   /*opacity: 1;*/
 }
@@ -131,7 +134,7 @@
   align-items: center;
   gap: 12px;
   transition: width 0.4s ease;
-  width: 110px;
+  width: 124px;
   overflow: hidden;
 }
 .social-item {
