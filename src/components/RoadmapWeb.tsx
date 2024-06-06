@@ -1,58 +1,53 @@
 import React, { useState } from "react";
-
-
-
-function swap() {
-  const elementFirst = document.getElementById("first");
-    if (elementFirst) {
-      // Trigger the transition by adding the 'move' class
-      elementFirst.classList.add("moveLeft");
-    }
-
-    const elementSecond = document.getElementById("second");
-    if (elementSecond) {
-      // Trigger the transition by adding the 'move' class
-      elementSecond.classList.add("moveStart");
-    }
-   
-    const elementThird = document.getElementById("third");
-    if (elementThird) {
-      // Trigger the transition by adding the 'move' class
-      elementThird.classList.add("move");
-    }
-
-    const elementForth = document.getElementById("fourth");
-    if (elementForth) {
-      // Trigger the transition by adding the 'move' class
-      elementForth.classList.add("moveRight");
-    }
-
-
-    const elementFourth = document.getElementById("forth");
-    if (elementFourth) {
-        // Trigger the transition by adding the 'move' class
-        elementFourth.classList.add("moveRight");
-      }
-
-      const elementFifth = document.getElementById("fifth");
-      if (elementFifth) {
-          // Trigger the transition by adding the 'move' class
-          elementFifth.classList.add("moveDown");
-        }
-}   
+// import './App.css'; // Подключите ваш CSS файл
 
 function RoadmapWeb() {
-    return (
-        
-      <div className="roadmapWeb">
-              <button onClick={swap}>NEXT</button>
-                <div id="first">first</div>
-                <div id="second">second</div>
-                <div id="third">third</div>
-                <div id="fourth">fourth</div>
-                <div id="fifth">fifth</div>
-            </div>
-    )
+  const [roadmapContent, setRoadmapContent] = useState([
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+  ]);
+  const [isClicked, setIsClicked] = useState(false);
+
+  const arrClass = [
+    "first_block_anim",
+    "second_block_anim",
+    "third_block_anim",
+    "fourth_block_anim",
+    "fifth_block_anim"
+  ];
+
+  function swapNext() {
+    setIsClicked(true); // Устанавливаем isClicked в true при клике на кнопку
+
+    // Обновляем состояние roadmapContent
+    setRoadmapContent((prevContent) => {
+      const newContent = prevContent.slice(1).concat(prevContent[0]);
+      return newContent;
+    });
+
+    // Сбрасываем isClicked после окончания анимации
+    setTimeout(() => setIsClicked(false), 2000); // Указываем время анимации в миллисекундах
+  }
+
+  return (
+    <div className="roadmapWeb">
+      <button onClick={swapNext}>
+        NEXT
+      </button>
+      {roadmapContent.map((el, index) => (
+        <div
+          key={index}
+          id={el}
+          className={isClicked ? arrClass[index] : ""}
+        >
+          {el}
+        </div>
+      ))}
+    </div>
+  );
 }
 
-export default RoadmapWeb
+export default RoadmapWeb;
