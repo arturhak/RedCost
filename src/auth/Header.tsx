@@ -5,22 +5,40 @@ import { Modal } from "antd";
 
 function Header() {
     const [profitModalOpen, setProfitModalOpen] = useState(false);
+    const [isWallet, setIsWallet] = useState(false);
+
 
     return (
         <div className='header'>
-            <WebHeader />
-            <MobileHeader />
+            <WebHeader
+                setProfitModalOpen={setProfitModalOpen}
+                isWallet={isWallet}
+                setIsWallet={setIsWallet}
+            />
+            <MobileHeader
+                setProfitModalOpen={setProfitModalOpen}
+                isWallet={isWallet}
+                setIsWallet={setIsWallet}
+            />
 
             {/*Connection Modal*/}
+
             <Modal
                 centered
-                width={1000}
+                width={469}
                 open={profitModalOpen}
                 onCancel={() => setProfitModalOpen(false)}
                 footer={null}
                 className="mini-popup"
             >
-                    Connect Wallet
+
+                <div>hgjkjkj</div>
+                <div>hgjkjkj</div>
+                <div>hgjkjkj</div>
+                <div>hgjkjkj</div>
+                <div>hgjkjkj</div>
+
+
             </Modal>
 
         </div>

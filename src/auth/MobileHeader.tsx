@@ -6,13 +6,15 @@ import mobileLogo from "../assets/mobile-logo.svg"
 import avatar from "../assets/icons/avatar.svg";
 import {useNavigate} from "react-router-dom";
 
-function MobileHeader(props: any) {
+function MobileHeader({ setProfitModalOpen, setIsWallet, isWallet }:any) {
 
     const [open, setOpen] = useState(false);
     const [burgerDrawer, setBurgerDrawer] = useState(false);
-    const [isWallet, setIsWallet] = useState(false);
     const navigate = useNavigate()
 
+    const openWalletConnetion = () => {
+        setProfitModalOpen(true)
+    };
     const showProfileDrawer = () => {
         setOpen(true);
         setBurgerDrawer(false)
@@ -46,16 +48,20 @@ function MobileHeader(props: any) {
     const handleClickNavItem = (index:any) => {
         switch (index) {
             case 0:
-                navigate("./about")
+                navigate("./about");
+                setOpen(false)
                 break;
             case 1:
-                navigate("./discover")
+                navigate("./discover");
+                setOpen(false)
                 break;
             case 3:
-                navigate("./investors")
+                navigate("./investors");
+                setOpen(false)
                 break;
             case 4:
-                navigate("./investors")
+                navigate("./contacts");
+                setOpen(false)
                 break;
 
             default:
@@ -73,7 +79,7 @@ function MobileHeader(props: any) {
                     <div onClick={showProfileDrawer}>
                         <img src={avatar} alt="avatar" style={{cursor: "pointer"}} />
                     </div>:
-                    <div className="mobile-login-button">Login</div>
+                    <div className="mobile-login-button" onClick={openWalletConnetion}>Login</div>
                 }
                  <div className={!open? "hamburger": "is-active"} onClick={showBurgerDrawer} id="hamburger-1">
                     <div className="line"></div>

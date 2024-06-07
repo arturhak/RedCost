@@ -37,6 +37,27 @@
   align-items: center;
 }
 
+//Connection popup
+.mini-popup:where(.css-dev-only-do-not-override-1okl62o).ant-modal .ant-modal-content{
+  border-radius: 26px;
+  background: linear-gradient(341deg, #EDEDED 12.22%, #FFF 86.92%);
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  padding: 39px 32px 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+
+
+
+
+
+
+
+
 .header {
   width:100%;
   background: #FFFFFF;
@@ -83,14 +104,14 @@
   transition: 1s ease;
   /*opacity: 1;*/
   position: absolute;
-  left: 20%;
+  left: 21%;
 }
 .hide-nav {
   transition: 0.5s ease;
   width: 100%;
   //overflow: hidden;
   opacity: 0;
-  animation: hidenavbar 0.8s ease;
+  animation: hidenavbar 0.5s ease;
 }
 
 @keyframes hidenavbar {
@@ -218,6 +239,23 @@
   transition: 0.4s ease;
   position: absolute;
   right: 0;
+}
+.login-button-connected-web {
+  display: flex;
+  padding: 18px 44px;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  color:  #949494;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17.175px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  position: absolute;
+  right: 0
 }
 .login-button:hover {
   border: 1px solid #B21815;

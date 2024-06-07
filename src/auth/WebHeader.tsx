@@ -6,16 +6,19 @@ import leftFill from "../assets/icons/left-fill.svg";
 import close from "../assets/icons/close.svg";
 import {useNavigate} from "react-router-dom";
 import InlineSVG from 'react-inlinesvg';
+import avatar from "../assets/icons/avatar.svg";
 
 
-function WebHeader() {
+function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }:any) {
     const [isOpen, setIsOpen] = useState(false);
     const [onHover, setOnHover] = useState(false);
-
     const navigate = useNavigate()
 
     const openSocialGroup = () => {
         setIsOpen(!isOpen);
+    };
+    const openWalletConnetion = () => {
+        setProfitModalOpen(true)
     };
 
    const handleClickNavItem = (index:any) => {
@@ -98,7 +101,12 @@ function WebHeader() {
                             </div>
                         })}
                     </div>
-                    <div className="login-button">Login</div>
+                    {isWallet?
+                        <div onClick={()=>console.log("show dropdown")} className="login-button-connected-web">
+                            <img src={avatar} alt="avatar" style={{cursor: "pointer"}} />
+                        </div>:
+                        <div className="login-button" onClick={openWalletConnetion}>Login</div>
+                    }
                 </div>
             </div>
         </div>

@@ -71,13 +71,15 @@ function Footer () {
                 </div>
                 <div className="footer-bottom-right-group">
                     <div  className={!isOpen? "footer-bottom-right": "footer-bottom-right open-icons-group"}>
-                        {socialItems.map((socialItem:any,key) =>{
+                        {socialItems.map((socialItem:any,index) =>{
                             return <div
-                                className="social-item"
-                                key={key}
+                                key={index}
                                 onClick={() => handleClickSocialItem(socialItem.name)}
                             >
-                                {socialItem.logosvg}
+                                <div className="svg-container">
+                                    {socialItem.logosvg}
+                                    {socialItem.logosvgred}
+                                </div>
                             </div>
                         })}
                     </div>
@@ -90,13 +92,15 @@ function Footer () {
                 {/*MObile social Items Scroll*/}
 
                 <div className="footer-bottom-right-group-mob">
-                    {socialItems.map((socialItem:any,key) =>{
+                    {socialItems.map((socialItem:any,index) =>{
                         return <div
-                            className="social-item"
-                            key={key}
+                            key={index}
                             onClick={() => handleClickSocialItem(socialItem.name)}
                         >
-                            {socialItem.logosvg}
+                            <div className="svg-container">
+                                {socialItem.logosvg}
+                                {socialItem.logosvgred}
+                            </div>
                         </div>
                     })}
                 </div>
