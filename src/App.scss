@@ -1457,7 +1457,21 @@
     margin-top: 70px;
   }
   .mobile-header {
-    width: 370px;
+    width: 370px!important;
+    padding: 0 20px;
+    height: 70px!important;
+  }
+  .logo img {
+    width: 136px;
+    height: 38px;
+  }
+  .mobile-login-button {
+    padding: 18px 44px;
+    width: 90px;
+    height: 32px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
   }
   .footer-bottom-right-group {
     display: none;
@@ -1542,7 +1556,7 @@
   }
   .discover-digital-art {
     width: 100%!important;
-    margin-top: 348px!important;
+    margin-top: 379px!important;
     margin-left: 0px!important;
   }
   .discover-security-item {
