@@ -73,19 +73,33 @@
 .web-header-group-items {
   display: flex;
   align-items: center;
-  gap: 57px
+  gap: 57px;
+  z-index: 5;
 }
 .navbar {
   display: flex;
   align-items: center;
   gap: 18px;
-  transition: 0.5s ease;
+  transition: 1s ease;
   /*opacity: 1;*/
+  position: absolute;
+  left: 20%;
 }
 .hide-nav {
   transition: 0.5s ease;
-  width: 0;
-  overflow: hidden;
+  width: 100%;
+  //overflow: hidden;
+  opacity: 0;
+  animation: hidenavbar 0.8s ease;
+}
+
+@keyframes hidenavbar {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .navbar-item {
   background: linear-gradient(to right, #949494 18.3%, #930210 99.43%, #B4001E 60.57%, #DA291C 81.7%);
@@ -93,7 +107,7 @@
   -webkit-text-fill-color: transparent;
   background-size: 500% 100%;
   background-position: left center;
-  transition: background 0.2s linear;
+  transition: background 0.5s linear;
   font-family: Montserrat-Regular;
   font-size: 16px;
   font-style: normal;
@@ -117,7 +131,7 @@
   -webkit-text-fill-color: transparent;
   background-size: 200% 50%;
   background-position: left center;
-  transition: all 0.3s linear;
+  transition: all 0.8s linear;
   font-family: Montserrat-Bold;
   font-size: 16px;
   font-style: normal;
@@ -125,6 +139,8 @@
   line-height: normal;
   cursor: pointer;
   white-space: nowrap;
+  position: absolute;
+  left: 60%
 }
 .navbar-item-market_nft:hover {
   background-position: 100% center;

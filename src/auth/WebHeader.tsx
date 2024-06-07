@@ -70,13 +70,13 @@ function WebHeader() {
             >
                 <img src={Logo} alt="logo"/>
             </div>
-            <div className={!isOpen? "navbar": "hide-nav"}>
+            <div className={!isOpen? "navbar": "navbar hide-nav"}>
                 {navItems.map((item:String,index:any)=>{
                     return <div className="navbar-item" key={index} onClick={()=>handleClickNavItem(index)}>{item}</div>
                 })}
 
             </div>
-            <div className={!isOpen? "navbar-item-market_nft": "hide-nav"}>Market NFT</div>
+            <div className={!isOpen? "navbar-item-market_nft": "navbar-item-market_nft hide-nav"}>Market NFT</div>
 
             <div className="web-header-group-items">
                 <div className="login">
