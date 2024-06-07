@@ -6,6 +6,7 @@ import About from "../pages/About";
 import Discover from "../pages/Discover";
 import Error from "../pages/Error";
 import Investors from "../pages/ForInvestors";
+import Contacts from "../pages/Contacts";
 
 
 interface RouteProps {
@@ -19,6 +20,7 @@ const publicRoutes: Array<RouteProps> = [
   { path: "/about", component: About },
   { path: "/discover", component: Discover },
   { path: "/investors", component: Investors },
+  { path: "/contacts", component: Contacts },
   { path: "*", component: Error },
 
 ];

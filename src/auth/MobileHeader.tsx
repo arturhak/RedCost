@@ -54,6 +54,9 @@ function MobileHeader(props: any) {
             case 3:
                 navigate("./investors")
                 break;
+            case 4:
+                navigate("./investors")
+                break;
 
             default:
                 navigate("./error")

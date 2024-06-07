@@ -29,6 +29,9 @@ function WebHeader() {
            case 3:
                navigate("./investors")
                break;
+           case 4:
+               navigate("./contacts")
+               break;
 
            default:
                navigate("./error")
