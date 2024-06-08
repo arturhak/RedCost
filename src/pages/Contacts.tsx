@@ -15,9 +15,18 @@ import SecurityDiscover from "../components/SecurityDiscover";
 import MainComponent2 from "../components/MainComponent2";
 import Offer from "../components/Offer";
 import RoadmapWebJoin from "../components/RoadmapWebJoin";
+import {useNavigate} from "react-router-dom";
+import telTop from "../assets/tel-top.svg";
+import telBottom from "../assets/tel-bottom.svg";
+import telInner from "../assets/tel-inner.svg";
+import emailTop from "../assets/email-top.svg";
+import emailBottom from "../assets/email-bottom.svg";
+import addressTop from "../assets/address-top.svg";
+import socialInner from "../assets/social-inner.svg";
+import socialTop from "../assets/social-top.svg";
 
 function Contacts () {
-
+    
     return (
         <div className="contacts">
 
@@ -41,6 +50,47 @@ function Contacts () {
                 noButton={true}
             />
             </div>
+{/*ADRESS*/}
+
+            <div className="actions-group">
+                <div className="address">
+                    <img src={addressTop} alt="" className="address-top"/>
+                    <div className="open-button" >
+                        <a href="https://www.google.com/maps" target="_blank">Open in maps</a>
+                    </div>
+                    <div className="address-title">
+                        Address
+                    </div>
+                </div>
+
+                <div className="telephone">
+                    <img src={telInner} alt="" className="tel-inner"/>
+                    <img src={telTop} alt="" className="tel-top"/>
+                    <div className="address-title">
+                        +0 0000 00 00
+                    </div>
+                    <img src={telBottom} alt="" className="tel-bottom"/>
+                </div>
+
+                <div className="email">
+                    <img src={emailTop} alt="" className="email-top"/>
+                    <div className="address-title">
+                        mailexample@gmail.com
+                    </div>
+                    <img src={emailBottom} alt="" className="email-bottom"/>
+                </div>
+
+                <div className="social">
+                    <img src={socialInner} alt="" className="social-inner"/>
+                    <img src={telTop} alt="" className="social-top"/>
+                    <div className="address-title">
+                        social items
+                    </div>
+                    <img src={telBottom} alt="" className="social-bottom"/>
+                </div>
+
+            </div>
+
 
 
             {/*<div className="lastMainComponent1">*/}
@@ -56,24 +106,6 @@ function Contacts () {
                 reverse={false}
                 isInput={false}
                 noButton={true}
-            />
-            {/*</div>*/}
-
-
-            {/*<div className="lastMainComponent1">*/}
-            <MainComponent
-                image={RedCost}
-                imageMobile={RedCostMob}
-                title={true}
-                titleText=""
-                subtitle="TiTle"
-                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
-                reverse={true}
-                isInput={false}
-                noButton={false}
-                buttonValue="Contacts"
-                buttonSize={true}
             />
             {/*</div>*/}
 
