@@ -107,7 +107,7 @@ function About () {
                 content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
                 content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
                 content11={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                buttonSize={false}
+                buttonSize={true}
                 buttonValue="Button"
             />
 
