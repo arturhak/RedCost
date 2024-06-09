@@ -8,7 +8,7 @@ import RedCost2 from "../assets/images/red-cost-2.svg";
 import RedCost2Mob from "../assets/images/red-cost-2-nobile.png";
 import SecurytyImage from "../assets/images/security-logo.svg"
 import Security from "../components/Security";
-import {socialItemsList} from "../constants/socialItems";
+import {socialItemsList, socialItemsListBig1, socialItemsListBig2} from "../constants/socialItems";
 import bgImage from "../assets/bg-image.svg";
 import bgImageMobile from "../assets/bg-image-mobile.svg";
 import RoadmapWeb from "../components/RoadmapWeb";
@@ -109,13 +109,30 @@ function AuthLayout () {
                     <div className="line_1"></div>
                 </div>
                 <div className="social-group-component">
-                    {socialItemsList.map((item,key)=> {
+                    {socialItemsListBig1.map((item,key)=> {
                         return <div
-                            className="folow-item"
+                            // className="folow-item"
                             key={key}
                             onClick={() => handleClickSocialItem(item.name)}
                         >
-                            {item.logosvg}
+                            <div className="svgbig-container">
+                                {item.logosvg}
+                                {item.logoRed}
+                            </div>
+                        </div>
+                    })}
+                    </div>
+                <div className="social-group-component1">
+                    {socialItemsListBig2.map((item,key)=> {
+                        return <div
+                            className="folow-itembig"
+                            key={key}
+                            onClick={() => handleClickSocialItem(item.name)}
+                        >
+                            <div className="svgbig-container">
+                                {item.logosvg}
+                                {item.logoRed}
+                            </div>
                         </div>
                     })}
                 </div>

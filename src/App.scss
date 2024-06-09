@@ -782,6 +782,18 @@
   gap: 50px;
   flex-wrap: wrap;
 }
+.social-group-component1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  //padding: 0 140px;
+  //width: 1240px;
+  //background: greenyellow;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-left: 75px;
+}
 
 .folow-item:hover{
   stop:nth-child(4) {
@@ -2645,5 +2657,58 @@
   .social-inner {
     top: -20px;
   }
+}
+
+.svgbig-container {
+  position: relative;
+  width: 182px;
+  height: 65px;
+}
+
+.svgbig-container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s ease-in-out;
+  cursor: pointer;
+}
+.svgbig-container1 {
+  position: relative;
+  width: 192px;
+  height: 50px;
+}
+
+.svgbig-container1 svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 82px;
+  //height: 100%;
+  transition: opacity 0.4s ease-in-out;
+  cursor: pointer;
+}
+.svg1 {
+  opacity: 1;
+}
+
+.svg2 {
+  opacity: 0;
+}
+
+.svgbig-container:hover .svg1 {
+  opacity: 0;
+}
+
+.svgbig-container:hover .svg2 {
+  opacity: 1;
+}
+.svgbig-container1:hover .svg1 {
+  opacity: 0;
+}
+
+.svgbig-container1:hover .svg2 {
+  opacity: 1;
 }
 

@@ -8,7 +8,7 @@ import RedCostMob from "../assets/images/red-cost-mob.svg";
 import Security from "../components/Security";
 import SecurytyImage from "../assets/images/security-logo.svg";
 import RoadmapWeb from "../components/RoadmapWeb";
-import {socialItemsList} from "../constants/socialItems";
+import {socialItemsList, socialItemsListBig1, socialItemsListBig2} from "../constants/socialItems";
 
 function About () {
 
@@ -84,13 +84,30 @@ function About () {
                     <div className="line_1"></div>
                 </div>
                 <div className="social-group-component">
-                    {socialItemsList.map((item,key)=> {
+                    {socialItemsListBig1.map((item,key)=> {
                         return <div
-                            className="folow-item"
+                            // className="folow-item"
                             key={key}
                             onClick={() => handleClickSocialItem(item.name)}
                         >
-                            {item.logosvg}
+                            <div className="svgbig-container">
+                                {item.logosvg}
+                                {item.logoRed}
+                            </div>
+                        </div>
+                    })}
+                </div>
+                <div className="social-group-component1">
+                    {socialItemsListBig2.map((item,key)=> {
+                        return <div
+                            className="folow-itembig"
+                            key={key}
+                            onClick={() => handleClickSocialItem(item.name)}
+                        >
+                            <div className="svgbig-container">
+                                {item.logosvg}
+                                {item.logoRed}
+                            </div>
                         </div>
                     })}
                 </div>
