@@ -182,7 +182,7 @@ function About () {
                         </div>
                     </div>
                 </div>
-                <div className="walf-image">
+                <div className="walf-image-web">
                     <img src={Walf} alt="" />
                 </div>
             </div>

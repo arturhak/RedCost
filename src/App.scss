@@ -1069,7 +1069,12 @@
   line-height: 114.5%; /* 13.74px */
   cursor: pointer;
 }
-
+.walf-image-web {
+  img {
+    width: 571px;
+    border-radius: 26px 0 0 26px;
+  }
+}
 @media screen and (max-width: 1300px) {
   .bottom-side {
     display: contents;
@@ -1101,12 +1106,13 @@
     width: 100%;
   }
   .security-item {
-    width: 180px;
-    height: 233px;
+    width: 248px;
+    height: 230px;
+    gap: 12px
   }
   .security-group {
     justify-content: center;
-    width: 970px;
+    //width: 970px;
     gap: 18px;
   }
   .discover-security-group {
@@ -1146,6 +1152,10 @@
     margin-top: 21px!important;
     margin-left: 31px!important;
   }
+  .discover-digital-art-contacts {
+    margin-top: 80px!important;
+    margin-left: 38px!important;
+  }
   .discover-bottom-side-left-header_buttons {
     justify-content: space-between;
   }
@@ -1169,7 +1179,7 @@
   .discover-last-item {
     width: 770px!important;
   }
-  .walf-image {
+  .walf-image-web {
     img {
       width: 300px !important;
     }
@@ -1214,10 +1224,20 @@
     }
 
   }
-
-
+  .telephone, .email, .address, .social {
+    width: 260px!important;
+    height: 240px!important;
+  }
+  .actions-group {
+    width: unset!important;
+  }
+  .responsive-main-top {
+    margin-top: -490px!important;
+  }
 }
-
+.responsive-main-top {
+  margin-top: -200px;
+}
 @media screen and (min-width: 1300px) {
   .mobile-header {
     display: none;
@@ -1599,6 +1619,35 @@
     background: #FFFFFF!important;
     align-items: flex-start!important;
   }
+  .discover-last-item {
+    width: 350px!important;
+    flex-direction: column-reverse;
+    padding: 0!important;
+
+  }
+  .walf-image-web {
+    img {
+      width: 350px!important;
+      border-radius: 26px 26px 0 0;
+    }
+  }
+  .discover-header-side {
+    font-size: 24px!important;
+    font-style: normal!important;
+    font-weight: 300!important;
+    line-height: 114.5%!important;
+  }
+  .discover-last-item-digital-art {
+    width: 100%!important;
+    gap: 25px!important;
+    padding: 38px 0 56px 24px;
+  }
+  .discover-bottom-side-left-header {
+    font-size: 14px!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    line-height: normal!important;
+  }
   .contacts-text {
     color: #D7D7D7!important;
     font-size: 16px!important;
@@ -1609,7 +1658,16 @@
     background: #FFFFFF!important;
     align-items: flex-start!important;
   }
+  .contacts-first-item {
+    width: 370px!important;
+    margin-top: -10px;
+  }
   .discover-digital-art {
+    width: 100%!important;
+    margin-top: 379px!important;
+    margin-left: 0px!important;
+  }
+  .discover-digital-art-contacts {
     width: 100%!important;
     margin-top: 379px!important;
     margin-left: 0px!important;
@@ -1939,6 +1997,7 @@
   margin-top: 0px;
   background-repeat: no-repeat;
   background-size: contain;
+  border-radius: 26px;
 }
 .discover {
   width: 100%;
@@ -1968,6 +2027,14 @@
 }
 
 .discover-digital-art {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 125px;
+  gap: 32px;
+  margin-left: 90px;
+}
+.discover-digital-art-contacts {
   display: flex;
   flex-direction: column;
   width: 50%;

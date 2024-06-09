@@ -36,7 +36,7 @@ function Contacts () {
                 </p>
             </div>
 
-            <div style={{marginTop: "-200px"}}>
+            <div className="responsive-main-top">
             <MainComponent
                 image={RedCost}
                 imageMobile={RedCostMob}
@@ -110,7 +110,7 @@ function Contacts () {
             {/*</div>*/}
 
             <div className="discover-first-item" style={{marginTop: "160px"}}>
-                <div className="discover-digital-art">
+                <div className="discover-digital-art-contacts">
                     <div className="discover-header-side">
                         Enter The New World<br/>of Digital Art
                     </div>
@@ -128,7 +128,7 @@ function Contacts () {
                 </div>
             </div>
             <div className="discover-first-item-mobile" style={{marginTop: "70px"}}>
-                <div className="discover-digital-art">
+                <div className="discover-digital-art-contacts">
                     <div className="discover-header-side">
                         Enter The New World<br/>of Digital Art
                     </div>
