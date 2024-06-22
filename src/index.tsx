@@ -5,22 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import ScrollToTop from "./auth/ScrollTop";
-import { Web3ReactProvider } from '@web3-react/core'
-import { Web3Provider } from "@ethersproject/providers";
 
-function getLibrary(provider:any) {
-    return new Web3Provider(provider);
-}
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
       <BrowserRouter>
-          <Web3ReactProvider getLibrary={getLibrary}>
-              <ScrollToTop />
-              <App />
-          </Web3ReactProvider>
+          <ScrollToTop />
+          <App />
       </BrowserRouter>
   </React.StrictMode>
 );
