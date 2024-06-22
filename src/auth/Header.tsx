@@ -7,15 +7,15 @@ import Metamask from "../assets/metamask.svg";
 import Coinbase from "../assets/coinbase.svg";
 import WalletConnect from "../assets/wallet-connect.svg";
 import { RightOutlined } from '@ant-design/icons';
-// import {useWeb3React} from "@web3-react/core";
-// import { connectors } from "./connectors";
+import {useWeb3React} from "@web3-react/core";
+import { connectors } from "./connectors";
 
 
 function Header() {
     const [profitModalOpen, setProfitModalOpen] = useState(false);
     const [isWallet, setIsWallet] = useState(false);
 
-    // const { activate }:any = useWeb3React();
+    const { activate }:any = useWeb3React();
     const setProvider = (type:any) => {
         window.localStorage.setItem("provider", type);
     };
@@ -59,7 +59,7 @@ function Header() {
                 </div>
                 <div className="connections">
                     <div className="connections_item" onClick={()=>{
-                        // activate(connectors.injected);
+                        activate(connectors.injected);
                         setProvider("injected");
                         setProfitModalOpen(false)
                     }}>

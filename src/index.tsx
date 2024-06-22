@@ -17,10 +17,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <BrowserRouter>
-          {/*<Web3ReactProvider getLibrary={getLibrary}>*/}
+          <Web3ReactProvider getLibrary={getLibrary}>
               <ScrollToTop />
               <App />
-          {/*</Web3ReactProvider>*/}
+          </Web3ReactProvider>
       </BrowserRouter>
   </React.StrictMode>
 );
