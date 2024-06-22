@@ -46,20 +46,115 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  .title {
+    font-family: Montserrat-Bold;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 24px;
+    margin-bottom: 32px;
 
+  }
+
+}
+:where(.css-dev-only-do-not-override-1okl62o).ant-modal .ant-modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+:where(.css-dev-only-do-not-override-1okl62o).ant-input-affix-wrapper-lg {
+  width: 405px;
+  display: inline-flex;
+  height: 48px;
+  padding: 0px 24px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: #FFF;
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  border: unset;
+}
+
+:where(.css-dev-only-do-not-override-1okl62o).ant-input-outlined:hover {
+  border: unset!important;
+}
+:where(.css-dev-only-do-not-override-1okl62o).ant-input-outlined:focus {
+  border: unset!important;
+
+}
+:where(.css-dev-only-do-not-override-1okl62o).ant-input-affix-wrapper >input.ant-input {
+  color: #949494;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%;
+}
+.anticon svg {
+  width: 24px;
+  height: 26px;
+  color: rgba(0, 0, 0, 0.13);
+}
+.line_2 {
+  width: 163px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(195, 16, 29, 0) 0%, #75030B 100%);
+}
+.rotate {
+  rotate: 180deg;
+}
+.connections {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  border-radius: 26px;
+  background: #FFF;
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  margin-top: 30px;
+  &_item {
+    display: flex;
+    width: 405px;
+    height: 48px;
+    padding: 13px 24px;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    span {
+      color: #949494;
+      font-family: Montserrat-Regular;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 114.5%;
+    }
+  }
+}
+.borders {
+  border-top: 1px solid rgba(0, 0, 0, 0.13);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+.more-wallets {
+  color: #949494;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
 
 
-
-
-
-
-
-
-
 .header {
-  width:100%;
+  width:100vw;
   background: #FFFFFF;
   position: fixed;
   display: flex;
@@ -540,11 +635,8 @@
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 114.5%; /* 17.175px */
+  line-height: 114.5%;
   cursor: pointer;
-
-  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
-  /*-webkit-text-fill-color: transparent;*/
   background-size: 400% 100%;
   background-position: 75% center;
   transition: background 0.3s linear;
@@ -1088,6 +1180,9 @@
   }
 }
 @media screen and (max-width: 1300px) {
+  .mobile-header {
+    padding: 0!important;
+  }
   .bottom-side {
     display: contents;
   }
@@ -1191,6 +1286,9 @@
   .discover-last-item {
     width: 770px!important;
   }
+  .airdrop-last-item {
+    width: 770px!important;
+  }
   .walf-image-web {
     img {
       width: 300px !important;
@@ -1246,7 +1344,30 @@
   .responsive-main-top {
     margin-top: -490px!important;
   }
+  .airdrop {
+    margin-top: 74px!important;
+  }
+  .airdrop-first-item {
+    height: 430px !important;
+  }
+  .airdrop-last-item {
+    margin-top: 20px!important;
+  }
+  .airdrop-text {
+    span{
+      width: 770px !important;
+    }
+  }
 }
+
+.nft-group {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 1240px;
+  gap: 22px;
+}
+
 .responsive-main-top {
   margin-top: -200px;
 }
@@ -1299,6 +1420,9 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .mobile-header {
+    padding: 0 22px!important;
+  }
   .header-side {
     font-size: 32px;
     font-weight: 300;
@@ -1544,7 +1668,7 @@
     margin-top: 70px;
   }
   .mobile-header {
-    width: 370px!important;
+    width: 410px!important;
     padding: 0 20px;
     height: 70px!important;
   }
@@ -1635,7 +1759,11 @@
     width: 350px!important;
     flex-direction: column-reverse;
     padding: 0!important;
-
+  }
+  .airdrop-last-item {
+    width: 350px!important;
+    flex-direction: column-reverse;
+    padding: 0!important;
   }
   .walf-image-web {
     img {
@@ -1697,6 +1825,47 @@
     font-style: normal!important;
     font-weight: 400!important;
     line-height: normal!important;
+  }
+  .name {
+    font-size: 24px!important;
+    font-style: normal!important;
+    font-weight: 600!important;
+    line-height: 114.5%!important;
+  }
+  .nft-details .details .creator-name {
+    font-size: 14px!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    line-height: normal!important;
+  }
+  .nft-details .details .price {
+    font-size: 14px!important;
+    font-style: normal!important;
+    font-weight: 60!important;
+    line-height: normal!important;
+  }
+  .nft-details {
+    gap: 16px!important;
+  }
+  .airdrop-nft-left {
+    gap: 24px!important;
+    padding: 16px 16px 24px 16px!important;
+    //background: greenyellow;
+    width: 100%;
+  }
+  .airdrop-text {
+    padding: 12px!important;
+    span {
+      width: 370px!important;
+      font-size: 16px!important;
+      font-style: normal!important;
+      font-weight: 400!important;
+      line-height: normal!important;
+      padding: 0 12px!important;
+    }
+  }
+  .airdrop {
+    margin-top: 69px!important;
   }
 
 }
@@ -2296,8 +2465,8 @@
   border-radius: 26px;
   padding: 24px 24px 24px 56px;
   justify-content: space-between;
-;
 }
+
 
 @media screen and (max-width: 1477px) {
   .main-component-2 {
@@ -2712,3 +2881,570 @@
   opacity: 1;
 }
 
+//AIRDROP
+.airdrop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 96px;
+}
+.airdrop-first-item {
+  background: url("./assets/airdrop-first-bg.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 694px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.airdrop-text {
+    justify-content: center;
+    width: 100%;
+    color: #D7D7D7;
+    font-family: Montserrat-Bold;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 90%);
+    backdrop-filter: blur(2px);
+  span {
+    width: 1240px;
+  }
+}
+
+.airdrop-last-item {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(112deg, #EDEDED 12.45%, #EDEDED 12.46%, #F0F0F0 155.93%);
+  width: 1240px;
+  margin-top: 35px;
+  border-radius: 27px;
+  padding: 24px 24px 24px 56px;
+  justify-content: space-between;
+}
+.airdrop-nft-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.nft-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  .name {
+    font-family: Montserrat-Bold;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 114.5%;
+    background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    .creator-name {
+      color: #949494;
+      font-family: Montserrat-Regular;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .price {
+      color: #949494;
+      font-family: Montserrat-Regular;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}
+
+.airdrop-countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.nft-item {
+  display: flex;
+  flex-direction: column;
+  width: 293px;
+  height: 430px;
+  border-radius: 25px;
+  //background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.60) 57.4%, rgba(255, 255, 255, 0.60) 100%);
+  background: url("./assets/nft-item-bg.svg");
+  padding: 16px 16px 33px 16px;
+  gap: 16px;
+  filter: drop-shadow(0px 4px 13.4px rgba(0, 0, 0, 0.13));
+  overflow: hidden;
+  transition: all .8s ease;
+  cursor: pointer;
+  .nft-item-picture {
+    img {
+      border-radius: 12px;
+      transition: all .8s ease;
+    }
+  }
+  &_details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    background: #FFFFFF;
+    transition: all .8s ease;
+    &__title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      &__title {
+        color: #949494;
+        font-family: Montserrat-Regular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      &__owner-name {
+        color: #949494;
+        font-family: Montserrat-Regular;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: row;
+      gap: 46px;
+      &___item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        &____top {
+          color: #949494;
+          font-family: Montserrat-Regular;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: uppercase;
+      }
+        &____bottom {
+          font-family: Montserrat-Bold;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+          background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+  }
+}
+.nft-item:hover {
+    transform: translateY(-14px);
+  .nft-item_details {
+    transform: translateY(-78px);
+  }
+  .make-offer-button {
+    transform: translateY(-8px);
+  }
+}
+.make-offer-button {
+  display: flex;
+  width: 100%;
+  padding: 20px 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+  color: #FFF;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 17.175px */
+  cursor: pointer;
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  //-webkit-text-fill-color: transparent;
+  background-size: 400% 100%;
+  background-position: 75% center;
+  transition: all .8s linear;
+  margin-top: 10px;
+}
+.make-offer-button:hover {
+  background-position: 100% center;
+}
+
+
+.nft-airdrop-button {
+  display: flex;
+  /*min-width: 100px;*/
+  padding: 24px 44px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 500px;
+  color: #FFF;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 17.175px */
+  cursor: pointer;
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  //-webkit-text-fill-color: transparent;
+  background-size: 400% 100%;
+  background-position: 75% center;
+  transition: background 0.3s linear;
+  //margin-top: 40px;
+  width: 171px;
+  text-transform: uppercase;
+}
+.nft-airdrop-button:hover {
+  background-position: 100% center;
+}
+.nft-group-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mt-160 {
+  margin-top: 160px
+}
+
+//Market
+
+.market {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 96px;
+}
+.market-buttons-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1240px;
+  margin-top: 30px;
+  gap: 10px;
+}
+.market-button {
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #D7D7D7;
+  cursor: pointer;
+  transition: all .3s ease;
+  span {
+    color: #D7D7D7;
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+}
+.market-button:hover {
+  border-radius: 4px;
+  border: 1px solid #75030B;
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-is-active {
+  border-radius: 4px;
+  background: #F4F4F4;
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  color: #353535;
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #D7D7D7;
+  cursor: pointer;
+  transition: all .3s ease;
+  span {
+    color: #949494;
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+}
+
+.market-block1{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 48px;
+  gap: 48px;
+  width: 1240px;
+  flex-wrap: wrap;
+}
+
+//NGTDETAILS
+
+.nft-details-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 96px;
+}
+.nft-details-first {
+  display: flex;
+  width: 1240px;
+  //align-items: center;
+  justify-content: space-between;
+  margin-top: 110px;
+  //background: greenyellow;
+  &_left {
+    display: flex;
+    width: 511px;
+    height: 511px;
+    //background: grey;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 26px;
+    }
+  }
+  &_right {
+    //background: blue;
+    max-width: 660px;
+    width: 100%;
+    &__name {
+      margin-top: 30px;
+      font-family: Montserrat-Bold;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 114.5%;
+      background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &__collection-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 8px;
+      &___owner {
+        color: #949494;
+        font-family: Montserrat-Regular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        span {
+          color: #949494;
+          font-family: Montserrat-Bold;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+      &___collection-name {
+        display: flex;
+        gap: 6px;
+        span {
+          font-family: Montserrat-Regular;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+    }
+  }
+
+}
+.rating {
+  display: flex;
+  gap:16px;
+  &_items {
+    display: flex;
+    gap: 8px;
+    span {
+      color: #949494;
+      font-family: Montserrat-Regular;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.sale-end {
+  display: flex;
+  gap: 8px;
+  span {
+    color: #949494;
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  div {
+    color: #949494;
+    font-family: Montserrat-Bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+.time-text {
+  color: #949494;
+  font-family: Montserrat-Bold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  min-width: 53px;
+}
+.collection-actions {
+  padding: 28px 32px;
+  background: #F3F3F3;
+  margin-top: 30px;
+  border-radius: 26px;
+  &_title {
+    color: #949494;
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 6px;
+  }
+  &_current-price {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    &_bnb {
+      color: #949494;
+      font-family: Montserrat-Bold;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    &_usd {
+      color: #949494;
+      font-family: Montserrat-Bold;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 2px;
+    }
+
+  }
+}
+.nft-buy-buttons-gropup {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.nft-buy-button {
+  display: flex;
+  width: 293px;
+  padding: 24px 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  color: #FFF;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 17.175px */
+  cursor: pointer;
+  background-size: 400% 100%;
+  background-position: 75% center;
+  transition: background 0.3s linear;
+  gap: 10px;
+}
+.nft-buy-button:hover {
+  background-position: 100% center;
+}
+
+.nft-drop-button {
+  display: flex;
+  min-width: 293px;
+  padding: 24px 44px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 500px;
+  border: 1px solid #B21815;
+  background: #FFF;
+  color: #B21815;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%; /* 17.175px */
+  cursor: pointer;
+  transition: 0.4s ease;
+
+}
+.nft-drop-button:hover {
+  background: #B21815;
+  color: #FFF;
+}
+.main-countdown {
+  height: 96px;
+  width: 100%;
+  background: greenyellow ;
+  margin-top: 8px;
+}

@@ -55,6 +55,9 @@ function MobileHeader({ setProfitModalOpen, setIsWallet, isWallet }:any) {
                 navigate("./discover");
                 setOpen(false)
                 break;
+            case 2:
+                navigate("./airdrop")
+                break;
             case 3:
                 navigate("./investors");
                 setOpen(false)

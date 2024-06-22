@@ -29,6 +29,9 @@ function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }:any) {
            case 1:
                navigate("./discover")
                break;
+           case 2:
+               navigate("./airdrop")
+               break;
            case 3:
                navigate("./investors")
                break;
@@ -40,6 +43,9 @@ function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }:any) {
                navigate("./error")
        }
         console.log(`Click on ${index} and navigate ${index}` )
+    }
+    const handleMarket = () => {
+        navigate("./market")
     }
     const handleClickSocialItem = (item:String) => {
         console.log(`Click on ${item} and navigate ${item}` )
@@ -79,7 +85,7 @@ function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }:any) {
                 })}
 
             </div>
-            <div className={!isOpen? "navbar-item-market_nft": "navbar-item-market_nft hide-nav"}>Market NFT</div>
+            <div className={!isOpen? "navbar-item-market_nft": "navbar-item-market_nft hide-nav"} onClick={handleMarket}>Market NFT</div>
 
             <div className="web-header-group-items">
                 <div className="login">
