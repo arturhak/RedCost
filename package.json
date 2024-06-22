@@ -14,6 +14,7 @@
     "@web3-react/injected-connector": "^6.0.7",
     "@web3-react/walletconnect-connector": "^6.2.13",
     "@web3-react/walletlink-connector": "^6.2.14",
+    "@web3modal/ethers": "^5.0.3",
     "antd": "^5.17.0",
     "compass-mixins": "^0.12.12",
     "ethers": "^6.13.1",

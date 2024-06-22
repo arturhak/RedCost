@@ -863,6 +863,17 @@
 }
 
 
+wui-flex{
+  position: absolute;
+  top: 20%;
+}
+
+.open{
+  width: 100vw;
+  // position: absolute;
+}
+
+
 .social-group-component {
   display: flex;
   flex-direction: row;
