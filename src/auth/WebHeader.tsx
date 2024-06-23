@@ -11,25 +11,27 @@ import avatar from "../assets/icons/avatar.svg";
 
 
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react'
+import ConnectButton from "../button/ConnectButton";
+
 
 // 1. Get projectId
-const projectId = 'YOUR_PROJECT_ID'
+const projectId = '3198f90121e49a902bfb2f2d8976ea0d'
 
 // 2. Set chains
 const mainnet = {
-    chainId: 1,
-    name: 'Ethereum',
-    currency: 'ETH',
-    explorerUrl: 'https://etherscan.io',
-    rpcUrl: 'https://cloudflare-eth.com'
+    chainId: 97,
+    name: 'BNB Smart Chain Testnet',
+    currency: 'tBNB',
+    explorerUrl: 'https://bscscan.io',
+    rpcUrl: 'https://data-seed-prebsc-1-s2.bnbchain.org:8545'
 }
 
 // 3. Create a metadata object
 const metadata = {
-    name: 'My Website',
+    name: 'RedCost',
     description: 'My Website description',
-    url: 'https://mywebsite.com', // origin must match your domain & subdomain
-    icons: ['https://avatars.mywebsite.com/']
+    url: 'https://avanesovcrypto.xyz', // origin must match your domain & subdomain
+    icons: [avatar]
 }
 
 // 4. Create Ethers config
@@ -42,7 +44,7 @@ const ethersConfig = defaultConfig({
     enableInjected: true, // true by default
     enableCoinbase: true, // true by default
     rpcUrl: '...', // used for the Coinbase SDK
-    defaultChainId: 1 // used for the Coinbase SDK
+    defaultChainId: 97 // used for the Coinbase SDK
 })
 
 // 5. Create a Web3Modal instance
@@ -50,8 +52,19 @@ createWeb3Modal({
     ethersConfig,
     chains: [mainnet],
     projectId,
-    enableAnalytics: true // Optional - defaults to your Cloud configuration
+    enableAnalytics: true, // Optional - defaults to your Cloud configuration
+    themeMode: "light",
+    themeVariables: {
+        "--w3m-font-family": 'Montserrat-Bold',
+        "--w3m-accent": "#FFFFFF",
+        "--w3m-border-radius-master": "40px"	
+    }
+
+
 })
+
+
+
 
 
 function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }: any) {
@@ -155,10 +168,14 @@ function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }: any) {
                     {isWallet ?
                         <div onClick={() => console.log("show dropdown")} className="login-button-connected-web">
                             <img src={avatar} alt="avatar" style={{ cursor: "pointer" }} />
-                        </div> : <w3m-button />
-                        // <div className="login-button" onClick={openWalletConnetion}>Login</div>
+                        </div> :
+                        <ConnectButton/>
+                        // <w3m-button balance="hide" size="sm" loadingLabel="wait..."/>
+                        // <div className="login-button" ></div>
+                        
+
                     }
-                    
+
                 </div>
             </div>
         </div>
