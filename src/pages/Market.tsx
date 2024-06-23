@@ -29,7 +29,7 @@ function Market () {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        infinite: true,
+        infinite: false,
         autoplay: false,
         autoplaySpeed: 1000,
     };
@@ -38,7 +38,7 @@ function Market () {
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1,
-        infinite: true,
+        infinite: false,
         autoplay: false,
         autoplaySpeed: 1000,
     };
