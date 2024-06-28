@@ -598,7 +598,7 @@
   color: #949494;
   leading-trim: both;
   text-edge: cap;
-  font-family: Montserrat-Regular;
+  font-family: Montserrat-Light;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2552,7 +2552,7 @@
     align-items: flex-start;
     gap:16px;
    &__title {
-     font-family: Montserrat-Bold;
+     font-family: Montserrat-Regular;
      font-size: 20px;
      font-style: normal;
      font-weight: 600;
@@ -2564,7 +2564,7 @@
    }
     &__text {
       color:  #949494;
-      font-family: Montserrat-Regular;
+      font-family: Montserrat-Light;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
