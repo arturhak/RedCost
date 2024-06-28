@@ -36,7 +36,7 @@ function Investors () {
                                 The marketplace for those who know<br/>the true value of digital assets.
                             </div>
                             <div className="discover-bottom-side-left-header_buttons">
-                                <div className="discover-left-button">Whitepaper</div>
+                                <div className="discover-left-button">WHITEPAPER</div>
                                 <div className="discover-right-button">About</div>
                             </div>
                         </div>

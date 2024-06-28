@@ -7,6 +7,14 @@
   src: url("./fonts/Montserrat/Montserrat-Regular.ttf"), local("Montserrat-Bold");
 }
 @font-face {
+  font-family: "Montserrat-Light";
+  src: url("./fonts/Montserrat/Montserrat-Light.ttf"), local("Montserrat-Light");
+}
+@font-face {
+  font-family: "Montserrat-ExtraLight";
+  src: url("./fonts/Montserrat/Montserrat-ExtraLight.ttf"), local("Montserrat-ExtraLight");
+}
+@font-face {
   font-family: "Roboto Mono";
   src: url("./fonts/RobotoMono/static/RobotoMono-Medium.ttf"), local("Roboto Mono");
 }
@@ -609,7 +617,7 @@
   color: #FFF;
   leading-trim: both;
   text-edge: cap;
-  font-family: Montserrat-Regular;
+  font-family: Montserrat-ExtraLight;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -2271,7 +2279,7 @@
   gap: 10px;
   border-radius: 500px;
   color: #FFF;
-  font-family: Montserrat-Regular;
+  font-family: Montserrat-ExtraLight;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
