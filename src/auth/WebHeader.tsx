@@ -152,7 +152,7 @@ function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }: any) {
                         <img src={leftFill} alt="leftFill" className="social-group-logo-img" onClick={openSocialGroup} /> :
                         <img src={close} alt="leftFill" className="social-group-logo-img" onClick={openSocialGroup} />
                     }
-                    <div className={!isOpen ? "social-group-logo" : "social-group-logo open"}>
+                    <div className={!isOpen ? "social-group-logo" : "social-group-logo open-social-items"}>
                         {socialItems.map((socialItem: any, index) => {
                             return <div
                                 key={index}
