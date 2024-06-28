@@ -3015,7 +3015,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    background: #FFFFFF;
+    padding-top: 8px;
+    background: url("./assets/nft-item-bg.svg");
+
     transition: all .8s ease;
     &__title-group {
       display: flex;
@@ -3075,7 +3077,7 @@
 .nft-item:hover {
     transform: translateY(-14px);
   .nft-item_details {
-    transform: translateY(-62px);
+    transform: translateY(-72px);
   }
   .make-offer-button {
     transform: translateY(-8px);
@@ -3570,12 +3572,13 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    background: #FFFFFF;
+    background: url("./assets/nft-item-bg.svg");
+    padding-top: 6px;
     transition: all .8s ease;
     &__title-group {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 4px;
       &__title {
         color: #949494;
         font-family: Montserrat-Regular;
@@ -3647,7 +3650,7 @@
 .make-offer-small-button {
   display: flex;
   width: 100%;
-  padding: 18px 44px;
+  padding: 14px 44px;
   justify-content: center;
   align-items: center;
   border-radius: 500px;
