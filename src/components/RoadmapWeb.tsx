@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-
+import RoadmapDot from "../assets/icons/roadmap-dot.svg"
 
 function swap() {
   const elementFirst = document.getElementById("first");
@@ -44,15 +43,24 @@ function swap() {
 function RoadmapWeb() {
   return (
     <>
-<div className="security-component-header">
-                    <div className="line_1"></div>
-                    <div className="security-component-title">check our</div>
-                </div>
-                <div className="subtitle">Roadmap</div>
+      <div className="security-component-header">
+        <div className="line_1"></div>
+        <div className="security-component-title">check our</div>
+      </div>
+      <div className="subtitle">Roadmap</div>
 
-                <div className="roadmapBlocLine"></div>
+      <div className="roadmapBlocLine">
+        <img className="roadmapCircle" src={RoadmapDot} alt="" />
+      </div>
+      <div className="line_vertical">
+        <img className="roadmapCircleVertical" src={RoadmapDot} alt="" />
+      </div>
+
+
+      <div id="roadmapFirstBlock">
+        <span></span>
+      </div>
       {/* <button onClick={swap}>NEXT</button>
-                <div id="first">first</div>
                 <div id="second">second</div>
                 <div id="third">third</div>
                 <div id="fourth">fourth</div>

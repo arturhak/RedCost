@@ -901,32 +901,68 @@
   line-height: 114.5%;
   /* 22.9px */
   text-transform: uppercase;
-  background: linear-gradient( #75030B, #930210, #B4001E, #DA291C);
+  background: linear-gradient(#75030B, #930210, #B4001E, #DA291C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .roadmap {
+  position: relative;
   width: 1240px;
   height: 444px;
   margin-top: 41px;
   // background: darkseagreen;
 }
 
-.roadmapBlocLine {
-  width: 761px;
-  height: 1px;
-  background: linear-gradient( #75030B, #930210, #B4001E, #DA291C);
-  margin-top: 51px;
+.roadmap:hover {
+  .roadmapCircleVertical {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 
-#first {
-  background: red;
+.roadmapBlocLine {
+  width: 761px;
+  height: 1px;
+  background: linear-gradient(#75030B, #930210, #B4001E, #DA291C);
+  margin-top: 51px;
+}
+
+.roadmapCircle {
+  visibility: hidden;
+  position: absolute;
+  top: 28.5%;
+  left: 60px;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+
+}
+
+.line_vertical {
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(#75030B, #930210, #B4001E, #DA291C);
+  position: absolute;
+  left: 760px;
+}
+
+.roadmapCircleVertical {
+  visibility: hidden;
+  position: absolute;
+  left: -6px;
+  top: 22px;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+
+}
+
+#roadmapFirstBlock {
   width: 587px;
   height: 274px;
+  flex-shrink: 0;
   border-radius: 25px;
-  text-align: center;
+  background: #FFF;
 }
 
 #second {
