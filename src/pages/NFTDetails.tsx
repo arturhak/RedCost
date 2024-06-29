@@ -7,6 +7,7 @@ import Category from "../assets/category.svg";
 // import CountdownSales from "../components/CountdownSales";
 import Countdown from 'react-countdown';
 import Basket from "../assets/icons/basket.svg";
+import Description from "../assets/icons/description.svg"
 
 function NFTDetails () {
     const [views, setViews] = useState<any>("000");
@@ -109,6 +110,21 @@ function NFTDetails () {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className="nft-details-second">
+                <div className="nft-details-second_left">
+                    <div className="nft-details-second_left_header">
+                        <img src={Description} alt=""/>
+                        <span>Description</span>
+                    </div>
+                    <div className="nft-details-second_left_description">
+                    </div>
+
+                </div>
+                <div className="nft-details-second_right">right</div>
+
+
             </div>
 
         </div>

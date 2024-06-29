@@ -3282,10 +3282,8 @@
 .nft-details-first {
   display: flex;
   width: 1240px;
-  //align-items: center;
   justify-content: space-between;
   margin-top: 110px;
-  //background: greenyellow;
   &_left {
     display: flex;
     width: 511px;
@@ -3794,4 +3792,49 @@
   .slick-prev:hover {
     opacity: 1;
   }
+}
+
+.nft-details-second {
+  display: flex;
+  width: 1240px;
+  justify-content: space-between;
+  //background: greenyellow;
+  &_left {
+    display: flex;
+    flex-direction: column;
+    &_header {
+      width: 511px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+      background: #F4F4F4;
+      box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+      border-radius: 9px;
+      margin-bottom: -8px;
+      z-index: 5555;
+      gap: 8px;
+      span {
+        background: var(--1, linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: Montserrat-Regular;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+    &_description {
+      width: 511px;
+      height: 207px;
+      background: #F4F4F4;
+      border-radius: 0 0 9px 9px;
+      padding: 24px;
+      box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+
+    }
+  }
+
 }
