@@ -54,11 +54,11 @@ function RoadmapWeb() {
   ]);
 
   const [animClass, setAnimClass] = useState([
-    "first",
-    "second",
-    "third",
-    "fourth",
-    "fifth",
+    "roadmapFirstBlock",
+    "roadmapSecondBlock",
+    "roadmapThirdlock",
+    "roadmapFourthBlock",
+    "roadmapFifthBlock",
   ]);
 
   const [blockId] = useState([

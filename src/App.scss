@@ -1114,7 +1114,7 @@
 
 #roadmapFifthBlock {
   width: 291px;
-  height: 142px;
+  height: 99px;
   flex-shrink: 0;
   border-radius: 15px;
   background: #FFF;
@@ -1124,6 +1124,61 @@
   position: absolute;
   right: 0;
   bottom: -12px;
+}
+
+
+.roadmapFirstBlock {
+  width: 587px !important;
+  height: 274px !important;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 2s ease-out !important;
+}
+
+.roadmapSecondBlock {
+  width: 271px !important;
+  height: 99px !important;
+  position: absolute;
+  left: 51%;
+  bottom: 165px;
+  transition: all 2s ease-out !important;
+}
+
+.roadmapThirdlock {
+  width: 271px !important;
+  height: 99px !important;
+  position: absolute;
+  left: 52%;
+  bottom: 0;
+  transition: all 2s ease-out !important;
+
+}
+
+.roadmapFourthBlock {
+  width: 291px !important;
+  height: 142px !important;
+  background: #ffff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  text-align: center;
+  transition: all 2s ease-out !important;
+}
+
+.roadmapFifthBlock {
+  width: 291px;
+  height: 99px;
+  flex-shrink: 0;
+  background: #FFF;
+
+  /* 1 */
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  right: 0;
+  top: 120px;
 }
 
 
