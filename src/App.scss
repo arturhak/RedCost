@@ -948,15 +948,13 @@
 .roadmapCircleVertical {
   position: absolute;
   left: -6px;
-  top: 22px;
+  top: 18px;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
 
 }
 
 .roadmapTitle {
-  // leading-trim: both;
-  // text-edge: cap;
   font-family: Montserrat-Bold;
   font-size: 20px;
   font-style: normal;
