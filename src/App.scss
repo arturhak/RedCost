@@ -914,12 +914,11 @@
   // background: darkseagreen;
 }
 
-.roadmap:hover {
-  .roadmapCircleVertical {
-    visibility: visible;
-    opacity: 1;
-  }
-}
+// .roadmap:hover {
+//   .roadmapCircleVertical {
+//     opacity: 1;
+//   }
+// }
 
 
 .roadmapBlocLine {
@@ -930,31 +929,132 @@
 }
 
 .roadmapCircle {
-  visibility: hidden;
   position: absolute;
   top: 28.5%;
-  left: 60px;
-  opacity: 0;
+  left: 48px;
+  opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
 
 }
 
 .line_vertical {
   width: 1px;
-  height: 52px;
+  height: 321px;
   background: linear-gradient(#75030B, #930210, #B4001E, #DA291C);
   position: absolute;
   left: 760px;
 }
 
 .roadmapCircleVertical {
-  visibility: hidden;
   position: absolute;
   left: -6px;
   top: 22px;
-  opacity: 0;
+  opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
 
+}
+
+.roadmapTitle {
+  // leading-trim: both;
+  // text-edge: cap;
+  font-family: Montserrat-Bold;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background: linear-gradient(#DA291C, #B4001E, #930210, #75030B);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 41px;
+  top: -8px;
+}
+
+.smTitleRoadmap {
+  background: linear-gradient(#DA291C, #B4001E, #930210, #75030B);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Montserrat-Light;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.roadmapCircleVerticalSecondToThird {
+  position: absolute;
+  left: 754px;
+  bottom: 27%;
+}
+
+.line_third_to_fifth {
+  width: 45px;
+  height: 1px;
+  background: linear-gradient(#DA291C, #B4001E, #930210, #75030B);
+  position: absolute;
+  bottom: 40px;
+  right: 291px;
+}
+
+.roadmapCircleVerticalThirdToFifth {
+  position: absolute;
+  right: 144.6px;
+  bottom: 164px;
+  z-index: 10;
+}
+
+.roadmapCircleVerticalFifth {
+  position: absolute;
+  bottom: 20px;
+  right: 144.6px;
+  top: 90px;
+}
+
+.line_fifth_to_fourth {
+  width: 1px;
+  height: 385px;
+  position: absolute;
+  right: 150px;
+  background: linear-gradient(#DA291C, #B4001E, #930210, #75030B);
+  bottom: 0px;
+}
+
+.line_next {
+  position: absolute;
+  right: 4px;
+  top: 54px;
+}
+
+.right_arrow {
+  // background: linear-gradient(#DA291C, #B4001E, #930210, #75030B);
+  // position: absolute;
+  // right: 5px;
+  // top: 49px;
+  width: 146px;
+  height: 0px;
+  flex-shrink: 0;
+  stroke-width: 1px;
+  stroke: #75030B;
+}
+
+.roadmapNextBtn {
+  font-family: Montserrat-Light;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.5%;
+  /* 22.9px */
+  text-transform: uppercase;
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  right: 4px;
+  top: 24px;
+  cursor: pointer;
 }
 
 #roadmapFirstBlock {
@@ -963,49 +1063,69 @@
   flex-shrink: 0;
   border-radius: 25px;
   background: #FFF;
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  // background: blue;
+  margin-top: 51px;
+  position: absolute;
+  background-image: url(./assets/roadmap-dot.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+
 }
 
-#second {
+#roadmapSecondBlock {
   width: 271px;
   height: 99px;
-  background: red;
-  position: absolute;
-  left: 52%;
+  flex-shrink: 0;
   border-radius: 15px;
+  background: #FFF;
+
+  /* 1 */
   box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  left: 632px;
+  bottom: 165px;
 }
 
-#third {
+#roadmapThirdlock {
   width: 271px;
   height: 99px;
-  background: red;
-  position: absolute;
-  left: 52%;
-  bottom: 0;
+  flex-shrink: 0;
   border-radius: 15px;
+  background: #FFF;
+
+  /* 1 */
   box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  left: 632px;
+  bottom: -12px;
 }
 
-#fourth {
+#roadmapFourthBlock {
+  width: 291px;
+  height: 99px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #FFF;
+
+  /* 1 */
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  right: 0;
+}
+
+#roadmapFifthBlock {
   width: 291px;
   height: 142px;
-  background: blue;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  flex-shrink: 0;
   border-radius: 15px;
-  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
-}
+  background: #FFF;
 
-#fifth {
-  width: 291px;
-  height: 99px;
-  background: green;
+  /* 1 */
+  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
   position: absolute;
   right: 0;
-  top: 57px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 13.4px 0px rgba(0, 0, 0, 0.13);
+  bottom: -12px;
 }
 
 
