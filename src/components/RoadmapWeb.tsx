@@ -1,47 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import RoadmapDot from "../assets/icons/roadmap-dot.svg"
 
-function swap() {
+// function swap() {
 
 
 
-  const elementFirst = document.getElementById("first");
-  if (elementFirst) {
-    // Trigger the transition by adding the 'move' class
-    elementFirst.classList.add("moveLeft");
-  }
+//   const elementFirst = document.getElementById("first");
+//   if (elementFirst) {
+//     // Trigger the transition by adding the 'move' class
+//     elementFirst.classList.add("moveLeft");
+//   }
 
-  const elementSecond = document.getElementById("second");
-  if (elementSecond) {
-    // Trigger the transition by adding the 'move' class
-    elementSecond.classList.add("moveStart");
-  }
+//   const elementSecond = document.getElementById("second");
+//   if (elementSecond) {
+//     // Trigger the transition by adding the 'move' class
+//     elementSecond.classList.add("moveStart");
+//   }
 
-  const elementThird = document.getElementById("third");
-  if (elementThird) {
-    // Trigger the transition by adding the 'move' class
-    elementThird.classList.add("move");
-  }
+//   const elementThird = document.getElementById("third");
+//   if (elementThird) {
+//     // Trigger the transition by adding the 'move' class
+//     elementThird.classList.add("move");
+//   }
 
-  const elementForth = document.getElementById("fourth");
-  if (elementForth) {
-    // Trigger the transition by adding the 'move' class
-    elementForth.classList.add("moveRight");
-  }
+//   const elementForth = document.getElementById("fourth");
+//   if (elementForth) {
+//     // Trigger the transition by adding the 'move' class
+//     elementForth.classList.add("moveRight");
+//   }
 
 
-  const elementFourth = document.getElementById("forth");
-  if (elementFourth) {
-    // Trigger the transition by adding the 'move' class
-    elementFourth.classList.add("moveRight");
-  }
+//   const elementFourth = document.getElementById("forth");
+//   if (elementFourth) {
+//     // Trigger the transition by adding the 'move' class
+//     elementFourth.classList.add("moveRight");
+//   }
 
-  const elementFifth = document.getElementById("fifth");
-  if (elementFifth) {
-    // Trigger the transition by adding the 'move' class
-    elementFifth.classList.add("moveDown");
-  }
-}
+//   const elementFifth = document.getElementById("fifth");
+//   if (elementFifth) {
+//     // Trigger the transition by adding the 'move' class
+//     elementFifth.classList.add("moveDown");
+//   }
+// }
 
 function RoadmapWeb() {
 
@@ -77,6 +77,45 @@ function RoadmapWeb() {
     "FEBRUARY",
   ]);
 
+  
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("count updated:", count);
+    updateDomClasses();
+  }, [animClass, count]);
+
+  function Next() {
+    setAnimClass(prevAnimClass => {
+      let newAnimClass = [...prevAnimClass];
+      let firstElement: any = newAnimClass.shift(); // Remove the first element
+      newAnimClass.push(firstElement); // Add it to the end
+      return newAnimClass; // Return the new array
+    });
+
+    setCount(prevCount => prevCount + 1); // Functional update to ensure the correct value
+  }
+
+  function animPrev() {
+    setAnimClass(prevAnimClass => {
+      let newAnimClass = [...prevAnimClass];
+      let lastElement: any = newAnimClass.pop(); // Remove the last element
+      newAnimClass.unshift(lastElement); // Add it to the beginning
+      return newAnimClass; // Return the new array
+    });
+
+    setCount(prevCount => prevCount - 1); // Functional update to ensure the correct value
+  }
+
+  function updateDomClasses() {
+    for (let index = 0; index < roadmapContent.length; index++) {
+      let element = document.getElementById(blockId[index]);
+      if (element) {
+        roadmapContent.forEach(cls => element?.classList.remove(cls)); // Remove all possible classes
+        element.classList.add(animClass[index]); // Add the new class
+      }
+    }
+  }
 
 
 
@@ -115,7 +154,7 @@ function RoadmapWeb() {
         </defs>
       </svg>
 
-      <span className="roadmapNextBtn">NEXT</span>
+      <span className="roadmapNextBtn" onClick={Next}>NEXT</span>
 
 
       {roadmapContent.map((el, index) => (
