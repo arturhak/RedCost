@@ -13,6 +13,7 @@ import bgImage from "../assets/bg-image.svg";
 import bgImageMobile from "../assets/bg-image-mobile.svg";
 import RoadmapWeb from "../components/RoadmapWeb";
 import CountDown from "../components/CountDown";
+import CountdownMain from "../countdowns/Countdown";
 
 function AuthLayout () {
 
@@ -42,7 +43,7 @@ function AuthLayout () {
                         </div>
                     </div>
                     <div className="auth-countdown">
-                        <CountDown/>
+                        <CountdownMain />
                     </div>
                 </div>
             </div>

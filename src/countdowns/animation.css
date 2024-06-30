@@ -1,0 +1,53 @@
+@keyframes fold {
+  from {
+    transform: rotateX(0);
+  }
+
+  to {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes unfold {
+  from {
+    transform: rotateX(180deg);
+  }
+
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.fold {
+  animation: fold 0.5s linear;
+}
+
+.unfold {
+  animation: unfold 0.5s linear;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf"), local("Montserrat-Regular");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf"), local("Montserrat-Bold");
+}
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf"), local("Montserrat-Light");
+}
+
+@font-face {
+  font-family: "Montserrat-ExtraLight";
+  src: url("../fonts/Montserrat/Montserrat-ExtraLight.ttf"), local("Montserrat-ExtraLight");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../fonts/RobotoMono/static/RobotoMono-Medium.ttf"), local("Roboto Mono");
+}
+
