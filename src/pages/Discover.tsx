@@ -18,12 +18,12 @@ function About () {
 
     return (
         <div className="discover">
-
-            <div className="discover-first-item">
-                <p className="discover-text">
+            <div className="discover-header">
+                <div className="discover-text">
                     Discover
-                </p>
-
+                </div>
+            </div>
+            <div className="discover-first-item">
                 <div className="discover-digital-art">
                     <div className="discover-header-side">
                         Enter The New World<br/>of Digital Art

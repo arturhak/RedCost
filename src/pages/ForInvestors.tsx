@@ -20,12 +20,12 @@ function Investors () {
 
     return (
         <div className="investors">
-
-            <div className="investors-first-item">
-                <p className="discover-text">
+            <div className="discover-header">
+                <div className="discover-text">
                     For Investors
-                </p>
-
+                </div>
+            </div>
+            <div className="investors-first-item">
                 <div className="discover-digital-art">
                     <div className="discover-header-side">
                         Enter The New World<br/>of Digital Art

@@ -440,9 +440,7 @@
 
 .header-side {
   color: #353535;
-  leading-trim: both;
-  text-edge: cap;
-  font-family: Montserrat-Bold;
+  font-family: Montserrat-Light;
   font-size: 64px;
   font-style: normal;
   font-weight: 300;
@@ -582,7 +580,7 @@
 .main-component {
   display: flex;
   width: 1240px;
-  //margin-top: 250px;
+  margin-top: 160px;
   align-items: center;
   justify-content: space-between;
   gap: 59px;
@@ -1755,7 +1753,7 @@
 }
 
 .responsive-main-top {
-  margin-top: -200px;
+  //margin-top: -200px;
 }
 
 @media screen and (min-width: 1300px) {
@@ -1975,13 +1973,30 @@
     height: 30px;
   }
 
+  .svgbig-container {
+    width: 70px !important;
+    height: 28px !important;
+  }
+  .social-group-component1 {
+    gap: 28px !important;
+    margin-left: 22px !important;
+  }
   .social-group-component {
     gap: 17px;
     max-width: 415px;
   }
+  .mt-250 {
+    margin-top: 72px!important;
+  }
+  .mt-160 {
+    margin-top: 100px!important;
+  }
+  .mt-140 {
+    margin-top: 72px!important;
+  }
 
   .social-big-logo-group {
-    gap: 33px
+    gap: 20px
   }
 
   .security-component-header {
@@ -1993,7 +2008,7 @@
   }
 
   .main-component {
-    margin-top: 120px;
+    margin-top: 0px;
   }
 
   .right-button:hover {
@@ -2166,13 +2181,13 @@
 
   .about-text {
     width: 345px !important;
-    margin-bottom: -100px !important;
+    //margin-bottom: -100px !important;
     font-size: 16px !important;
     font-weight: 400 !important;
   }
 
   .about {
-    margin-top: 100px !important;
+    margin-top: 27px !important;
   }
 
   .discover-first-item {
@@ -2664,13 +2679,13 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 55px;
   //background:red;
 }
 .about-header {
   width: 100%;
   height: 70px;
-  background: linear-gradient(270deg, #FFF 0%, #F7F7F7 50%);
+  background: linear-gradient(270deg, #FFF 0%, #F7F7F7 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2701,26 +2716,34 @@
   margin-top: 0px;
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 26px;
+  border-radius: 0 0 26px 26px;
 }
 
 .discover {
   width: 100%;
   display: flex;
-  /*justify-content: center;*/
+  //justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
+  position: relative;
 }
-
+.discover-header {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
 .discover-text {
   justify-content: flex-start;
-  max-width: 1240px;
-  width: 100%;
+  //max-width: 1240px;
+  width: 1240px;
   color: #D7D7D7;
   font-family: Montserrat-Light;
-
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -3044,7 +3067,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 
@@ -3176,12 +3199,17 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 
 .contacts-first-item {
-  width: 1240px;
+  width: 100%;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 100%);
 }
 
 .contacts-text {
@@ -3190,7 +3218,6 @@
   width: 100%;
   color: #D7D7D7;
   font-family: Montserrat-Light;
-
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -3477,7 +3504,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
 }
 
 .airdrop-first-item {
@@ -3506,7 +3533,7 @@
   height: 70px;
   display: flex;
   align-items: center;
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 90%);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 60%);
   backdrop-filter: blur(2px);
 
   span {
