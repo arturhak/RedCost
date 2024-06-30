@@ -208,7 +208,7 @@ function NFTDetails () {
                     <div className="nft-details-second_right_description">
                         <div className="chart-content">
                             <div className="left-vertical">Volume (ETH)</div>
-                            {[1,2,3,4].map((item) => <div className="chart-content_item">
+                            {[1,2,3,4].map((item) => <div className="chart-content_item" key={item}>
                                 <div className="chart-content_price">0.0</div>
                                 <div className="chart-content_line"></div>
                                 <div className="chart-content_price">0.0</div>
