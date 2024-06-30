@@ -46,7 +46,7 @@ function AuthLayout () {
                     </div>
                 </div>
             </div>
-            <div className="mt-250">
+            <div>
                 <MainComponent
                     image={RedCost}
                     imageMobile={RedCostMob}
@@ -87,7 +87,7 @@ function AuthLayout () {
                 <RoadmapWeb />
 
             </div>
-            <div className="lastMainComponent mt-140">
+            <div className="lastMainComponent">
                 <MainComponent
                     image={RedCost1}
                     imageMobile={RedCost1Mob}
@@ -137,7 +137,7 @@ function AuthLayout () {
                     })}
                 </div>
             </div>
-            <div className="lastMainComponent1 mt-140">
+            <div className="lastMainComponent1">
                 <MainComponent
                     image={RedCost2}
                     imageMobile={RedCost2Mob}

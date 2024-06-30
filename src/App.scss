@@ -529,7 +529,7 @@
 .main-component {
   display: flex;
   width: 1240px;
-  //margin-top: 250px;
+  margin-top: 250px;
   align-items: center;
   justify-content: space-between;
   gap: 59px;
@@ -2242,7 +2242,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 .discover-text {
@@ -2550,7 +2550,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 .investors-first-item {
@@ -2674,7 +2674,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 .contacts-first-item {
@@ -2952,7 +2952,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
 }
 .airdrop-first-item {
   background: url("./assets/airdrop-first-bg.svg");
@@ -2980,7 +2980,7 @@
     height: 70px;
     display: flex;
     align-items: center;
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 90%);
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 60%);
     backdrop-filter: blur(2px);
   span {
     width: 1240px;
