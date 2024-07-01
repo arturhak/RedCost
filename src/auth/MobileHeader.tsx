@@ -1,132 +1,107 @@
 import React, {useState} from "react";
 import {Drawer} from 'antd';
-import {navItems, profileItem} from "../constants/navItems";
-import {socialItems} from "../constants/socialItems";
-import mobileLogo from "../assets/mobile-logo.svg"
-import avatar from "../assets/icons/avatar.svg";
-import {useNavigate} from "react-router-dom";
 
-function MobileHeader({ setProfitModalOpen, setIsWallet, isWallet }:any) {
+function MobileHeader(props: any) {
 
     const [open, setOpen] = useState(false);
-    const [burgerDrawer, setBurgerDrawer] = useState(false);
-    const navigate = useNavigate()
 
-    const openWalletConnetion = () => {
-        setProfitModalOpen(true)
-    };
-    const showProfileDrawer = () => {
+    const showDrawer = () => {
         setOpen(true);
-        setBurgerDrawer(false)
     };
-
-    const showBurgerDrawer = () => {
-
-        if (open) {
-            setOpen(false);
-        }else{
-            setOpen(true)
-            setBurgerDrawer(true)
-        }
-    };
-
     const onClose = () => {
         setOpen(false);
     };
-
-    const handleClickProfileItem = (item:String) => {
-        console.log(`Click on ${item} and navigate ${item}` )
-    }
-
-    const handleClickSocialItem = (item:String) => {
-        console.log(`Click on ${item} and navigate ${item}` )
-    }
-    const handleHome = () => {
-        console.log("go to home page");
-        setOpen(false)
-    }
-    const handleClickNavItem = (index:any) => {
-        switch (index) {
-            case 0:
-                navigate("./about");
-                setOpen(false)
-                break;
-            case 1:
-                navigate("./discover");
-                setOpen(false)
-                break;
-            case 2:
-                navigate("./airdrop")
-                break;
-            case 3:
-                navigate("./investors");
-                setOpen(false)
-                break;
-            case 4:
-                navigate("./contacts");
-                setOpen(false)
-                break;
-
-            default:
-                navigate("./error")
-        }
-        console.log(`Click on ${index} and navigate ${index}` )
-    }
+const headerData = [
+        {
+            icon: "LamaLogo",
+            header: "Profit"
+        },
+        {
+            icon: "Coctail",
+            header: "Cocktails"
+        },
+        {
+            icon: "BNB2",
+            header: "Balance"
+        },
+        {
+            icon: "Statistic",
+            header: "Statistic"
+        },
+    ]
     return (
-        <div className="mobile-header" >
-            <div onClick={handleHome} style={{cursor: "pointer"}} className="logo">
-                <img src={mobileLogo} alt="mobileLogo" />
-            </div>
-            <div className="login-burger-group">
-                {isWallet?
-                    <div onClick={showProfileDrawer}>
-                        <img src={avatar} alt="avatar" style={{cursor: "pointer"}} />
-                    </div>:
-                    <div className="mobile-login-button" onClick={openWalletConnetion}>Login</div>
-                }
-                 <div className={!open? "hamburger": "is-active"} onClick={showBurgerDrawer} id="hamburger-1">
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                 </div>
+        <div className="mobile-header">
+            <div className="burger" onClick={showDrawer}>
+                <div className="burger-line"></div>
+                <div className="burger-line"></div>
+                <div className="burger-line"></div>
             </div>
             <Drawer
-                placement="right"
+                placement="left"
                 onClose={onClose}
                 open={open}
-                width={390}
+                className="drower-el"
             >
-                {burgerDrawer?
-                    <div className="drower-content-navbar">
-                        {navItems.map((item: String, index:any) => {
-                            return <div  className="drower-content-navbar-item" key={index}
-                                        onClick={() => handleClickNavItem(index)}>{item}</div>
-                        })}
-                        <div className="drower-content-navbar-nft">Market NFT</div>
-                    </div>:
-                    <div className="drower-content-navbar drower-content-profile">
-                        {profileItem.map((item: any, index) => {
-                            return <div style={{display:"flex", gap: "8px", alignItems:"center"}} key={index}>
-                                <img src={item.icon} alt=""/>
-                                <div className="drower-content-navbar-item"
-                                        onClick={() => handleClickProfileItem(item.option)}>{item.option}</div>
+                <div className="balance-group mob-balance-group">
+                    <div className="balance-mobie" onClick={() => {
+                        props.openActions(headerData[0].header)
+                        setOpen(false)
+                    }}>
+                        <img src={headerData[0].icon} alt="logo"/>
+                        <div className="balance-content">
+                            <div className="balance-content-header">
+                                {headerData[0].header}
                             </div>
-                        })}
-                    </div>
-                }
-
-                <div className="drower-content-navbar-bottom">
-                    {socialItems.map((socialItem:any,key) =>{
-                        return <div
-                            style={{cursor:"pointer"}}
-                            key={key}
-                            onClick={() => handleClickSocialItem(socialItem.name)}
-                        >
-                            {socialItem.logosvg}
+                            <div className="balance-content-amount">
+                                {Number(props.data?.balanceOfCoin)}
+                            </div>
                         </div>
-                    })}
+                    </div>
+                    <div className="balance-mobie" onClick={() => {
+                        props.openActions(headerData[1].header)
+                        setOpen(false)
+                    }}>
+                        <img src={headerData[1].icon} alt="logo"/>
+                        <div className="balance-content">
+                            <div className="balance-content-header">
+                                {headerData[1].header}
+                            </div>
+                            <div className="balance-content-amount">
+                                {Number(props.data?.balanceOfCocktail)}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="balance-mobie" onClick={() => {
+                        props.openActions(headerData[2].header)
+                        setOpen(false)
+                    }}>
+                        <img src={headerData[2].icon} alt="logo"/>
+                        <div className="balance-content">
+                            <div className="balance-content-header">
+                                {headerData[2].header}
+                            </div>
+                            <div className="balance-content-amount">
+                               fsgdhjhdh
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
+                <div onClick={() => {
+                    props.openActions("Statistic");
+                    setOpen(false)
+                }} style={{marginBottom: "24px"}}>
+
+                </div>
+
             </Drawer>
+            <div className="mobile-header-content">
+                <div className="logo">
+                    <img src={"Logo"} alt="" onClick={()=>console.log("OK")}/>
+                </div>
+
+            </div>
         </div>
     )
 }

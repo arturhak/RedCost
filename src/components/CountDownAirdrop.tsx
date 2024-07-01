@@ -4,7 +4,7 @@ function CountDownAirdrop () {
 
     // * To flip all card
     const flipAllCards = (time:any) => {
-        // console.log("time", time)
+        console.log("time", time)
         // * Breaking the time into sec, min, hours
         const seconds = Math.floor(time % 60);
         const minutes = Math.floor(time / 60) % 60;
