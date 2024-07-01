@@ -7,21 +7,12 @@ import Category from "../assets/category.svg";
 // import CountdownSales from "../components/CountdownSales";
 import Countdown from 'react-countdown';
 import Basket from "../assets/icons/basket.svg";
-import Description from "../assets/icons/description.svg"
-import {Dropdown, Space} from "antd";
-import type { MenuProps } from 'antd';
-import DetailsIcon from "../assets/icons/details-icon.svg";
-import ArrowDown from "../assets/icons/arrow-down-grey.svg";
-import ArrowUp from "../assets/icons/arrow-up-grey.svg";
-import PriceHistory from "../assets/icons/price-history.svg";
-import ChartLine from "../assets/icons/chart-hover-line.svg";
 
 function NFTDetails () {
     const [views, setViews] = useState<any>("000");
     const [favorites, setFavorites] = useState<any>("000");
     const [priceBNB, setPriceBNB] = useState<number>(1000);
     const [priceUSD, setPriceUSD] = useState<number>(5000);
-    const [openDropdown, setOpenDropdown] = useState<any>();
 
     function formatTime(date:any) {
         let hours = date.getHours();
@@ -57,54 +48,6 @@ function NFTDetails () {
     const handleDropNFT = () => {
         console.log("handleDropNFT")
     }
-    const onOpenChange = (e:any) => {
-        setOpenDropdown(e)
-    }
-    const items: MenuProps['items'] = [
-        {
-            key: '1',
-            label: <div className="dropdown-items">
-                <div className="dropdown-items_left">Contract Address</div>
-                <div className="dropdown-items_right">xxx</div>
-            </div>
-        },
-        {
-            key: '2',
-            label: <div className="dropdown-items">
-                <div className="dropdown-items_left">Token ID</div>
-                <div className="dropdown-items_right">xxx</div>
-            </div>
-        },
-        {
-            key: '3',
-            label: <div className="dropdown-items">
-                <div className="dropdown-items_left">Token Standard</div>
-                <div className="dropdown-items_right">xxx</div>
-            </div>
-        },
-        {
-            key: '4',
-            label: <div className="dropdown-items">
-                <div className="dropdown-items_left">Chain</div>
-                <div className="dropdown-items_right">xxx</div>
-            </div>
-        },
-        {
-            key: '5',
-            label: <div className="dropdown-items">
-                <div className="dropdown-items_left">Last Updated</div>
-                <div className="dropdown-items_right">xxx</div>
-            </div>
-        },
-        {
-            key: '6',
-            label: <div className="dropdown-items">
-                <div className="dropdown-items_left">Creator Earnings</div>
-                <div className="dropdown-items_right">xxx</div>
-            </div>
-        },
-    ];
-
     return (
         <div className="nft-details-main">
             <div className="nft-details-first">
@@ -166,73 +109,6 @@ function NFTDetails () {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="nft-details-second">
-                <div className="nft-details-second_left">
-                    <div className="nft-details-second_left_header">
-                        <img src={Description} alt=""/>
-                        <span>Description</span>
-                    </div>
-                    <div className="nft-details-second_left_description">
-                        <div className="scroll-div">
-                            <span>RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent.
-                                <br/>
-                                <br/>
-                                To create a safe and convenient platform for everyone who
-                            </span>
-                        </div>
-                    </div>
-                    <Dropdown
-                        menu={{ items }}
-                        trigger={["click"]}
-                        onOpenChange={onOpenChange}
-                    >
-                        <a onClick={(e) => e.preventDefault()}>
-                            <Space>
-                                <div className="dropdown-left">
-                                    <img src={DetailsIcon} alt=""/>
-                                    <span>Details</span>
-                                </div>
-                                {openDropdown ? <img src={ArrowUp} alt=""/>: <img src={ArrowDown} alt=""/>}
-
-                            </Space>
-                        </a>
-                    </Dropdown>
-                </div>
-                <div className="nft-details-second_right">
-                    <div className="nft-details-second_right_header">
-                        <img src={PriceHistory} alt=""/>
-                        <span>Price History</span>
-                    </div>
-                    <div className="nft-details-second_right_description">
-                        <div className="chart-content">
-                            <div className="left-vertical">Volume (ETH)</div>
-                            {[1,2,3,4].map((item) => <div className="chart-content_item" key={item}>
-                                <div className="chart-content_price">0.0</div>
-                                <div className="chart-content_line"></div>
-                                <div className="chart-content_price">0.0</div>
-                            </div>)}
-                            <div className="right-vertical">Average price<br/>(ETH)</div>
-
-                            <div className="chart">
-                                <img src={ChartLine} alt="" className="line-image"/>
-                                <div className="chart-info">
-                                    <div className="chart-info_header">0.00 ETH</div>
-                                    <div className="chart-info_content">
-                                        Avg. price: 0,000 ETH
-                                        <br/>
-                                        Num. sales: 0
-                                        <br/>
-                                        May 27 at 0:00 AM
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
 
         </div>
