@@ -46,7 +46,7 @@ function AuthLayout () {
                     </div>
                 </div>
             </div>
-            <div id="firstMainComponent">
+            <div>
                 <MainComponent
                     image={RedCost}
                     imageMobile={RedCostMob}
