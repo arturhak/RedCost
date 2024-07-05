@@ -4,7 +4,6 @@ import bgImageMobile from "../assets/bg-image-mobile.svg";
 import CountDown from "../components/CountDown";
 import MainComponent from "../components/MainComponent";
 import RedCost from "../assets/images/red-cost.svg";
-import RedCostReverse from "../assets/images/red-cost-reverse.svg";
 import RedCostMob from "../assets/images/red-cost-mob.svg";
 import Security from "../components/Security";
 import SecurytyImage from "../assets/images/security-logo.svg";
@@ -19,14 +18,12 @@ function About () {
 
     return (
         <div className="about">
-            <div className="about-header">
-                <div className="about-text">
-                    About
-                </div>
+            <div className="about-text">
+                About
             </div>
             <div>
                 <MainComponent
-                    image={RedCostReverse}
+                    image={RedCost}
                     imageMobile={RedCostMob}
                     title={true}
                     titleText="ABOUT"
@@ -67,7 +64,7 @@ function About () {
             </div>
             <div className="lastMainComponent">
                 <MainComponent
-                    image={RedCostReverse}
+                    image={RedCost}
                     imageMobile={RedCostMob}
                     title={true}
                     titleText=""

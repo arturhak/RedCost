@@ -195,7 +195,6 @@ function NFTDetails () {
                                     <span>Details</span>
                                 </div>
                                 {openDropdown ? <img src={ArrowUp} alt=""/>: <img src={ArrowDown} alt=""/>}
-
                             </Space>
                         </a>
                     </Dropdown>

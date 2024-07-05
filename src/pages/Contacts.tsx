@@ -51,6 +51,7 @@ function Contacts () {
             />
             </div>
 {/*ADRESS*/}
+
             <div className="actions-group">
                 <div className="address">
                     <img src={addressTop} alt="" className="address-top"/>
