@@ -39,7 +39,7 @@ const handleScroll = () => {
         let position1:any = el1?.getBoundingClientRect();
         // let position2:any = el2?.getBoundingClientRect();
 
-        if (position?.top + 600< window.innerHeight && position?.bottom > 0) {    //position.top + 100
+        if (position?.top + 400< window.innerHeight && position?.bottom > 0) {    //position.top + 100
             elLeft?.classList.add("anim-from-left")
             elRight?.classList.add("anim-from-right")
             // el.classList.add("visible")
@@ -50,7 +50,7 @@ const handleScroll = () => {
             // el.classList.remove("visible")
         }
 
-    if (position1?.top + 600 < window.innerHeight && position1?.bottom > 0) {
+    if (position1?.top + 400 < window.innerHeight && position1?.bottom > 0) {
         elLeft1.classList.add("anim-from-left")
         elRight1.classList.add("anim-from-right")
         // el1.classList.add("visible")

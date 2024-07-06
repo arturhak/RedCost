@@ -13,7 +13,7 @@ import bgImage from "../assets/bg-image.svg";
 import bgImageMobile from "../assets/bg-image-mobile.svg";
 import RoadmapWeb from "../components/RoadmapWeb";
 import CountDown from "../components/CountDown";
-import CountdownGradient from "../components/countdown/CountdownGradient";
+import CountdownMain from "../components/countdown/CountdownMain";
 
 function AuthLayout () {
 
@@ -42,9 +42,9 @@ function AuthLayout () {
                             <div className="right-button">AirDrop</div>
                         </div>
                     </div>
-                    {/*<div className="auth-countdown">*/}
-                        <CountdownGradient />
-                    {/*</div>*/}
+                    <div className="auth-countdown">
+                        <CountdownMain />
+                    </div>
                 </div>
             </div>
             <div id="firstMainComponent">

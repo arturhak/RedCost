@@ -11,8 +11,9 @@ const Container = styled.div`
   width: 170px;
   height: 170px;
 
-  @media screen and (max-width: 37.5em) {
-    width: 14rem;
+  @media screen and (max-width: 1023px) {
+    width: 80px;
+    height: 80px;
   }
 `;
 
@@ -30,6 +31,11 @@ const Title = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+    
+  @media screen and (max-width: 1023px) {
+    font-size: 10px;
+    margin-top: 8px;
+  }
 `;
 
 const Cards = styled.div`
@@ -42,8 +48,10 @@ const Cards = styled.div`
   background: linear-gradient(180deg, #F2F2F2 0%, #CCC 100%);
   box-shadow: 0px 4px 13.9px 0px rgba(0, 0, 0, 0.25);
 
-  @media screen and (max-width: 37.5em) {
-    border-radius: 5px;
+  @media screen and (max-width: 1023px) {
+    border-radius: 15px;
+    height: 80px;
+
   }
 `;
 
@@ -69,6 +77,10 @@ const StaticCard = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+    @media screen and (max-width: 1023px) {
+      font-size: 48px;
+    }
   }
 `;
 
@@ -93,9 +105,9 @@ const UpperStaticCard = styled(StaticCard)`
     filter: brightness(0.85);
   }
 
-  @media screen and (max-width: 37.5em) {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+  @media screen and (max-width: 1023px) {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 `;
 
@@ -119,9 +131,9 @@ const LowerStaticCard = styled(StaticCard)`
     transform: translateY(-50%);
   }
 
-  @media screen and (max-width: 37.5em) {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  @media screen and (max-width: 1023px) {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 `;
 
@@ -140,14 +152,13 @@ const BackFlipCard = styled(LowerStaticCard)`
   transform: rotateX(180deg);
 `;
 
-const Card = ({ currentNumber, nextNumber, title }) => {
+const CardMain = ({ currentNumber, nextNumber, title }) => {
   const [[current, next], setNumber] = useState([currentNumber, nextNumber]);
   const [isAnimated, setIsAnimated] = useState(false);
   const [isFirstRender, setIsFirstRender] = useState(true);
 
   const toString = num => {
-    return ('5' + num?.toString(10)).slice(-2);
-    // console.log("nnnnnnnnnnnnnn",('0' + num.toString(10)).slice(-2), "nummmmm=>",num)
+    return ('0' + num?.toString(10)).slice(-2);
   };
 
   console.log("current",current,)
@@ -188,4 +199,4 @@ const Card = ({ currentNumber, nextNumber, title }) => {
   );
 };
 
-export default Card;
+export default CardMain;

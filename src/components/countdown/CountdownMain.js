@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { addDays, intervalToDuration, compareAsc, addSeconds } from 'date-fns';
-import Card from "./Card";
+import CardMain from "./CardMain";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -44,10 +44,13 @@ const Main = styled.main`
   display: flex;
   justify-content: center;
   gap: 21px;
+  @media screen and (max-width: 1023px) {
+    gap: 12px
+  }
 `;
 
-const CountdownGradient = () => {
-  const [targetTime] = useState(addDays(new Date(), 15));
+const CountdownMain = () => {
+  const [targetTime] = useState(addDays(new Date(),10));
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => setCurrentTime(time => addSeconds(time, 0)), []); //if finished
@@ -75,14 +78,14 @@ const CountdownGradient = () => {
       <GlobalStyle />
 
       <Main>
-        <Card currentNumber={days} nextNumber={nextDays} title="days" />
-        <Card currentNumber={hours} nextNumber={nextHours} title="hours" />
-        <Card currentNumber={minutes} nextNumber={nextMinutes} title="minutes" />
-        <Card currentNumber={seconds} nextNumber={nextSeconds} title="seconds" />
+        <CardMain currentNumber={days} nextNumber={nextDays} title="days" />
+        <CardMain currentNumber={hours} nextNumber={nextHours} title="hours" />
+        <CardMain currentNumber={minutes} nextNumber={nextMinutes} title="minutes" />
+        <CardMain currentNumber={seconds} nextNumber={nextSeconds} title="seconds" />
       </Main>
 
     </>
   );
 };
 
-export default CountdownGradient;
+export default CountdownMain;

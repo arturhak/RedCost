@@ -9,6 +9,8 @@ import MainComponent from "../components/MainComponent";
 import RedCost from "../assets/images/red-cost.svg";
 import RedCostMob from "../assets/images/red-cost-mob.svg";
 import {NFTImages} from "../constants/marketButtonsName";
+import CountdownSmall from "../components/countdown/CountdownSmall";
+import CountdownMain from "../components/countdown/CountdownMain";
 
 
 
@@ -33,7 +35,9 @@ function AirDrop () {
                             </div>
                         </div>
                         <div className="airdrop-countdown">
-                            <CountDownAirdrop />
+                            <div className="airdrop-countdown-small">
+                                <CountdownSmall />
+                            </div>
                             <div className="bottom-side-left-header_buttons">
                                 <div className="left-button">Whitepaper</div>
                                 <div className="right-button">Whitelist</div>
@@ -128,7 +132,9 @@ function AirDrop () {
                         </div>
                     </div>
                     <div className="airdrop-countdown">
-                        {/*<CountDownAirdrop />*/}
+                        <div className="airdrop-countdown-small">
+                            <CountdownSmall />
+                        </div>
                         <div className="bottom-side-left-header_buttons">
                             <div className="left-button">Whitepaper</div>
                             <div className="right-button">Whitelist</div>
