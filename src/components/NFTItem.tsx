@@ -3,7 +3,7 @@ import React from "react";
 function NFTitem (props:any) {
 
     return (
-        <div className="nft-item" >
+        <div className="nft-item">
             <div className="nft-item-picture">
                 <img src={props.image} alt=""/>
             </div>

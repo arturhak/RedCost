@@ -11,15 +11,16 @@ const Container = styled.div`
   width: 96px;
   height: 96px;
 
-  @media screen and (max-width: 37.5em) {
-    width: 14rem;
+  @media screen and (max-width: 1023px) {
+    width: 69px;
+    height: 69px;
   }
 `;
 
 const Title = styled.h2`
   text-transform: uppercase;
   position: absolute;
-  z-index: 555555;
+  z-index: 999;
   margin-top: 10px;
   font-family: Montserrat;
   font-size: 10px;
@@ -30,6 +31,10 @@ const Title = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 1023px) {
+    margin-top: 4px;
+
+  }
 `;
 
 const Cards = styled.div`
@@ -42,8 +47,10 @@ const Cards = styled.div`
   background: linear-gradient(180deg, #F2F2F2 0%, #CCC 100%);
   box-shadow: 0px 4px 13.9px 0px rgba(0, 0, 0, 0.25);
 
-  @media screen and (max-width: 37.5em) {
-    border-radius: 5px;
+  @media screen and (max-width: 1023px) {
+    border-radius: 15px;
+    width: 69px;
+    height: 69px;
   }
 `;
 
@@ -69,6 +76,9 @@ const StaticCard = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media screen and (max-width: 1023px) {
+      font-size: 38px;
+    }
   }
 `;
 
@@ -93,9 +103,9 @@ const UpperStaticCard = styled(StaticCard)`
     filter: brightness(0.85);
   }
 
-  @media screen and (max-width: 37.5em) {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+  @media screen and (max-width: 1023px) {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 `;
 
@@ -119,9 +129,9 @@ const LowerStaticCard = styled(StaticCard)`
     transform: translateY(-50%);
   }
 
-  @media screen and (max-width: 37.5em) {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  @media screen and (max-width: 1023px) {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 `;
 

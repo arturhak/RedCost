@@ -123,7 +123,7 @@ function Market () {
                 </div>
                 <div className="nft-group">
                         {[1,2,3,4].map((index) => {
-                            return <NFTitem
+                            return <div><NFTitem
                                 key={index}
                                 image={NFT1}
                                 name="Name"
@@ -134,6 +134,7 @@ function Market () {
                                 price={1.56}
                                 func={()=>openNFTDetails(index)}
                             />
+                            </div>
                         })}
                 </div>
             </div>
@@ -147,7 +148,7 @@ function Market () {
                 <div className="container-slider1">
                     <Slider {...settings1}>
                         {AfroStyles.map((index) => {
-                            return <NFTitemSmall
+                            return <div><NFTitemSmall
                                 key={index}
                                 image={index.src}
                                 name="Name"
@@ -159,11 +160,12 @@ function Market () {
                                 price={1.56}
                                 func={()=>openNFTDetails(index)}
                             />
+                            </div>
                         })}
                     </Slider>
                     <Slider {...settings1}>
                         {AfroStyles.map((index) => {
-                            return <NFTitemSmall
+                            return <div><NFTitemSmall
                                 key={index}
                                 image={index.src}
                                 name="Name"
@@ -175,6 +177,7 @@ function Market () {
                                 price={1.56}
                                 func={()=>openNFTDetails(index)}
                             />
+                            </div>
                         })}
                     </Slider>
                 </div>
@@ -216,7 +219,7 @@ function Market () {
                 <div className="container-slider">
                     <Slider {...settings}>
                         {AfroStyles.map((index) => {
-                            return <NFTitem
+                            return <div><NFTitem
                                 key={index}
                                 image={index.src}
                                 name="Name"
@@ -227,6 +230,7 @@ function Market () {
                                 price={1.56}
                                 func={()=>openNFTDetails(index)}
                             />
+                            </div>
                         })}
                     </Slider>
                 </div>
@@ -241,7 +245,7 @@ function Market () {
                 <div className="container-slider">
                     <Slider {...settings}>
                         {AfroStyles.map((index) => {
-                            return <NFTitem
+                            return <div><NFTitem
                                 key={index}
                                 image={index.src}
                                 name="Name"
@@ -252,6 +256,7 @@ function Market () {
                                 price={1.56}
                                 func={()=>openNFTDetails(index)}
                             />
+                            </div>
                         })}
                     </Slider>
                 </div>

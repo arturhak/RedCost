@@ -6,7 +6,7 @@ import NFT1 from "../assets/nft/nft_1.svg"
 import Offer from "../components/Offer";
 import {socialItemsListBig1, socialItemsListBig2} from "../constants/socialItems";
 import MainComponent from "../components/MainComponent";
-import RedCost from "../assets/images/red-cost.svg";
+import RedCostImage from "../assets/images/red-cost-image.svg";
 import RedCostMob from "../assets/images/red-cost-mob.svg";
 import {NFTImages} from "../constants/marketButtonsName";
 import CountdownSmall from "../components/countdown/CountdownSmall";
@@ -38,9 +38,9 @@ function AirDrop () {
                             <div className="airdrop-countdown-small">
                                 <CountdownSmall />
                             </div>
-                            <div className="bottom-side-left-header_buttons">
-                                <div className="left-button">Whitepaper</div>
-                                <div className="right-button">Whitelist</div>
+                            <div className="bottom-side-left-header_buttons-airdrop">
+                                <div className="left-button-airdrop">Whitepaper</div>
+                                <div className="right-button-airdrop">Whitelist</div>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ function AirDrop () {
                 </div>
                 <div className="nft-group">
                     {NFTImages.map((itemImage,index) => {
-                        return <NFTitem
+                        return <div><NFTitem
                             key={index}
                             image={itemImage.img}
                             name={itemImage.NFTName}
@@ -67,15 +67,16 @@ function AirDrop () {
                             houre={itemImage.houre}
                             price={itemImage.price}
                         />
+                        </div>
                     })}
                 </div>
                 <div className="nft-group-button">
                     <div className="nft-airdrop-button">Whitelist</div>
                 </div>
             </div>
-            <div className="lastMainComponent">
+            <div>
                 <MainComponent
-                    image={RedCost}
+                    image={RedCostImage}
                     imageMobile={RedCostMob}
                     title={true}
                     titleText=""
@@ -135,9 +136,9 @@ function AirDrop () {
                         <div className="airdrop-countdown-small">
                             <CountdownSmall />
                         </div>
-                        <div className="bottom-side-left-header_buttons">
-                            <div className="left-button">Whitepaper</div>
-                            <div className="right-button">Whitelist</div>
+                        <div className="bottom-side-left-header_buttons-airdrop">
+                            <div className="left-button-airdrop">Whitepaper</div>
+                            <div className="right-button-airdrop">Whitelist</div>
                         </div>
                     </div>
                 </div>

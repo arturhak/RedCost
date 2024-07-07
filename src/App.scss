@@ -460,8 +460,14 @@
   gap: 24px;
   width: 100%;
 }
+.bottom-side-left-header_buttons-airdrop {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+}
 
-.left-button {
+.left-button, .left-button-airdrop {
   display: flex;
   width: 193px;
   height: 59px;
@@ -472,7 +478,6 @@
   border-radius: 500px;
   color: #FFF;
   font-family: Montserrat-Light;
-
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -489,8 +494,11 @@
 .left-button:hover {
   background-position: 100% center;
 }
+.left-button-airdrop:hover {
+  background-position: 100% center;
+}
 
-.right-button {
+.right-button, .right-button-airdrop {
   display: flex;
   width: 193px;
   height: 59px;
@@ -515,6 +523,10 @@
 }
 
 .right-button:hover {
+  background: #B21815;
+  color: #FFF;
+}
+.right-button-airdrop:hover {
   background: #B21815;
   color: #FFF;
 }
@@ -1354,7 +1366,7 @@
 /*Mobile Header*/
 
 :where(.css-dev-only-do-not-override-1okl62o).ant-drawer-right>.ant-drawer-content-wrapper {
-  top: 74px;
+  top: 65px;
 }
 
 :where(.css-dev-only-do-not-override-1okl62o).ant-drawer .ant-drawer-header {
@@ -1506,8 +1518,88 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .investors {
+    margin-top: 35px!important;
+  }
+  .contacts {
+    margin-top: 60px!important;
+  }
+  .market {
+    margin-top: 35px!important;
+  }
+  .container-slider1 {
+    width: 100%!important;
+  }
+  .slick-slider {
+    gap: 16px!important;
+    //background: red;
+    width: 100%!important;
+    margin-left: 22px;
+    overflow-x: scroll!important;
+    -ms-overflow-style: none!important;
+    scrollbar-width: none!important;
+    scroll-behavior: smooth!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    flex-wrap: nowrap!important;
+    //height: 335px!important;
+    padding-right: 22px!important;
+  }
+  .nft-group {
+    gap: 16px!important;
+    //background: red;
+    width: 100%!important;
+    margin-left: 22px;
+    overflow-x: scroll!important;
+    -ms-overflow-style: none!important;
+    scrollbar-width: none!important;
+    scroll-behavior: smooth!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    flex-wrap: nowrap!important;
+    height: 335px!important;
+    padding-right: 22px!important;
+  }
+  .nft-item {
+    width: 227px!important;
+    height: 322px!important;
+    padding: 12px 10px!important;
+    gap: 4px!important;
+  }
+  .nft-item .nft-item-picture img {
+    height: 220px!important;
+  }
+  .nft-item_details__title-group__title {
+    font-size: 12px!important;
+  }
+  .nft-item_details {
+    gap:0!important;
+    padding-top: 4px!important;
+  }
+  .nft-item_details__content___item____top {
+    font-size: 12px!important;
+  }
+  .make-offer-button {
+    width: 199px!important;
+    height: 42px!important;
+    margin-top: 20px!important;
+  }
+  .nft-item:hover .nft-item_details {
+    transform: translateY(-55px)!important;
+  }
+  .nft-item:hover {
+    transform: translateY(-7px)!important;
+  }
   .mobile-header {
     padding: 0 !important;
+  }
+  .market-block1 {
+    width: 100%!important;
+  }
+  .social-big-logo-group {
+    gap: 36px;
   }
   .discover {
     margin-top: 36px!important;
@@ -1697,8 +1789,8 @@
   .email,
   .address,
   .social {
-    width: 260px !important;
-    height: 240px !important;
+    width: 230px !important;
+    height: 225px !important;
   }
 
   .actions-group {
@@ -1710,15 +1802,22 @@
   }
 
   .airdrop {
-    margin-top: 74px !important;
+    margin-top: 35px !important;
   }
 
   .airdrop-first-item {
-    height: 430px !important;
+    height: 100% !important;
+    padding-bottom: 20px!important;
   }
-
+  .airdrop-nft-left {
+    gap: 16px!important;
+  }
+  .nft-details {
+    gap: 12px!important;
+  }
   .airdrop-last-item {
     margin-top: 20px !important;
+    width: 822px!important;
   }
 
   .airdrop-text {
@@ -1727,7 +1826,7 @@
     }
   }
 }
-
+//end  1300px
 .nft-group {
   display: flex;
   align-items: flex-start;
@@ -1750,6 +1849,30 @@
   .bg-image-web {
     display: none;
   }
+  .airdrop-countdown-small {
+    width: auto!important;
+  }
+  .right-button-airdrop, .left-button-airdrop {
+    width: 146px;
+    height: 50px;
+  }
+  .nft-group {
+    justify-content: flex-start!important;
+  }
+  .investors {
+    margin-top: 60px!important;
+  }
+  .roadmap2 {
+    margin-top: -60px!important;
+  }
+  .actions-group {
+    flex-wrap: wrap!important;
+    width: 390px!important;
+    justify-content: center!important;
+    margin-top: 70px!important;
+  }
+
+
 }
 
 @media screen and (min-width: 1023px) {
@@ -1891,7 +2014,7 @@
     display: none;
   }
   .discover {
-    margin-top: 50px!important;
+    margin-top: 60px!important;
   }
   .left-side {
     text-align: center;
@@ -2342,6 +2465,8 @@
 
   .airdrop-text {
     padding: 12px !important;
+    height: 49px!important;
+    background: #ffffff!important;
 
     span {
       width: 370px !important;
@@ -2354,7 +2479,7 @@
   }
 
   .airdrop {
-    margin-top: 69px !important;
+    margin-top: 36px !important;
   }
 
 }
@@ -2718,7 +2843,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 56px;
+  margin-top: 55px;
   //background:red;
 }
 
@@ -3051,7 +3176,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 
@@ -3183,7 +3308,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 
@@ -3197,7 +3322,6 @@
   width: 100%;
   color: #D7D7D7;
   font-family: Montserrat-Light;
-
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -3308,7 +3432,6 @@
   border-radius: 25px;
   position: relative;
   filter: drop-shadow(0px 4px 2.4px rgba(0, 0, 0, 0.13));
-  background: grey;
   overflow: hidden;
 }
 
@@ -3354,7 +3477,6 @@
   position: relative;
   filter: drop-shadow(0px 4px 2.4px rgba(0, 0, 0, 0.13));
   overflow: hidden;
-  background: grey;
 }
 
 .email-top {
@@ -3390,7 +3512,6 @@
   position: relative;
   cursor: pointer;
   filter: drop-shadow(0px 4px 2.4px rgba(0, 0, 0, 0.13));
-  background: grey;
   overflow: hidden;
 }
 
@@ -3484,7 +3605,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
 }
 
 .airdrop-first-item {
@@ -3513,7 +3634,7 @@
   height: 70px;
   display: flex;
   align-items: center;
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 90%);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 67%);
   backdrop-filter: blur(2px);
 
   span {
@@ -3773,7 +3894,7 @@
 }
 
 .mt-160 {
-  margin-top: 160px
+  margin-top: 160px!important;
 }
 
 //Market
@@ -3783,7 +3904,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
 }
 
 .market-buttons-group {
@@ -3882,7 +4003,6 @@
     display: flex;
     width: 511px;
     height: 511px;
-    //background: grey;
     align-items: center;
     justify-content: center;
 
