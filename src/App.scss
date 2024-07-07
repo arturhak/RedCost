@@ -187,7 +187,7 @@
   display: flex;
   justify-content: center;
   box-shadow: 0px 4px 4px 0px rgba(188, 188, 188, 0.25);
-  z-index: 500000;
+  z-index: 50000000;
 
 }
 
@@ -420,9 +420,7 @@
 
 .header-side {
   color: #353535;
-  leading-trim: both;
-  text-edge: cap;
-  font-family: Montserrat-Bold;
+  font-family: Montserrat-Light;
   font-size: 64px;
   font-style: normal;
   font-weight: 300;
@@ -447,8 +445,6 @@
 
 .bottom-side-left-header {
   color: #949494;
-  leading-trim: both;
-  text-edge: cap;
   font-family: Montserrat-Light;
 
   font-size: 18px;
@@ -464,10 +460,17 @@
   gap: 24px;
   width: 100%;
 }
-
-.left-button {
+.bottom-side-left-header_buttons-airdrop {
   display: flex;
-  /*min-width: 100px;*/
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+}
+
+.left-button, .left-button-airdrop {
+  display: flex;
+  width: 193px;
+  height: 59px;
   padding: 24px 44px;
   justify-content: center;
   align-items: center;
@@ -475,7 +478,6 @@
   border-radius: 500px;
   color: #FFF;
   font-family: Montserrat-Light;
-
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -492,10 +494,14 @@
 .left-button:hover {
   background-position: 100% center;
 }
+.left-button-airdrop:hover {
+  background-position: 100% center;
+}
 
-.right-button {
+.right-button, .right-button-airdrop {
   display: flex;
-  min-width: 181px;
+  width: 193px;
+  height: 59px;
   padding: 24px 44px;
   justify-content: center;
   align-items: center;
@@ -517,6 +523,10 @@
 }
 
 .right-button:hover {
+  background: #B21815;
+  color: #FFF;
+}
+.right-button-airdrop:hover {
   background: #B21815;
   color: #FFF;
 }
@@ -1356,7 +1366,7 @@
 /*Mobile Header*/
 
 :where(.css-dev-only-do-not-override-1okl62o).ant-drawer-right>.ant-drawer-content-wrapper {
-  top: 74px;
+  top: 65px;
 }
 
 :where(.css-dev-only-do-not-override-1okl62o).ant-drawer .ant-drawer-header {
@@ -1508,10 +1518,124 @@
 }
 
 @media screen and (max-width: 1300px) {
+  .investors {
+    margin-top: 35px!important;
+  }
+  .contacts {
+    margin-top: 60px!important;
+  }
+  .market {
+    margin-top: 35px!important;
+  }
+  .container-slider1 {
+    width: 100%!important;
+    gap: 16px!important;
+    //background: red;
+    margin-left: 22px;
+    overflow-x: scroll!important;
+    -ms-overflow-style: none!important;
+    scrollbar-width: none!important;
+    scroll-behavior: smooth!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: flex-start!important;
+    flex-wrap: nowrap!important;
+    //height: 335px!important;
+    padding-right: 22px!important;
+  }
+  //.slick-slider {
+  //  gap: 16px!important;
+  //  //background: red;
+  //  width: 100%!important;
+  //  margin-left: 22px;
+  //  overflow-x: scroll!important;
+  //  -ms-overflow-style: none!important;
+  //  scrollbar-width: none!important;
+  //  scroll-behavior: smooth!important;
+  //  display: flex!important;
+  //  align-items: center!important;
+  //  justify-content: center!important;
+  //  flex-wrap: nowrap!important;
+  //  //height: 335px!important;
+  //  padding-right: 22px!important;
+  //}
+
+  .slick-slider {
+    height: 300px!important;
+  }
+  .market-buttons-group {
+    overflow-x: scroll!important;
+    -ms-overflow-style: none!important;
+    scrollbar-width: none!important;
+    scroll-behavior: smooth!important;
+    width: 100%!important;
+    padding-left: 22px!important;
+    margin-top: 48px!important;
+  }
+  .market-button {
+    padding: 12px 16px!important;
+  }
+  .button-is-active {
+    padding: 12px 16px!important;
+  }
+  .nft-group {
+    gap: 16px!important;
+    //background: red;
+    width: 100%!important;
+    margin-left: 22px;
+    overflow-x: scroll!important;
+    -ms-overflow-style: none!important;
+    scrollbar-width: none!important;
+    scroll-behavior: smooth!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    flex-wrap: nowrap!important;
+    height: 335px!important;
+    padding-right: 22px!important;
+  }
+  .nft-item {
+    width: 227px!important;
+    height: 322px!important;
+    padding: 12px 10px!important;
+    gap: 4px!important;
+  }
+  .nft-item .nft-item-picture img {
+    height: 220px!important;
+  }
+  .nft-item_details__title-group__title {
+    font-size: 12px!important;
+  }
+  .nft-item_details {
+    gap:0!important;
+    padding-top: 4px!important;
+  }
+  .nft-item_details__content___item____top {
+    font-size: 12px!important;
+  }
+  .make-offer-button {
+    width: 199px!important;
+    height: 42px!important;
+    margin-top: 20px!important;
+  }
+  .nft-item:hover .nft-item_details {
+    transform: translateY(-55px)!important;
+  }
+  .nft-item:hover {
+    transform: translateY(-7px)!important;
+  }
   .mobile-header {
     padding: 0 !important;
   }
-
+  .market-block1 {
+    width: 100%!important;
+  }
+  .social-big-logo-group {
+    gap: 36px;
+  }
+  .discover {
+    margin-top: 36px!important;
+  }
   .bottom-side {
     display: contents;
   }
@@ -1574,7 +1698,9 @@
   .about-text {
     width: 720px !important;
   }
-
+  .about-text-content {
+    margin-top: -75px!important;
+  }
   .discover-first-item {
     width: 770px !important;
     height: 407px !important;
@@ -1695,8 +1821,8 @@
   .email,
   .address,
   .social {
-    width: 260px !important;
-    height: 240px !important;
+    width: 230px !important;
+    height: 225px !important;
   }
 
   .actions-group {
@@ -1708,15 +1834,22 @@
   }
 
   .airdrop {
-    margin-top: 74px !important;
+    margin-top: 35px !important;
   }
 
   .airdrop-first-item {
-    height: 430px !important;
+    height: 100% !important;
+    padding-bottom: 20px!important;
   }
-
+  .airdrop-nft-left {
+    gap: 16px!important;
+  }
+  .nft-details {
+    gap: 12px!important;
+  }
   .airdrop-last-item {
     margin-top: 20px !important;
+    width: 822px!important;
   }
 
   .airdrop-text {
@@ -1725,7 +1858,7 @@
     }
   }
 }
-
+//end  1300px
 .nft-group {
   display: flex;
   align-items: flex-start;
@@ -1748,6 +1881,29 @@
   .bg-image-web {
     display: none;
   }
+  .airdrop-countdown-small {
+    width: auto!important;
+  }
+  .right-button-airdrop, .left-button-airdrop {
+    width: 146px;
+    height: 50px;
+  }
+  .nft-group {
+    justify-content: flex-start!important;
+  }
+  .investors {
+    margin-top: 60px!important;
+  }
+  .roadmap2 {
+    margin-top: -60px!important;
+  }
+  .actions-group {
+    flex-wrap: wrap!important;
+    width: 390px!important;
+    justify-content: center!important;
+    margin-top: 70px!important;
+  }
+
 
 }
 
@@ -1796,6 +1952,24 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .auth-countdown {
+    margin-top: -208px;
+  }
+  .svgbig-container {
+    width: 70px!important;
+    height: 29px!important;
+  }
+  .social-group-component1 {
+    gap: 17px!important;
+    margin-left: 20px!important;
+    margin-top: -20px!important;
+  }
+  .folow-itembig {
+    width: 76px;
+  }
+  .auth-layouth {
+    gap: 55px;
+  }
   .mobile-header {
     padding: 0 22px !important;
   }
@@ -1808,6 +1982,7 @@
 
   .bottom-side-left {
     position: relative;
+    gap: 28px;
   }
 
   .bottom-side-left-header {
@@ -1818,6 +1993,7 @@
   }
 
   .left-button {
+    width: 180px;
     padding: 20px 42px;
     gap: 10px;
     flex-shrink: 0;
@@ -1830,6 +2006,7 @@
   }
 
   .right-button {
+    width: 180px;
     padding: 20px 42px;
     gap: 10px;
     flex-shrink: 0;
@@ -1841,6 +2018,7 @@
 
   .bottom-side-left-header_buttons {
     gap: 10px;
+    margin-top: 105px;
   }
 
   .digital-art {
@@ -1867,7 +2045,9 @@
   .left-side-image-web {
     display: none;
   }
-
+  .discover {
+    margin-top: 60px!important;
+  }
   .left-side {
     text-align: center;
   }
@@ -1959,17 +2139,14 @@
     gap: 17px;
     max-width: 415px;
   }
-
-  .social-big-logo-group {
-    gap: 33px
-  }
-
   .security-component-header {
     gap: 8px
   }
 
   .social-big-logo-group {
     margin-top: 73px;
+    gap: 33px;
+    margin-bottom: -114px;
   }
 
   .main-component {
@@ -2096,7 +2273,7 @@
 
   .mobile-header {
     width: 370px !important;
-    padding: 0 20px;
+    padding: 0 10px!important;
     height: 70px !important;
   }
 
@@ -2146,13 +2323,17 @@
 
   .about-text {
     width: 345px !important;
-    margin-bottom: -100px !important;
     font-size: 16px !important;
     font-weight: 400 !important;
   }
-
+  .about-text-content {
+    margin-bottom: -170px!important;
+    height: 43px!important;
+    margin-top: -65px!important;
+  }
   .about {
-    margin-top: 100px !important;
+    margin-top: 95px !important;
+    gap: 65px!important;
   }
 
   .discover-first-item {
@@ -2316,6 +2497,8 @@
 
   .airdrop-text {
     padding: 12px !important;
+    height: 49px!important;
+    background: #ffffff!important;
 
     span {
       width: 370px !important;
@@ -2328,7 +2511,7 @@
   }
 
   .airdrop {
-    margin-top: 69px !important;
+    margin-top: 36px !important;
   }
 
 }
@@ -2340,7 +2523,7 @@
 
 @keyframes fromleft {
   0% {
-    transform: translate(-1024px);
+    transform: translate(-124px);
     opacity: 0;
   }
 
@@ -2357,7 +2540,7 @@
 
 @keyframes fromright {
   0% {
-    transform: translate(1024px);
+    transform: translate(124px);
     opacity: 0;
   }
 
@@ -2647,22 +2830,28 @@
   margin-top: 110px;
   //background:red;
 }
-
-.about-text {
-  justify-content: flex-start;
-  max-width: 1240px;
+.about-text-content {
   width: 100%;
+  background: linear-gradient(270deg, #FFF 0%, #F7F7F7 75%);
+  margin-bottom: -160px;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  align-items: center;
+  margin-top: -56px;
+}
+.about-text {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  width: 1240px;
   color: #D7D7D7;
-  leading-trim: both;
-  text-edge: cap;
   font-family: Montserrat-Light;
-
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  margin-bottom: -160px;
 }
 
 //Discover
@@ -2677,7 +2866,7 @@
   margin-top: 0px;
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 26px;
+  border-radius: 0 0 26px 26px;
 }
 
 .discover {
@@ -2686,7 +2875,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 
@@ -2696,7 +2885,6 @@
   width: 100%;
   color: #D7D7D7;
   font-family: Montserrat-Light;
-
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -2705,7 +2893,7 @@
   height: 70px;
   display: flex;
   align-items: center;
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 100%);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #FAFAF7 100%);
   backdrop-filter: blur(2px);
 }
 
@@ -2969,7 +3157,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    background: linear-gradient(90deg, rgba(195, 16, 29, 0.00) 0%, #75030B 100%);
+    background: linear-gradient(#DA291C, #B4001E, #930210, #75030B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -3020,7 +3208,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 
@@ -3152,7 +3340,7 @@
   /*justify-content: center;*/
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
   //background:red;
 }
 
@@ -3166,7 +3354,6 @@
   width: 100%;
   color: #D7D7D7;
   font-family: Montserrat-Light;
-
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -3277,7 +3464,6 @@
   border-radius: 25px;
   position: relative;
   filter: drop-shadow(0px 4px 2.4px rgba(0, 0, 0, 0.13));
-  background: grey;
   overflow: hidden;
 }
 
@@ -3323,7 +3509,6 @@
   position: relative;
   filter: drop-shadow(0px 4px 2.4px rgba(0, 0, 0, 0.13));
   overflow: hidden;
-  background: grey;
 }
 
 .email-top {
@@ -3359,7 +3544,6 @@
   position: relative;
   cursor: pointer;
   filter: drop-shadow(0px 4px 2.4px rgba(0, 0, 0, 0.13));
-  background: grey;
   overflow: hidden;
 }
 
@@ -3453,7 +3637,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
 }
 
 .airdrop-first-item {
@@ -3473,7 +3657,7 @@
   justify-content: center;
   width: 100%;
   color: #D7D7D7;
-  font-family: Montserrat-Bold;
+  font-family: Montserrat-Light;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -3482,7 +3666,7 @@
   height: 70px;
   display: flex;
   align-items: center;
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 90%);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 67%);
   backdrop-filter: blur(2px);
 
   span {
@@ -3560,7 +3744,9 @@
   align-items: flex-start;
   gap: 24px;
 }
-
+.airdrop-countdown-small {
+  width: 100%;
+}
 .nft-item {
   display: flex;
   flex-direction: column;
@@ -3740,7 +3926,7 @@
 }
 
 .mt-160 {
-  margin-top: 160px
+  margin-top: 160px!important;
 }
 
 //Market
@@ -3750,7 +3936,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 55px;
 }
 
 .market-buttons-group {
@@ -3849,7 +4035,6 @@
     display: flex;
     width: 511px;
     height: 511px;
-    //background: grey;
     align-items: center;
     justify-content: center;
 
@@ -4119,7 +4304,7 @@
 
   .slick-slider {
     width: 1265px !important;
-    height: 480px !important;
+    height: 480px;
     display: flex !important;
     align-items: center !important;
   }

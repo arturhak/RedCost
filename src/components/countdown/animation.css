@@ -1,0 +1,30 @@
+@keyframes fold {
+  from {
+    transform: rotateX(0);
+  }
+
+  to {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes unfold {
+  from {
+    transform: rotateX(180deg);
+  }
+
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.fold {
+  animation: fold .9s forwards;
+}
+
+.unfold {
+  animation: unfold .9s forwards;
+}
+
+
+
