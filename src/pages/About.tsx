@@ -3,7 +3,8 @@ import bgImage from "../assets/bg-image.svg";
 import bgImageMobile from "../assets/bg-image-mobile.svg";
 import CountDown from "../components/CountDown";
 import MainComponent from "../components/MainComponent";
-import RedCost from "../assets/images/red-cost.svg";
+import RedCost from "../assets/images/red-cost-image.svg";
+import RedCostImage1 from "../assets/images/red-cost-image1.svg";
 import RedCostMob from "../assets/images/red-cost-mob.svg";
 import Security from "../components/Security";
 import SecurytyImage from "../assets/images/security-logo.svg";
@@ -18,8 +19,10 @@ function About () {
 
     return (
         <div className="about">
-            <div className="about-text">
-                About
+            <div className="about-text-content">
+                <div className="about-text">
+                    About
+                </div>
             </div>
             <div>
                 <MainComponent
@@ -62,7 +65,7 @@ function About () {
                 <RoadmapWeb />
 
             </div>
-            <div className="lastMainComponent">
+            <div>
                 <MainComponent
                     image={RedCost}
                     imageMobile={RedCostMob}
@@ -112,9 +115,9 @@ function About () {
                     })}
                 </div>
             </div>
-            <div className="lastMainComponent1">
+            <div>
                 <MainComponent
-                    image={RedCost}
+                    image={RedCostImage1}
                     imageMobile={RedCostMob}
                     title={true}
                     titleText=""
