@@ -23,7 +23,6 @@ function About() {
                     Discover
                 </p>
             </div>
-
             <div className="discover-first-item">
 
                 <div className="discover-digital-art">

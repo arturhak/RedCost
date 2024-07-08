@@ -29,10 +29,10 @@ function Contacts() {
 
     return (
         <div className="contacts">
-            <div className="discover-text-block">
-                <p className="discover-text">
+            <div className="contact-text-block">
+                <div className="contact-text">
                     Contact
-                </p>
+                </div>
             </div>
             <div className="contacts-first-item">
             </div>

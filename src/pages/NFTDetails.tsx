@@ -15,6 +15,7 @@ import ArrowDown from "../assets/icons/arrow-down-grey.svg";
 import ArrowUp from "../assets/icons/arrow-up-grey.svg";
 import PriceHistory from "../assets/icons/price-history.svg";
 import ChartLine from "../assets/icons/chart-hover-line.svg";
+import CountdownSmall from "../components/countdown/CountdownSmall";
 
 function NFTDetails () {
     const [views, setViews] = useState<any>("000");
@@ -147,7 +148,9 @@ function NFTDetails () {
                         <span> at </span>
                         <div> {formatTime(currentDate)} </div>
                     </div>
-                    <div className="main-countdown">COUNTDOWN HERE</div>
+                    <div className="main-countdown">
+                        <CountdownSmall />
+                    </div>
 
                     <div className="collection-actions">
                         <div className="collection-actions_title">Current price</div>
