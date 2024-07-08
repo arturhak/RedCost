@@ -94,7 +94,7 @@ function Contacts() {
 
 
 
-            {/*<div className="lastMainComponent1">*/}
+            <div className="lastMainComponent1">
             <MainComponent
                 image={RedCost}
                 imageMobile={RedCostMob}
@@ -108,7 +108,7 @@ function Contacts() {
                 isInput={false}
                 noButton={true}
             />
-            {/*</div>*/}
+            </div>
 
             <div className="discover-first-item" style={{ marginTop: "160px" }}>
                 <div className="discover-digital-art-contacts">

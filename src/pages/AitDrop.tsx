@@ -74,7 +74,7 @@ function AirDrop () {
                     <div className="nft-airdrop-button">Whitelist</div>
                 </div>
             </div>
-            <div>
+            <div className="lastMainComponent">
                 <MainComponent
                     image={RedCostImage}
                     imageMobile={RedCostMob}

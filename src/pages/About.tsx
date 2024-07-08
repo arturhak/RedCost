@@ -65,7 +65,7 @@ function About () {
                 <RoadmapWeb />
 
             </div>
-            <div>
+            <div className="lastMainComponent">
                 <MainComponent
                     image={RedCost}
                     imageMobile={RedCostMob}
@@ -115,7 +115,7 @@ function About () {
                     })}
                 </div>
             </div>
-            <div>
+            <div className="lastMainComponent1">
                 <MainComponent
                     image={RedCostImage1}
                     imageMobile={RedCostMob}

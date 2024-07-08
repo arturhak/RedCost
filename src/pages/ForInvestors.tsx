@@ -68,7 +68,7 @@ function Investors() {
                 </div>
             </div>
 
-            {/*<div className="lastMainComponent1">*/}
+            <div className="lastMainComponent2">
             <MainComponent
                 image={RedCost}
                 imageMobile={RedCostMob}
@@ -81,7 +81,7 @@ function Investors() {
                 isInput={false}
                 noButton={true}
             />
-            {/*</div>*/}
+            </div>
 
             <div className="offer-block">
                 <div className="offer-block__header">
@@ -100,7 +100,7 @@ function Investors() {
                 </div>
             </div>
 
-            {/*<div className="lastMainComponent1">*/}
+            <div className="lastMainComponent1">
             <MainComponent
                 image={RedCost}
                 imageMobile={RedCostMob}
@@ -114,11 +114,11 @@ function Investors() {
                 isInput={false}
                 noButton={true}
             />
-            {/*</div>*/}
+            </div>
 
             <RoadmapWebJoin />
 
-            {/*<div className="lastMainComponent1">*/}
+            <div className="lastMainComponent">
             <MainComponent
                 image={RedCost}
                 imageMobile={RedCostMob}
@@ -133,7 +133,7 @@ function Investors() {
                 buttonValue="Contacts"
                 buttonSize={true}
             />
-            {/*</div>*/}
+            </div>
 
         </div>
     )

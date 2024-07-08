@@ -31,12 +31,23 @@ const handleScroll = () => {
     let elLeft1:any = document.querySelector(".lastMainComponent1 .left-side");
     let elRight1:any = document.querySelector(".lastMainComponent1 .right-side");
 
+    let el2:any = document.querySelector(".lastMainComponent2");
+    let elLeft2:any = document.querySelector(".lastMainComponent2 .right-side");
+    let elRight2:any = document.querySelector(".lastMainComponent2 .left-side");
+
+    let el3:any = document.querySelector(".lastMainComponent3");
+    let elLeft3:any = document.querySelector(".lastMainComponent3 .left-side");
+    let elRight3:any = document.querySelector(".lastMainComponent3 .right-side");
+
+
     // let el2:any = document.querySelector(".roadmap");
 
 
     // el.forEach((el:any)=>{
         let position:any = el?.getBoundingClientRect();
         let position1:any = el1?.getBoundingClientRect();
+        let position2:any = el2?.getBoundingClientRect();
+        let position3:any = el3?.getBoundingClientRect();
         // let position2:any = el2?.getBoundingClientRect();
 
         if (position?.top + 400< window.innerHeight && position?.bottom > 0) {    //position.top + 100
@@ -58,6 +69,26 @@ const handleScroll = () => {
     else {
         elLeft1?.classList.remove("anim-from-left")
         elRight1?.classList.remove("anim-from-right")
+        // el1.classList.remove("visible")
+    }
+    if (position2?.top + 400 < window.innerHeight && position1?.bottom > 0) {
+        elLeft2.classList.add("anim-from-left")
+        elRight2.classList.add("anim-from-right")
+        // el1.classList.add("visible")
+    }
+    else {
+        elLeft2?.classList.remove("anim-from-left")
+        elRight2?.classList.remove("anim-from-right")
+        // el1.classList.remove("visible")
+    }
+    if (position3?.top + 400 < window.innerHeight && position1?.bottom > 0) {
+        elLeft3.classList.add("anim-from-left")
+        elRight3.classList.add("anim-from-right")
+        // el1.classList.add("visible")
+    }
+    else {
+        elLeft3?.classList.remove("anim-from-left")
+        elRight3?.classList.remove("anim-from-right")
         // el1.classList.remove("visible")
     }
 

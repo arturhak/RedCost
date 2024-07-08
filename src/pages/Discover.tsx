@@ -85,21 +85,64 @@ function About() {
                 </div>
             </div>
 
-            {/*<div className="lastMainComponent1">*/}
-            <MainComponent
-                image={RedCost}
-                imageMobile={RedCostMob}
-                title={true}
-                titleText=""
-                subtitle="TiTle"
-                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
-                reverse={false}
-                buttonSize={true}
-                isInput={false}
-                buttonValue="Button"
-            />
-            {/*</div>*/}
+            <div className="lastMainComponent3">
+                <MainComponent
+                    image={RedCost}
+                    imageMobile={RedCostMob}
+                    title={true}
+                    titleText=""
+                    subtitle="TiTle"
+                    content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                    content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
+                    reverse={false}
+                    buttonSize={true}
+                    isInput={false}
+                    buttonValue="Button"
+                />
+            </div>
+            <div>
+                <MainComponent2
+                    image={RedCostCenter}
+                    imageMobile={RedCostMob}
+                    subtitle="TiTle"
+                    content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                    content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
+                    content11={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                    buttonSize={true}
+                    buttonValue="Button"
+                />
+            </div>
+
+            <div className="lastMainComponent2">
+                <MainComponent
+                    image={RedCost}
+                    imageMobile={RedCostMob}
+                    title={true}
+                    titleText=""
+                    subtitle="TiTle"
+                    content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                    content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
+                    reverse={true}
+                    buttonSize={true}
+                    isInput={false}
+                    buttonValue="Button"
+                />
+            </div>
+            <div className="lastMainComponent1">
+                <MainComponent
+                    image={RedCost}
+                    imageMobile={RedCostMob}
+                    title={true}
+                    titleText=""
+                    subtitle="TiTle"
+                    content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                    content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
+                    reverse={false}
+                    buttonSize={true}
+                    isInput={false}
+                    buttonValue="Button"
+                />
+            </div>
 
             <MainComponent2
                 image={RedCostCenter}
@@ -112,63 +155,21 @@ function About() {
                 buttonValue="Button"
             />
 
-            {/*<div className="lastMainComponent1">*/}
-            <MainComponent
-                image={RedCost}
-                imageMobile={RedCostMob}
-                title={true}
-                titleText=""
-                subtitle="TiTle"
-                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
-                reverse={true}
-                buttonSize={true}
-                isInput={false}
-                buttonValue="Button"
-            />
-            {/*</div>*/}
-            {/*<div className="lastMainComponent1">*/}
-            <MainComponent
-                image={RedCost}
-                imageMobile={RedCostMob}
-                title={true}
-                titleText=""
-                subtitle="TiTle"
-                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
-                reverse={false}
-                buttonSize={true}
-                isInput={false}
-                buttonValue="Button"
-            />
-            {/*</div>*/}
-
-            <MainComponent2
-                image={RedCostCenter}
-                imageMobile={RedCostMob}
-                subtitle="TiTle"
-                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
-                content11={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                buttonSize={true}
-                buttonValue="Button"
-            />
-
-            {/*<div className="lastMainComponent1">*/}
-            <MainComponent
-                image={RedCost}
-                imageMobile={RedCostMob}
-                title={true}
-                titleText=""
-                subtitle="TiTle"
-                content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
-                content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
-                reverse={true}
-                buttonSize={true}
-                isInput={false}
-                buttonValue="Button"
-            />
-            {/*</div>*/}
+            <div className="lastMainComponent">
+                <MainComponent
+                    image={RedCost}
+                    imageMobile={RedCostMob}
+                    title={true}
+                    titleText=""
+                    subtitle="TiTle"
+                    content1={"RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent."}
+                    content2={"To create a safe and convenient platform for everyone who understands the topic and wants to earn safely on NFT."}
+                    reverse={true}
+                    buttonSize={true}
+                    isInput={false}
+                    buttonValue="Button"
+                />
+            </div>
             <div className="discover-last-item">
                 <div className="discover-last-item-digital-art">
                     <div className="discover-header-side">
