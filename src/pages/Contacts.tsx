@@ -4,6 +4,7 @@ import bgImageMobile from "../assets/bg-image-mobile.svg";
 import CountDown from "../components/CountDown";
 import MainComponent from "../components/MainComponent";
 import RedCost from "../assets/images/red-cost.svg";
+import RedCostNew from "../assets/images/red-cost-image.svg";
 import RedCostMob from "../assets/images/red-cost-mob.svg";
 import RedCostCenter from "../assets/images/red-cost-center.svg";
 import Walf from "../assets/Walf.svg";
@@ -39,7 +40,7 @@ function Contacts() {
 
             <div className="responsive-main-top">
                 <MainComponent
-                    image={RedCost}
+                    image={RedCostNew}
                     imageMobile={RedCostMob}
                     title={true}
                     titleText="Join"

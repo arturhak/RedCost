@@ -17,9 +17,9 @@ function MainComponent2 (props:any) {
             </div>
             <img src={props.image} alt="image" className="left-side-image-web"/>
             <img src={props.imageMobile} alt="image" className="left-side-image-mob"/>
-            <div className="main-component-2__left-side ">
+            <div className="main-component-2__left-side main-component-2__left-side-position">
                 <div className="line-width_2"></div>
-                <div className="main-component-2-content">
+                <div className="main-component-2-content main-component-2-content-position">
                     {props.content11}
                     <br/>
                     <br/>

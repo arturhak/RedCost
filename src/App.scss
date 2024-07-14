@@ -260,7 +260,6 @@
   background-position: left center;
   transition: background 0.5s linear;
   font-family: Montserrat-Light;
-
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -271,6 +270,12 @@
 
 .navbar-item:hover {
   background-position: 100% center;
+}
+.navbar-item-is-active {
+  background: linear-gradient(30deg, #75030B 18.3%, #930210 39.43%, #B4001E 60.57%, #DA291C 81.7%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .login {
@@ -435,9 +440,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 107px
+  //gap: 107px
 }
-
+.mt-36 {
+  margin-top: -36px;
+}
 .bottom-side-left {
   display: flex;
   flex-direction: column;
@@ -1290,7 +1297,6 @@
 
 .nav-footer-item {
   font-family: Montserrat-Light;
-
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1300,6 +1306,9 @@
   background-position: left center;
   transition: background 0.3s linear;
   white-space: nowrap;
+  width: 81px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-footer-item:hover {
@@ -3289,14 +3298,19 @@
   font-weight: 400;
   line-height: normal;
 }
-
+.main-component-2__left-side-position {
+  align-items: flex-end;
+}
+.main-component-2-content-position {
+  text-align: end;
+}
 .main-component-2 {
   display: flex;
   width: 1240px;
   margin-top: 250px;
   align-items: center;
   justify-content: space-between;
-  gap: 59px;
+  gap: 11px;
   transition: all 2s ease;
 
   &__left-side {
@@ -3355,7 +3369,8 @@
   border-radius: 26px;
   padding: 24px 24px 24px 56px;
   justify-content: space-between;
-  ;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 @media screen and (max-width: 1477px) {
@@ -3846,10 +3861,11 @@
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
-  height: 694px;
+  height: 708px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .airdrop-text {
@@ -3876,7 +3892,9 @@
 .airdrop-last-item {
   display: flex;
   align-items: center;
-  background: linear-gradient(112deg, #EDEDED 12.45%, #EDEDED 12.46%, #F0F0F0 155.93%);
+  //background: linear-gradient(112deg, #EDEDED 12.45%, #EDEDED 12.46%, #F0F0F0 155.93%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #D9D9D9;
   width: 1240px;
   margin-top: 35px;
   border-radius: 27px;
@@ -3980,7 +3998,6 @@
     gap: 16px;
     padding-top: 8px;
     background: url("./assets/nft-item-bg.svg");
-
     transition: all .8s ease;
 
     &__title-group {
@@ -4226,7 +4243,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  //margin-top: 96px;
+  gap: 48px
 }
 
 .nft-details-first {
@@ -4234,7 +4252,7 @@
   width: 1240px;
   //align-items: center;
   justify-content: space-between;
-  margin-top: 110px;
+  margin-top: 102px;
 
   //background: greenyellow;
   &_left {

@@ -69,8 +69,8 @@ createWeb3Modal({
 
 function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }: any) {
     const [isOpen, setIsOpen] = useState(false);
-    const [onHover, setOnHover] = useState(false);
-    const navigate = useNavigate()
+    const [activeIndex, setActiveIndex] = useState(null);
+    const navigate = useNavigate();
 
     const openSocialGroup = () => {
         setIsOpen(!isOpen);
@@ -80,6 +80,8 @@ function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }: any) {
     };
 
     const handleClickNavItem = (index: any) => {
+        setActiveIndex(index)
+
         switch (index) {
             case 0:
                 navigate("./about")
@@ -103,6 +105,7 @@ function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }: any) {
         console.log(`Click on ${index} and navigate ${index}`)
     }
     const handleMarket = () => {
+        setActiveIndex(null)
         navigate("./market")
     }
     const handleClickSocialItem = (item: String) => {
@@ -133,13 +136,19 @@ function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }: any) {
             <div className="logo"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => { navigate("./") }}
+                onClick={() => { navigate("./"); setActiveIndex(null)
+                }}
             >
                 <img src={Logo} alt="logo" />
             </div>
             <div className={!isOpen ? "navbar" : "navbar hide-nav"}>
                 {navItems.map((item: String, index: any) => {
-                    return <div className="navbar-item" key={index} onClick={() => handleClickNavItem(index)}>{item}</div>
+                    return <div className="navbar-item"
+                                key={index}
+                                onClick={() => handleClickNavItem(index)}
+                    >
+                       <span className={activeIndex === index ? "navbar-item-is-active" : ""}>{item}</span>
+                    </div>
                 })}
 
             </div>

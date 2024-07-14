@@ -61,7 +61,7 @@ const CountdownSmall = () => {
         return () => clearInterval(intvervalId);
     }, [currentTime, targetTime]);
 
-    const { days, hours, minutes, seconds } = intervalToDuration({
+    let { days, hours, minutes, seconds } = intervalToDuration({
         start: currentTime,
         end: targetTime,
     });
@@ -70,6 +70,15 @@ const CountdownSmall = () => {
     const nextMinutes = minutes > 0 ? minutes - 1 : days > 0 || hours > 0 ? 59 : 0;
     const nextSeconds = seconds > 0 ? seconds - 1 : days > 0 || hours > 0 || minutes > 0 ? 59 : 0;
 
+    if (seconds === undefined) {
+        seconds = 0
+    }
+    if (minutes === undefined) {
+        minutes = 0
+    }
+    if (hours === undefined) {
+        hours = 0
+    }
     return (
         <>
             <GlobalStyle />

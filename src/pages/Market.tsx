@@ -11,7 +11,7 @@ import NFTitemSmall from "../components/NFTItemSmall";
 
 
 function Market () {
-    const [name, setName] = useState("");
+    const [name, setName] = useState("All");
     const navigate = useNavigate();
 
     const handleFilterMarket = (el:any,index:any) => {
@@ -123,7 +123,7 @@ function Market () {
                 </div>
                 <div className="nft-group">
                         {[1,2,3,4].map((index) => {
-                            return <div><NFTitem
+                            return <div className="nft-item-group"><NFTitem
                                 key={index}
                                 image={NFT1}
                                 name="Name"

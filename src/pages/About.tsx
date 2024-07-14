@@ -24,7 +24,7 @@ function About () {
                     About
                 </div>
             </div>
-            <div>
+            <div className="mt-36">
                 <MainComponent
                     image={RedCost}
                     imageMobile={RedCostMob}

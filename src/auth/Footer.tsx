@@ -53,10 +53,10 @@ function Footer () {
                 <div className="footer-top-right">
                     <div className="nav-footer">
                         <div className="nav-footer-item">About</div>
-                        <div className="nav-footer-item fixedposition">Discover</div>
-                        <div className="nav-footer-item">AirDrop</div>
                         <div className="nav-footer-item">For investors</div>
+                        <div className="nav-footer-item">Discover</div>
                         <div className="nav-footer-item">Contact</div>
+                        <div className="nav-footer-item">AirDrop</div>
                         <div className="nav-footer-item">Market NFT</div>
                     </div>
                 </div>
