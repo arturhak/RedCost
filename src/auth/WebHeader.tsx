@@ -119,7 +119,7 @@ function WebHeader({ setProfitModalOpen, setIsWallet, isWallet }: any) {
         const centerY = boundingRect.height / 2;
         const maxRotateX = 15; // Maximum rotation angle around X-axis
         const maxRotateY = 1; // Maximum rotation angle around Y-axis
-        const perspective = 4000; // Perspective value
+        const perspective = 9000; // Perspective value
 
         const rotateX = ((mouseY - centerY) / centerY) * maxRotateX;
         const rotateY = ((mouseX - centerX) / centerX) * maxRotateY;
