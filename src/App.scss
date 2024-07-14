@@ -3262,6 +3262,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all .5s linear;
+  width: 20%;
 }
 
 .discover-security-item:hover {
@@ -3283,6 +3284,9 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  background: linear-gradient(30deg, #75030B, #930210, #B4001E, #DA291C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .discover-security-item-content {
