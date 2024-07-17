@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import NFT6 from "../assets/nft/nft_6.svg";
 import CollectionStar from "../assets/collection-star.svg";
 import Views from "../assets/views.svg";
@@ -25,7 +25,17 @@ function NFTDetails () {
     const [priceBNB, setPriceBNB] = useState<number>(1000);
     const [priceUSD, setPriceUSD] = useState<number>(5000);
     const [openDropdown, setOpenDropdown] = useState<any>();
-    const { address, chainId, isConnected } = useWeb3ModalAccount()
+    const [nftItem, setNftItem] = useState<any>();
+    const { address, chainId, isConnected } = useWeb3ModalAccount();
+
+    useEffect(() => {
+        let cat:any = localStorage.getItem("myNFT");
+        if (cat) {
+            setNftItem(JSON.parse(cat))
+        }
+    },[])
+
+    console.log("lllllllllllllll",nftItem)
 
     function formatTime(date:any) {
         let hours = date.getHours();
@@ -117,7 +127,7 @@ function NFTDetails () {
         <div className="nft-details-main">
             <div className="nft-details-first">
                 <div className="nft-details-first_left">
-                    <img src="https://ipfs.io/ipfs/QmREmPyLWLz4hVCXCB8tzPMf4LQ9z5y7CqWUin6VY2fonn?filename=images%20(1).jpeg" alt=""/>
+                    <img src={nftItem?.tokenURI} alt=""/>
                 </div>
                 <div className="nft-details-first_right">
                     <div className="nft-details-first_right__name">NAME</div>

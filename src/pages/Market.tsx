@@ -29,8 +29,9 @@ function Market () {
         setName(el.text)
         };
 
-    const openNFTDetails = (id:any) => {
-        console.log("event===>",id)
+    const openNFTDetails = async (nft:any) => {
+        console.log("event===>",nft)
+        await localStorage.setItem("myNFT", JSON.stringify(nft));
         navigate("./details")
     };
 
@@ -141,7 +142,7 @@ function Market () {
                                 percent={41}
                                 houre={24}
                                 price={1.56}
-                                func={()=>openNFTDetails(index)}
+                                func={()=>openNFTDetails(element)}
                             />
                             </div>
                         })}
