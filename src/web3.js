@@ -50,7 +50,7 @@ export async function _decreaseAuctionPrice(_account,_tokenID) {
     }
 }
 
-export async function _buy (_tokenID){
+export async function _buy (_account,_tokenID){
     try {
         // Estimate gas for the transaction
         const estimatedGas = await contractMarket.methods.buy(_tokenID).estimateGas({ from: _account });
