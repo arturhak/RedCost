@@ -131,7 +131,7 @@ function Market () {
                     <div className="line_1 rotate"></div>
                 </div>
                 <div className="nft-group">
-                        {nftGroup.map((element:any,index:any) => {
+                        {nftGroup?.map((element:any,index:any) => {
                             return <div className="nft-item-group"><NFTitem
                                 key={index}
                                 image={element.tokenURI}
