@@ -16,6 +16,8 @@ import ArrowUp from "../assets/icons/arrow-up-grey.svg";
 import PriceHistory from "../assets/icons/price-history.svg";
 import ChartLine from "../assets/icons/chart-hover-line.svg";
 import CountdownSmall from "../components/countdown/CountdownSmall";
+import { _decreaseAuctionPrice, getNFT } from "../web3";
+import { useWeb3ModalAccount } from '@web3modal/ethers/react'
 
 function NFTDetails () {
     const [views, setViews] = useState<any>("000");
@@ -23,6 +25,7 @@ function NFTDetails () {
     const [priceBNB, setPriceBNB] = useState<number>(1000);
     const [priceUSD, setPriceUSD] = useState<number>(5000);
     const [openDropdown, setOpenDropdown] = useState<any>();
+    const { address, chainId, isConnected } = useWeb3ModalAccount()
 
     function formatTime(date:any) {
         let hours = date.getHours();
@@ -55,12 +58,16 @@ function NFTDetails () {
     const handleBuyNFT = () => {
         console.log("handleBuyNFT")
     }
+
     const handleDropNFT = () => {
-        console.log("handleDropNFT")
+        // _decreaseAuctionPrice(address)   
+        getNFT() 
     }
+
     const onOpenChange = (e:any) => {
         setOpenDropdown(e)
     }
+
     const items: MenuProps['items'] = [
         {
             key: '1',
