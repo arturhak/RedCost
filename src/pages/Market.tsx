@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {marketButtons} from "../constants/marketButtonsName";
 import NFTitem from "../components/NFTItem";
 import NFT1 from "../assets/nft/nft_1.svg";
@@ -95,6 +95,8 @@ function Market () {
             src: "https://images.unsplash.com/photo-1530884698386-d42ad3199b1f?auto=format&fit=crop&q=80&w=2787&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
     ];
+
+  
 
 
     return (

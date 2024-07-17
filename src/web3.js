@@ -7,7 +7,7 @@ const bscTestnetProvider = 'https://data-seed-prebsc-1-s1.binance.org:8545';
 const web3 = new Web3(new Web3.providers.HttpProvider(bscTestnetProvider));
 
 // Test contract address on BSC testnet
-const RedCostNFTAddress = "0x6f07f1C47a1A27b7d27361a5e726e8438CD0CE1c";
+const RedCostNFTAddress = "0x7eaaDD0429CCb845DC820b6ebcb4d84e5B8E10a0";
 const RedCostMarketAddress= "0x503aE66598B1c2246f9592EAA59dC5b121e4fC43"
 
 const contractNFT = new web3.eth.Contract(ABI, RedCostNFTAddress);
