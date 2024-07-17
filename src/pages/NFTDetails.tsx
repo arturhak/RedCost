@@ -117,7 +117,7 @@ function NFTDetails () {
         <div className="nft-details-main">
             <div className="nft-details-first">
                 <div className="nft-details-first_left">
-                <img src="https://ipfs.io/ipfs/QmXbxrXgSzfzPfLnfZPnsdHNaXBjKyADio183Uho9wWeTL?filename=img-qKvjXiRu2EACw0nCXsoA3rx3.png" alt=""/>
+                    <img src="https://ipfs.io/ipfs/QmREmPyLWLz4hVCXCB8tzPMf4LQ9z5y7CqWUin6VY2fonn?filename=images%20(1).jpeg" alt=""/>
                 </div>
                 <div className="nft-details-first_right">
                     <div className="nft-details-first_right__name">NAME</div>

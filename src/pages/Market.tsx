@@ -8,11 +8,21 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NFTitemSmall from "../components/NFTItemSmall";
+import {getNFT} from "../web3";
 
 
 function Market () {
     const [name, setName] = useState("All");
+    const [nftGroup, setNftGroup] = useState<any>();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        getNFT().then((res:any)=> {
+            setNftGroup(res)
+        })
+    },[])
+
+    console.log("NFTTTTTTTTTTTT=>",nftGroup)
 
     const handleFilterMarket = (el:any,index:any) => {
         console.log("MARKET",el, index)
@@ -96,9 +106,6 @@ function Market () {
         },
     ];
 
-  
-
-
     return (
         <div className="market">
             <p className="airdrop-text">
@@ -124,10 +131,10 @@ function Market () {
                     <div className="line_1 rotate"></div>
                 </div>
                 <div className="nft-group">
-                        {[1,2,3,4].map((index) => {
+                        {nftGroup.map((element:any,index:any) => {
                             return <div className="nft-item-group"><NFTitem
                                 key={index}
-                                image={NFT1}
+                                image={element.tokenURI}
                                 name="Name"
                                 owners="owners"
                                 ownwersCount={274}
