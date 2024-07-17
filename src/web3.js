@@ -27,7 +27,7 @@ export async function getNFT() {
         }
 
         console.log("nftInfo",nftInfo);
-        return nft;
+        return nftInfo;
     } catch (error) {
         console.error("An error occurred while fetching the NFT:", error);
     }
@@ -37,6 +37,7 @@ export async function _decreaseAuctionPrice(_account,_tokenID) {
     try {
         // Estimate gas for the transaction
         const estimatedGas = await contractMarket.methods.decreaseAuctionPrice(_tokenID).estimateGas({ from: _account });
+        const gasPrice = await web3.eth.getGasPrice();
         let dropTheRate = await contractMarket.methods.decreaseAuctionPrice(_tokenID).send({
             from: _account,
             gas: estimatedGas, // Set the estimated gas limit
@@ -53,6 +54,7 @@ export async function _buy (_tokenID){
     try {
         // Estimate gas for the transaction
         const estimatedGas = await contractMarket.methods.buy(_tokenID).estimateGas({ from: _account });
+        const gasPrice = await web3.eth.getGasPrice();
         let buyNFT = await contractMarket.methods.buy(_tokenID).send({
             from: _account,
             gas: estimatedGas, // Set the estimated gas limit
