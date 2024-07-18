@@ -9,18 +9,25 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NFTitemSmall from "../components/NFTItemSmall";
 import {getNFT} from "../web3";
+import Loading from "../auth/Loading";
 
 
 function Market () {
     const [name, setName] = useState("All");
     const [nftGroup, setNftGroup] = useState<any>();
+    const [loading, setLoading] = useState<boolean>(true);
     const navigate = useNavigate();
 
     useEffect(() => {
         getNFT().then((res:any)=> {
-            setNftGroup(res)
+            setNftGroup(res);
+            setLoading(false)
         })
-    },[])
+    },[]);
+
+    if (loading) {
+        return <Loading />
+    }
 
     console.log("NFTTTTTTTTTTTT=>",nftGroup)
 
@@ -133,7 +140,7 @@ function Market () {
                 </div>
                 <div className="nft-group">
                         {nftGroup?.map((element:any,index:any) => {
-                            return <div className="nft-item-group"><NFTitem
+                            return <div className="nft-item-group" key={index}><NFTitem
                                 key={index}
                                 image={element.tokenURI}
                                 name="Name"
@@ -157,8 +164,8 @@ function Market () {
                 </div>
                 <div className="container-slider1">
                     <Slider {...settings1}>
-                        {AfroStyles.map((index) => {
-                            return <div><NFTitemSmall
+                        {AfroStyles.map((index:any) => {
+                            return <div key={index}><NFTitemSmall
                                 key={index}
                                 image={index.src}
                                 name="Name"
@@ -174,8 +181,8 @@ function Market () {
                         })}
                     </Slider>
                     <Slider {...settings1}>
-                        {AfroStyles.map((index) => {
-                            return <div><NFTitemSmall
+                        {AfroStyles.map((index:any) => {
+                            return <div key={index}><NFTitemSmall
                                 key={index}
                                 image={index.src}
                                 name="Name"
@@ -192,32 +199,6 @@ function Market () {
                     </Slider>
                 </div>
             </div>
-
-            {/*<div className="market-block1">*/}
-                {/*<div className="offer-block__header">*/}
-                {/*    <div className="line_1"></div>*/}
-                {/*    <div className="security-component-title">title</div>*/}
-                {/*    <div className="line_1 rotate"></div>*/}
-                {/*</div>*/}
-                {/*<div className="container-slider1">*/}
-                {/*    <Slider {...settings1}>*/}
-                {/*        {AfroStyles.map((index) => {*/}
-                {/*            return <NFTitemSmall*/}
-                {/*                key={index}*/}
-                {/*                image={index.src}*/}
-                {/*                name="Name"*/}
-                {/*                authorName="@author name"*/}
-                {/*                owners="Floor"*/}
-                {/*                ownwersCount={274}*/}
-                {/*                percent={41}*/}
-                {/*                houre={24}*/}
-                {/*                price={1.56}*/}
-                {/*                func={()=>openNFTDetails(index)}*/}
-                {/*            />*/}
-                {/*        })}*/}
-                {/*    </Slider>*/}
-                {/*</div>*/}
-            {/*</div>*/}
 {/*end Small NFT`s*/}
 
             <div className="market-block1">
@@ -228,8 +209,8 @@ function Market () {
                 </div>
                 <div className="container-slider">
                     <Slider {...settings}>
-                        {AfroStyles.map((index) => {
-                            return <div><NFTitem
+                        {AfroStyles.map((index:any) => {
+                            return <div key={index}><NFTitem
                                 key={index}
                                 image={index.src}
                                 name="Name"
@@ -254,8 +235,8 @@ function Market () {
                 </div>
                 <div className="container-slider">
                     <Slider {...settings}>
-                        {AfroStyles.map((index) => {
-                            return <div><NFTitem
+                        {AfroStyles.map((index:any) => {
+                            return <div key={index}><NFTitem
                                 key={index}
                                 image={index.src}
                                 name="Name"

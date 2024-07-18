@@ -33,9 +33,7 @@ function NFTDetails () {
         if (cat) {
             setNftItem(JSON.parse(cat))
         }
-    },[])
-
-    console.log("lllllllllllllll",nftItem)
+    },[]);
 
     function formatTime(date:any) {
         let hours = date.getHours();
@@ -138,10 +136,10 @@ function NFTDetails () {
                             <span>collection_name</span>
                         </div>
                     </div>
-                    <div className="nft-details-first_right__collection-details___collection-name mt-30">
-                        <img src={CollectionStar} alt="CollectionStar"/>
-                        <span>collection_name</span>
-                    </div>
+                    {/*<div className="nft-details-first_right__collection-details___collection-name mt-30">*/}
+                    {/*    <img src={CollectionStar} alt="CollectionStar"/>*/}
+                    {/*    <span>collection_name</span>*/}
+                    {/*</div>*/}
                     <div className="rating mt-30">
                         <div className="rating_items">
                             <img src={Views} alt=""/>

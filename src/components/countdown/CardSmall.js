@@ -159,8 +159,8 @@ const CardSmall = ({ currentNumber, nextNumber, title }) => {
         return ('0' + num?.toString(10)).slice(-2);
     };
 
-    console.log("current",current,)
-    console.log("next",next,)
+    // console.log("current",current)
+    // console.log("next",next)
 
     const onAnimationEnd = () => {
         setIsAnimated(false);
