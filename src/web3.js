@@ -15,53 +15,64 @@ const contractMarket = new web3.eth.Contract(marketABI, RedCostMarketAddress);
 
 // Function to get NFT data
 export async function getNFT() {
-    let nftInfo = [];
+    let nftInfo = []; // Initialize an array to hold NFT information
     try {
-        let nftLength = await contractNFT.methods.nextNftIndex().call()
+        // Fetch the total number of NFTs from the contract
+        let nftLength = await contractNFT.methods.nextNftIndex().call();
         console.log(nftLength);
 
+        // Loop through each NFT index and fetch the NFT details
         for (let index = 0; index < nftLength; index++) {
             let nftObj = {};
-            nftObj = await contractNFT.methods.nftRegistry(index).call();
-            nftInfo.push(nftObj)
+            nftObj = await contractNFT.methods.nftRegistry(index).call(); // Fetch the NFT details from the contract
+            nftInfo.push(nftObj); // Add the NFT details to the array
         }
 
-        console.log("nftInfo",nftInfo);
-        return nftInfo;
+        console.log("nftInfo", nftInfo);
+        return nftInfo; // Return the array of NFT information
     } catch (error) {
-        console.error("An error occurred while fetching the NFT:", error);
+        console.error("An error occurred while fetching the NFT:", error); // Log any errors that occur during the process
     }
 }
 
-export async function _decreaseAuctionPrice(_account,_tokenID) {
+// Function to decrease the auction price of an NFT
+export async function _decreaseAuctionPrice(_account, _tokenID) {
     try {
-        // Estimate gas for the transaction
+        // Estimate the gas required for the transaction
         const estimatedGas = await contractMarket.methods.decreaseAuctionPrice(_tokenID).estimateGas({ from: _account });
+        // Get the current gas price
         const gasPrice = await web3.eth.getGasPrice();
+        // Send the transaction to decrease the auction price
         let dropTheRate = await contractMarket.methods.decreaseAuctionPrice(_tokenID).send({
             from: _account,
             gas: estimatedGas, // Set the estimated gas limit
             gasPrice: gasPrice, // Set the current gas price
         });
 
-        return dropTheRate;
+        return dropTheRate; // Return the result of the transaction
     } catch (error) {
-        console.error("Error DropTheRate:", error);
+        console.error("Error DropTheRate:", error); // Log any errors that occur during the process
     }
 }
 
-export async function _buy (_account,_tokenID){
+// Function to buy an NFT
+export async function _buy(_account, _tokenID) {
     try {
-        // Estimate gas for the transaction
+        // Estimate the gas required for the transaction
         const estimatedGas = await contractMarket.methods.buy(_tokenID).estimateGas({ from: _account });
+        // Get the current gas price
         const gasPrice = await web3.eth.getGasPrice();
+        // Send the transaction to buy the NFT
         let buyNFT = await contractMarket.methods.buy(_tokenID).send({
             from: _account,
             gas: estimatedGas, // Set the estimated gas limit
             gasPrice: gasPrice, // Set the current gas price
         });
-        return buyNFT;
+
+        return buyNFT; // Return the result of the transaction
     } catch (error) {
-        console.error("Error Buy:", error);
+        console.error("Error Buy:", error); // Log any errors that occur during the process
     }
 }
+
+
