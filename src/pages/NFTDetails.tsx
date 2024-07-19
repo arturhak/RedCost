@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import NFT6 from "../assets/nft/nft_6.svg";
 import CollectionStar from "../assets/collection-star.svg";
 import Views from "../assets/views.svg";
@@ -8,7 +8,7 @@ import Category from "../assets/category.svg";
 import Countdown from 'react-countdown';
 import Basket from "../assets/icons/basket.svg";
 import Description from "../assets/icons/description.svg"
-import {Dropdown, Space} from "antd";
+import { Dropdown, Space } from "antd";
 import type { MenuProps } from 'antd';
 import DetailsIcon from "../assets/icons/details-icon.svg";
 import ArrowDown from "../assets/icons/arrow-down-grey.svg";
@@ -16,10 +16,10 @@ import ArrowUp from "../assets/icons/arrow-up-grey.svg";
 import PriceHistory from "../assets/icons/price-history.svg";
 import ChartLine from "../assets/icons/chart-hover-line.svg";
 import CountdownSmall from "../components/countdown/CountdownSmall";
-import { _decreaseAuctionPrice, getNFT } from "../web3";
+import { _buy, _decreaseAuctionPrice, getAuctionData, getNFT } from "../web3";
 import { useWeb3ModalAccount } from '@web3modal/ethers/react'
 
-function NFTDetails () {
+function NFTDetails() {
     const [views, setViews] = useState<any>("000");
     const [favorites, setFavorites] = useState<any>("000");
     const [priceBNB, setPriceBNB] = useState<number>(1000);
@@ -29,13 +29,18 @@ function NFTDetails () {
     const { address, chainId, isConnected } = useWeb3ModalAccount();
 
     useEffect(() => {
-        let cat:any = localStorage.getItem("myNFT");
+        let cat: any = localStorage.getItem("myNFT");
         if (cat) {
             setNftItem(JSON.parse(cat))
+            var auctionInfo = JSON.parse(cat)
+            getAuctionData(auctionInfo.tokenIndex).then(res => {
+                setPriceBNB(res.currentPrice / 10 ** 18)
+            })
         }
-    },[]);
 
-    function formatTime(date:any) {
+    }, [nftItem]);
+
+    function formatTime(date: any) {
         let hours = date.getHours();
         const minutes = date.getMinutes();
         const ampm = hours >= 12 ? 'PM' : 'AM';
@@ -50,10 +55,10 @@ function NFTDetails () {
         return `${hours}:${minutesStr} ${ampm}`;
     }
 
-    const currentDate:any = new Date(5887788878324);
+    const currentDate: any = new Date(5887788878324);
 
 
-    const renderer = ({ hours, minutes, seconds, completed }:any) => {
+    const renderer = ({ hours, minutes, seconds, completed }: any) => {
         if (completed) {
             // Render a completed state
             return <p className="time-text">00:00:0000</p>;
@@ -64,15 +69,15 @@ function NFTDetails () {
     };
 
     const handleBuyNFT = () => {
-        console.log("handleBuyNFT")
+        _buy(address, nftItem.tokenIndex)
     }
 
     const handleDropNFT = () => {
-        // _decreaseAuctionPrice(address)   
-        getNFT() 
+
+        _decreaseAuctionPrice(address, nftItem.tokenIndex)
     }
 
-    const onOpenChange = (e:any) => {
+    const onOpenChange = (e: any) => {
         setOpenDropdown(e)
     }
 
@@ -125,14 +130,14 @@ function NFTDetails () {
         <div className="nft-details-main">
             <div className="nft-details-first">
                 <div className="nft-details-first_left">
-                    <img src={nftItem?.tokenURI} alt=""/>
+                    <img src={nftItem?.tokenURI} alt="" />
                 </div>
                 <div className="nft-details-first_right">
                     <div className="nft-details-first_right__name">NAME</div>
                     <div className="nft-details-first_right__collection-details">
                         <div className="nft-details-first_right__collection-details___owner">Owned by <span>@author_name</span></div>
                         <div className="nft-details-first_right__collection-details___collection-name">
-                            <img src={CollectionStar} alt="CollectionStar"/>
+                            <img src={CollectionStar} alt="CollectionStar" />
                             <span>collection_name</span>
                         </div>
                     </div>
@@ -142,15 +147,15 @@ function NFTDetails () {
                     {/*</div>*/}
                     <div className="rating mt-30">
                         <div className="rating_items">
-                            <img src={Views} alt=""/>
+                            <img src={Views} alt="" />
                             <span>{views} views</span>
                         </div>
                         <div className="rating_items">
-                            <img src={Favorites} alt=""/>
+                            <img src={Favorites} alt="" />
                             <span>{favorites} favorites</span>
                         </div>
                         <div className="rating_items">
-                            <img src={Category} alt=""/>
+                            <img src={Category} alt="" />
                             <span>category</span>
                         </div>
                     </div>
@@ -175,7 +180,7 @@ function NFTDetails () {
                         </div>
                         <div className="nft-buy-buttons-gropup">
                             <div className="nft-buy-button" onClick={handleBuyNFT}>
-                                <img src={Basket} alt=""/>
+                                <img src={Basket} alt="" />
                                 <span>Buy</span>
                             </div>
                             <div className="nft-drop-button" onClick={handleDropNFT}>
@@ -189,14 +194,14 @@ function NFTDetails () {
             <div className="nft-details-second">
                 <div className="nft-details-second_left">
                     <div className="nft-details-second_left_header">
-                        <img src={Description} alt=""/>
+                        <img src={Description} alt="" />
                         <span>Description</span>
                     </div>
                     <div className="nft-details-second_left_description">
                         <div className="scroll-div">
                             <span>RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent.
-                                <br/>
-                                <br/>
+                                <br />
+                                <br />
                                 To create a safe and convenient platform for everyone who
                             </span>
                         </div>
@@ -209,38 +214,38 @@ function NFTDetails () {
                         <a onClick={(e) => e.preventDefault()}>
                             <Space>
                                 <div className="dropdown-left">
-                                    <img src={DetailsIcon} alt=""/>
+                                    <img src={DetailsIcon} alt="" />
                                     <span>Details</span>
                                 </div>
-                                {openDropdown ? <img src={ArrowUp} alt=""/>: <img src={ArrowDown} alt=""/>}
+                                {openDropdown ? <img src={ArrowUp} alt="" /> : <img src={ArrowDown} alt="" />}
                             </Space>
                         </a>
                     </Dropdown>
                 </div>
                 <div className="nft-details-second_right">
                     <div className="nft-details-second_right_header">
-                        <img src={PriceHistory} alt=""/>
+                        <img src={PriceHistory} alt="" />
                         <span>Price History</span>
                     </div>
                     <div className="nft-details-second_right_description">
                         <div className="chart-content">
                             <div className="left-vertical">Volume (ETH)</div>
-                            {[1,2,3,4].map((item) => <div className="chart-content_item" key={item}>
+                            {[1, 2, 3, 4].map((item) => <div className="chart-content_item" key={item}>
                                 <div className="chart-content_price">0.0</div>
                                 <div className="chart-content_line"></div>
                                 <div className="chart-content_price">0.0</div>
                             </div>)}
-                            <div className="right-vertical">Average price<br/>(ETH)</div>
+                            <div className="right-vertical">Average price<br />(ETH)</div>
 
                             <div className="chart">
-                                <img src={ChartLine} alt="" className="line-image"/>
+                                <img src={ChartLine} alt="" className="line-image" />
                                 <div className="chart-info">
                                     <div className="chart-info_header">0.00 ETH</div>
                                     <div className="chart-info_content">
                                         Avg. price: 0,000 ETH
-                                        <br/>
+                                        <br />
                                         Num. sales: 0
-                                        <br/>
+                                        <br />
                                         May 27 at 0:00 AM
                                     </div>
                                 </div>
