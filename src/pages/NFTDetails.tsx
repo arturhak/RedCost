@@ -43,6 +43,7 @@ function NFTDetails() {
 
     }, [nftItem]);
 
+
     function formatTime(date: any) {
         let hours = date.getHours();
         const minutes = date.getMinutes();
@@ -75,10 +76,11 @@ function NFTDetails() {
         _buy(address, nftItem.tokenIndex)
     }
 
-    const handleDropNFT = () => {
-        _decreaseAuctionPrice(address, nftItem.tokenIndex).then(res =>{
-            console.log(res);  
-        })
+    const handleDropNFT = async () => {
+        setLoading(true)
+       await _decreaseAuctionPrice(address, nftItem.tokenIndex);
+        setLoading(false)
+
     }
 
     const onOpenChange = (e: any) => {
@@ -131,138 +133,144 @@ function NFTDetails() {
     ];
 
     return (
-        <div className="nft-details-main">
-            <div className="nft-details-first">
-                <div className="nft-details-first_left">
-                    <img src={nftItem?.tokenURI} alt="" />
+        <>
+        {
+            loading? <Loading />:
+                <div className="nft-details-main">
+        <div className="nft-details-first">
+            <div className="nft-details-first_left">
+                <img src={nftItem?.tokenURI} alt=""/>
+            </div>
+            <div className="nft-details-first_right">
+                <div className="nft-details-first_right__name">NAME</div>
+                <div className="nft-details-first_right__collection-details">
+                    <div className="nft-details-first_right__collection-details___owner">Owned
+                        by <span>@author_name</span></div>
+                    <div className="nft-details-first_right__collection-details___collection-name">
+                        <img src={CollectionStar} alt="CollectionStar"/>
+                        <span>collection_name</span>
+                    </div>
                 </div>
-                <div className="nft-details-first_right">
-                    <div className="nft-details-first_right__name">NAME</div>
-                    <div className="nft-details-first_right__collection-details">
-                        <div className="nft-details-first_right__collection-details___owner">Owned by <span>@author_name</span></div>
-                        <div className="nft-details-first_right__collection-details___collection-name">
-                            <img src={CollectionStar} alt="CollectionStar" />
-                            <span>collection_name</span>
-                        </div>
+                {/*<div className="nft-details-first_right__collection-details___collection-name mt-30">*/}
+                {/*    <img src={CollectionStar} alt="CollectionStar"/>*/}
+                {/*    <span>collection_name</span>*/}
+                {/*</div>*/}
+                <div className="rating mt-30">
+                    <div className="rating_items">
+                        <img src={Views} alt=""/>
+                        <span>{views} views</span>
                     </div>
-                    {/*<div className="nft-details-first_right__collection-details___collection-name mt-30">*/}
-                    {/*    <img src={CollectionStar} alt="CollectionStar"/>*/}
-                    {/*    <span>collection_name</span>*/}
-                    {/*</div>*/}
-                    <div className="rating mt-30">
-                        <div className="rating_items">
-                            <img src={Views} alt="" />
-                            <span>{views} views</span>
-                        </div>
-                        <div className="rating_items">
-                            <img src={Favorites} alt="" />
-                            <span>{favorites} favorites</span>
-                        </div>
-                        <div className="rating_items">
-                            <img src={Category} alt="" />
-                            <span>category</span>
-                        </div>
+                    <div className="rating_items">
+                        <img src={Favorites} alt=""/>
+                        <span>{favorites} favorites</span>
                     </div>
-                    <div className="sale-end mt-30">
-                        <span>Sale ends</span>
-                        <Countdown
-                            date={Date.now() + 7000000}
-                            renderer={renderer}
-                        />
-                        <span> at </span>
-                        <div> {formatTime(currentDate)} </div>
+                    <div className="rating_items">
+                        <img src={Category} alt=""/>
+                        <span>category</span>
                     </div>
-                    <div className="main-countdown">
-                        <CountdownSmall />
-                    </div>
+                </div>
+                <div className="sale-end mt-30">
+                    <span>Sale ends</span>
+                    <Countdown
+                        date={Date.now() + 7000000}
+                        renderer={renderer}
+                    />
+                    <span> at </span>
+                    <div> {formatTime(currentDate)} </div>
+                </div>
+                <div className="main-countdown">
+                    <CountdownSmall/>
+                </div>
 
-                    <div className="collection-actions">
-                        <div className="collection-actions_title">Current price</div>
-                        <div className="collection-actions_current-price">
-                            <div className="collection-actions_current-price_bnb">{priceBNB.toLocaleString()} BNB</div>
-                            <div className="collection-actions_current-price_usd">${priceUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}</div>
+                <div className="collection-actions">
+                    <div className="collection-actions_title">Current price</div>
+                    <div className="collection-actions_current-price">
+                        <div className="collection-actions_current-price_bnb">{priceBNB.toLocaleString()} BNB</div>
+                        <div
+                            className="collection-actions_current-price_usd">${priceUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}</div>
+                    </div>
+                    <div className="nft-buy-buttons-gropup">
+                        <div className="nft-buy-button" onClick={handleBuyNFT}>
+                            <img src={Basket} alt=""/>
+                            <span>Buy</span>
                         </div>
-                        <div className="nft-buy-buttons-gropup">
-                            <div className="nft-buy-button" onClick={handleBuyNFT}>
-                                <img src={Basket} alt="" />
-                                <span>Buy</span>
-                            </div>
-                            <div className="nft-drop-button" onClick={handleDropNFT}>
-                                <span>Drop the rate</span>
-                            </div>
+                        <div className="nft-drop-button" onClick={handleDropNFT}>
+                            <span>Drop the rate</span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div className="nft-details-second">
-                <div className="nft-details-second_left">
-                    <div className="nft-details-second_left_header">
-                        <img src={Description} alt="" />
-                        <span>Description</span>
-                    </div>
-                    <div className="nft-details-second_left_description">
-                        <div className="scroll-div">
+        <div className="nft-details-second">
+            <div className="nft-details-second_left">
+                <div className="nft-details-second_left_header">
+                    <img src={Description} alt=""/>
+                    <span>Description</span>
+                </div>
+                <div className="nft-details-second_left_description">
+                    <div className="scroll-div">
                             <span>RED COST is the official marketplace for valuing, buying and selling digital assets (NFT). Complies with all current cryptocurrency security requirements. All transactions are legal and transparent.
-                                <br />
-                                <br />
+                                <br/>
+                                <br/>
                                 To create a safe and convenient platform for everyone who
                             </span>
-                        </div>
                     </div>
-                    <Dropdown
-                        menu={{ items }}
-                        trigger={["click"]}
-                        onOpenChange={onOpenChange}
-                    >
-                        <a onClick={(e) => e.preventDefault()}>
-                            <Space>
-                                <div className="dropdown-left">
-                                    <img src={DetailsIcon} alt="" />
-                                    <span>Details</span>
-                                </div>
-                                {openDropdown ? <img src={ArrowUp} alt="" /> : <img src={ArrowDown} alt="" />}
-                            </Space>
-                        </a>
-                    </Dropdown>
                 </div>
-                <div className="nft-details-second_right">
-                    <div className="nft-details-second_right_header">
-                        <img src={PriceHistory} alt="" />
-                        <span>Price History</span>
-                    </div>
-                    <div className="nft-details-second_right_description">
-                        <div className="chart-content">
-                            <div className="left-vertical">Volume (ETH)</div>
-                            {[1, 2, 3, 4].map((item) => <div className="chart-content_item" key={item}>
-                                <div className="chart-content_price">0.0</div>
-                                <div className="chart-content_line"></div>
-                                <div className="chart-content_price">0.0</div>
-                            </div>)}
-                            <div className="right-vertical">Average price<br />(ETH)</div>
+                <Dropdown
+                    menu={{items}}
+                    trigger={["click"]}
+                    onOpenChange={onOpenChange}
+                >
+                    <a onClick={(e) => e.preventDefault()}>
+                        <Space>
+                            <div className="dropdown-left">
+                                <img src={DetailsIcon} alt=""/>
+                                <span>Details</span>
+                            </div>
+                            {openDropdown ? <img src={ArrowUp} alt=""/> : <img src={ArrowDown} alt=""/>}
+                        </Space>
+                    </a>
+                </Dropdown>
+            </div>
+            <div className="nft-details-second_right">
+                <div className="nft-details-second_right_header">
+                    <img src={PriceHistory} alt=""/>
+                    <span>Price History</span>
+                </div>
+                <div className="nft-details-second_right_description">
+                    <div className="chart-content">
+                        <div className="left-vertical">Volume (ETH)</div>
+                        {[1, 2, 3, 4].map((item) => <div className="chart-content_item" key={item}>
+                            <div className="chart-content_price">0.0</div>
+                            <div className="chart-content_line"></div>
+                            <div className="chart-content_price">0.0</div>
+                        </div>)}
+                        <div className="right-vertical">Average price<br/>(ETH)</div>
 
-                            <div className="chart">
-                                <img src={ChartLine} alt="" className="line-image" />
-                                <div className="chart-info">
-                                    <div className="chart-info_header">0.00 ETH</div>
-                                    <div className="chart-info_content">
-                                        Avg. price: 0,000 ETH
-                                        <br />
-                                        Num. sales: 0
-                                        <br />
-                                        May 27 at 0:00 AM
-                                    </div>
+                        <div className="chart">
+                            <img src={ChartLine} alt="" className="line-image"/>
+                            <div className="chart-info">
+                                <div className="chart-info_header">0.00 ETH</div>
+                                <div className="chart-info_content">
+                                    Avg. price: 0,000 ETH
+                                    <br/>
+                                    Num. sales: 0
+                                    <br/>
+                                    May 27 at 0:00 AM
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
+
         </div>
-    )
+
+    </div>
+}
+        </>)
 }
 
 export default NFTDetails;
