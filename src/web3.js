@@ -35,7 +35,6 @@ export async function getNFT() {
     }
 }
 
-// Function to decrease the auction price of an NFT
 export async function _decreaseAuctionPrice(_account, _tokenID) {
     try {
         // Estimate the gas required for the transaction
@@ -52,6 +51,7 @@ export async function _decreaseAuctionPrice(_account, _tokenID) {
             gasPrice: web3.utils.toHex(gasPrice), // Convert gasPrice to hex
             data: contractMarket.methods.decreaseAuctionPrice(_tokenID).encodeABI()
         };
+
         // Send the transaction
         const dropTheRate = await window.ethereum.request({
             method: 'eth_sendTransaction',
@@ -60,7 +60,11 @@ export async function _decreaseAuctionPrice(_account, _tokenID) {
 
         return dropTheRate; // Return the result of the transaction
     } catch (error) {
-        console.error("Error DropTheRate:", error); // Log any errors that occur during the process
+        console.error("Error in decreaseAuctionPrice:", error); // Log any errors that occur during the process
+
+        if (error.message.includes('estimateGas')) {
+            console.error("Gas estimation failed. There might be an issue with the contract or parameters.");
+        }
         // Additional error handling can be added here if needed
     }
 }
