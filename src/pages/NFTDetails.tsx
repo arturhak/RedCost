@@ -18,6 +18,7 @@ import ChartLine from "../assets/icons/chart-hover-line.svg";
 import CountdownSmall from "../components/countdown/CountdownSmall";
 import { _buy, _decreaseAuctionPrice, getAuctionData, getNFT } from "../web3";
 import { useWeb3ModalAccount } from '@web3modal/ethers/react'
+import Loading from "../auth/Loading";
 
 function NFTDetails() {
     const [views, setViews] = useState<any>("000");
@@ -27,6 +28,8 @@ function NFTDetails() {
     const [openDropdown, setOpenDropdown] = useState<any>();
     const [nftItem, setNftItem] = useState<any>();
     const { address, chainId, isConnected } = useWeb3ModalAccount();
+    const [loading, setLoading] = useState<boolean>(false);
+
 
     useEffect(() => {
         let cat: any = localStorage.getItem("myNFT");
@@ -34,7 +37,7 @@ function NFTDetails() {
             setNftItem(JSON.parse(cat))
             var auctionInfo = JSON.parse(cat)
             getAuctionData(auctionInfo.tokenIndex).then(res => {
-                setPriceBNB(res.currentPrice / 10 ** 18)
+                setPriceBNB(res?.currentPrice / 10 ** 18)
             })
         }
 
@@ -73,7 +76,6 @@ function NFTDetails() {
     }
 
     const handleDropNFT = () => {
-
         _decreaseAuctionPrice(address, nftItem.tokenIndex)
     }
 

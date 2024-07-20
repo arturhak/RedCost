@@ -166,6 +166,9 @@ const CountdownMain = () => {
   if (hours === undefined) {
     hours = 0
   }
+  if (days === undefined) {
+    days = 0
+  }
 
 
   return (

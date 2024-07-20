@@ -47,7 +47,7 @@ const Main = styled.main`
 `;
 
 const CountdownSmall = () => {
-    const [targetTime] = useState(addDays(new Date(),10));
+    const [targetTime] = useState(addDays(new Date(1721426872 * 1000),7));
     const [currentTime, setCurrentTime] = useState(new Date());
 
     useEffect(() => setCurrentTime(time => addSeconds(time, 0)), []); //if finished
@@ -70,6 +70,7 @@ const CountdownSmall = () => {
     const nextMinutes = minutes > 0 ? minutes - 1 : days > 0 || hours > 0 ? 59 : 0;
     const nextSeconds = seconds > 0 ? seconds - 1 : days > 0 || hours > 0 || minutes > 0 ? 59 : 0;
 
+
     if (seconds === undefined) {
         seconds = 0
     }
@@ -78,6 +79,9 @@ const CountdownSmall = () => {
     }
     if (hours === undefined) {
         hours = 0
+    }
+    if (days === undefined) {
+        days = 0
     }
     return (
         <>
