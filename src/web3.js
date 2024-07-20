@@ -57,8 +57,7 @@ export async function _decreaseAuctionPrice(_account, _tokenID) {
             method: 'eth_sendTransaction',
             params: [tx],
         });
-
-        return dropTheRate; // Return the result of the transaction
+        return web3.utils.toHex(dropTheRate); // Return the result of the transaction
     } catch (error) {
         console.error("Error DropTheRate:", error); // Log any errors that occur during the process
         // Additional error handling can be added here if needed

@@ -76,7 +76,9 @@ function NFTDetails() {
     }
 
     const handleDropNFT = () => {
-        _decreaseAuctionPrice(address, nftItem.tokenIndex)
+        _decreaseAuctionPrice(address, nftItem.tokenIndex).then(res =>{
+            console.log(res);  
+        })
     }
 
     const onOpenChange = (e: any) => {
